@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@import "./assets/fonts/fonts.css";
+
+@theme {
+    --font-sans: "Century Gothic", sans-serif;
+    --color-primary: #C9A96E;
+}
+
+
+.section-padding {
+  padding-inline: clamp(1.75rem, 6.22vw + 0.389rem, 6.688rem);
+}
+
+.section-margin {
+  margin-block: clamp(2.813rem, 3.949vw + 1.949rem, 6.688rem);
+}
