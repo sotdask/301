@@ -9,7 +9,7 @@ import {
 
 const Hero = () => {
   return (
-    <section className="relative h-dvh min-h-dvh w-full overflow-hidden">
+    <section className="relative h-svh min-h-svh w-full overflow-hidden md:h-dvh md:min-h-dvh">
       <img
         src={hero}
         alt=""
