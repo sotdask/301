@@ -4,7 +4,7 @@ import Button from "../global/Button";
 
 const Info = () => {
   return (
-    <div className="section-padding section-margin flex flex-col items-center text-center">
+    <section className="section-padding section-margin flex flex-col items-center text-center">
       <div className="flex justify-center">
         <h2 className="mr-1 lg:mr-3 text-xl md:text-2xl lg:text-3xl uppercase text-primary">
           welcome!
@@ -46,7 +46,7 @@ const Info = () => {
         <Button to="#" text="View Our Portfolio" title="Work" />
         <Button to="#" text="View Our Team" title="About" />
       </div>
-    </div>
+    </section>
   );
 };
 
