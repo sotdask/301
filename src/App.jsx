@@ -5,8 +5,14 @@ import Header from "./layouts/Header";
 import Footer from "./layouts/Footer";
 
 function App() {
+  const rawBase = import.meta.env.BASE_URL;
+  const routerBase =
+    rawBase && rawBase !== "/" && rawBase !== "/./"
+      ? rawBase.replace(/\/+$/, "")
+      : undefined;
+
   return (
-    <Router basename={import.meta.env.BASE_URL}>
+    <Router basename={routerBase}>
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1">
