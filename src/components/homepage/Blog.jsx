@@ -12,7 +12,7 @@ const Blog = () => {
         <div className="border-b-primary border-b-3 lg:border-r-primary lg:border-r-3 lg:border-b-0 pt-3 pb-6 md:py-6 lg:px-10">
           <a
             href="#"
-            className="text-primary text-lg md:text-2xl lg:text-3xl italic"
+            className="text-primary text-lg md:text-2xl lg:text-3xl italic transition duration-300 hover:text-black"
           >
             Minimal Living: ο Xώρος Aναπνέει με Λιγότερα.
           </a>
@@ -26,7 +26,7 @@ const Blog = () => {
           </p>
           <a
             href="#"
-            className="ml-auto inline-flex w-fit items-center gap-x-3 border-b lg:border-b-2 border-current pb-0.5 text-sm uppercase tracking-wider sm:text-sm md:text-base"
+            className="ml-auto inline-flex w-fit items-center gap-x-3 border-b lg:border-b-2 border-current pb-0.5 text-sm uppercase tracking-wider transition duration-300 sm:text-sm md:text-base hover:translate-x-3"
           >
             read the article
             <img src={blackarrow} alt="" />
@@ -35,7 +35,7 @@ const Blog = () => {
         <div className="py-3 md:py-6 lg:px-10">
           <a
             href="#"
-            className="text-primary text-lg md:text-2xl lg:text-3xl italic"
+            className="text-primary text-lg md:text-2xl lg:text-3xl italic transition duration-300 hover:text-black"
           >
             Η Επιστροφή του Φυσικού Υλικού στη Σύγχρονη Κατοικία.
           </a>
@@ -49,7 +49,7 @@ const Blog = () => {
           </p>
           <a
             href="#"
-            className="ml-auto inline-flex w-fit items-center gap-x-3 border-b lg:border-b-2 border-current pb-0.5 text-sm uppercase tracking-wider sm:text-sm md:text-base"
+            className="ml-auto inline-flex w-fit items-center gap-x-3 border-b lg:border-b-2 border-current pb-0.5 text-sm uppercase tracking-wider transition duration-300 sm:text-sm md:text-base hover:translate-x-3"
           >
             read the article
             <img src={blackarrow} alt="" />

@@ -35,7 +35,7 @@ function Header() {
         </a>
         <ul className="hidden lg:flex text-xl tracking-wider gap-x-10 text-white">
           <li>
-            <a href="#" className="duration-300 transition hover:text-primary">
+            <a href="/about" className="duration-300 transition hover:text-primary">
               ABOUT
             </a>
           </li>

@@ -1,10 +1,10 @@
 import React from "react";
-import { footerlogo } from "../assets";
+import { footerlogo, facebook, instagram, tiktok } from "../assets";
 
 function Footer() {
   return (
-    <footer className="bg-black">
-      <div className="section-padding text-white pt-22 flex flex-col lg:flex-row items-center lg:items-start gap-18 md:gap-24 lg:gap-30 xl:gap-38">
+    <footer className="bg-black section-padding pb-1">
+      <div className="text-white pt-22 flex flex-col lg:flex-row items-center lg:items-start gap-18 md:gap-24 lg:gap-30 xl:gap-38">
         <a href="/">
           <img src={footerlogo} alt="" />
         </a>
@@ -119,6 +119,38 @@ function Footer() {
             </ul>
           </div>
         </div>
+      </div>
+      <ul className="wrapper flex justify-center my-5 md:my-7 lg:my-9 gap-12">
+        <li>
+          <a href="#">
+            <img src={facebook} alt="" className="opacity-70 transition duration-300 hover:scale-110" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src={instagram} alt="" className="opacity-70 transition duration-300 hover:scale-110"/>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src={tiktok} alt="" className="opacity-70 transition duration-300 hover:scale-110"/>
+          </a>
+        </li>
+      </ul>
+      <div className="text-white flex flex-col w-full lg:flex-row items-center justify-between gap-2 lg:gap-4">
+        <p className="text-sm text-center lg:text-right">
+          © {new Date().getFullYear()} 301 Architecture Studio. All rights reserved
+        </p>
+        <a
+          href="https://sotdask.gr"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Visit sotdask.gr"
+          className="text-sm text-center lg:text-right flex items-center gap-1"
+        >
+          Created using
+          <span className="inline-block animate-sparkle">✨</span> by SD
+        </a>
       </div>
     </footer>
   );

@@ -38,7 +38,7 @@ const Hero = () => {
 
           <a
             href="#"
-            className="text-sm flex gap-x-3 justify-center md:justify-start uppercase tracking-wider text-primary sm:text-base md:text-xl"
+            className="text-sm flex gap-x-3 justify-center md:justify-start uppercase tracking-wider text-primary transition duration-300 sm:text-base md:text-xl hover:translate-x-3"
           >
             explore our work
             <img src={arrow} alt="" />
@@ -47,17 +47,17 @@ const Hero = () => {
         <ul className="wrapper flex flex-row md:flex-col justify-center md:justify-end gap-12">
           <li>
             <a href="#">
-              <img src={facebook} alt="" />
+              <img src={facebook} alt="" className="opacity-70 transition duration-300 hover:scale-110"/>
             </a>
           </li>
           <li>
             <a href="#">
-              <img src={instagram} alt="" />
+              <img src={instagram} alt="" className="opacity-70 transition duration-300 hover:scale-110"/>
             </a>
           </li>
           <li>
             <a href="#">
-              <img src={tiktok} alt="" />
+              <img src={tiktok} alt="" className="opacity-70 transition duration-300 hover:scale-110"/>
             </a>
           </li>
         </ul>
