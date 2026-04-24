@@ -1,13 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { footerlogo, facebook, instagram, tiktok } from "../assets";
 
 function Footer() {
   return (
     <footer className="bg-black section-padding pb-1">
       <div className="text-white pt-22 flex flex-col lg:flex-row items-center lg:items-start gap-18 md:gap-24 lg:gap-30 xl:gap-38">
-        <a href="/">
+        <Link to="/">
           <img src={footerlogo} alt="" />
-        </a>
+        </Link>
         <div className="footer-columns grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full gap-6">
           <div>
             <h4 className="text-primary font-bold text-lg lg:text-xl mb-2 lg:mb-3">
@@ -15,20 +16,20 @@ function Footer() {
             </h4>
             <ul className="text-lg space-y-2">
               <li>
-                <a
-                  href="/"
+                <Link
+                  to="/"
                   className="transition duration-300 hover:text-primary"
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/about"
                   className="transition duration-300 hover:text-primary"
                 >
                   About us
-                </a>
+                </Link>
               </li>
               <li>
                 <a

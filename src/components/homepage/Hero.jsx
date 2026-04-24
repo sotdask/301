@@ -9,13 +9,13 @@ import {
 
 const Hero = () => {
   return (
-    <section className="relative h-svh min-h-svh w-full overflow-hidden md:h-dvh md:min-h-dvh">
+    <section className="relative isolate min-h-svh w-full md:min-h-dvh">
       <img
         src={hero}
         alt=""
-        className="absolute inset-0 h-full w-full object-cover object-[62%_center] sm:object-[58%_center] lg:object-center"
+        className="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover object-[62%_center] sm:object-[58%_center] lg:object-center"
       />
-      <div className="absolute w-full flex gap-y-12 flex-col md:flex-row md:justify-between text-center md:text-start section-padding top-1/4 lg:top-1/3">
+      <div className="relative z-10 flex min-h-svh w-full flex-col justify-start gap-y-12 pb-12 pt-[25svh] text-center section-padding md:flex-row md:items-center md:justify-between md:text-start lg:pt-[33svh]">
         <div className="wrapper">
           <div className="wrapper flex items-center gap-x-3 sm:gap-x-5">
             <span className="block h-0.5 w-8 bg-primary sm:w-26" />

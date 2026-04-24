@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { logo } from "../assets/index";
 
 function Header() {
@@ -35,9 +36,12 @@ function Header() {
         </a>
         <ul className="hidden lg:flex text-xl tracking-wider gap-x-10 text-white">
           <li>
-            <a href="/about" className="duration-300 transition hover:text-primary">
+            <Link
+              to="/about"
+              className="duration-300 transition hover:text-primary"
+            >
               ABOUT
-            </a>
+            </Link>
           </li>
           <li>
             <a href="#" className="duration-300 transition hover:text-primary">
