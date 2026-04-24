@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { logo } from "../assets/index";
+import Menu from "../components/global/Menu";
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,6 +35,7 @@ function Header() {
             }`}
           />
         </a>
+        <Menu />
         <ul className="hidden lg:flex text-xl tracking-wider gap-x-10 text-white">
           <li>
             <Link
