@@ -1,13 +1,12 @@
-import React from "react";
-import { Navigation, Pagination } from "swiper/modules";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { project_1 } from "../../assets";
 import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { blackarrow } from "../../assets";
 
 const Work = () => {
+  const swiperRef = useRef(null);
   const projects = [
     {
       id: 1,
@@ -62,11 +61,11 @@ const Work = () => {
       </h3>
       <Swiper
         className="site-swiper mt-10"
-        modules={[Navigation, Pagination]}
         spaceBetween={50}
         slidesPerView={1}
-        navigation
-        pagination={{ clickable: true }}
+        onSwiper={(swiper) => {
+          swiperRef.current = swiper;
+        }}
       >
         {projects.map((project) => (
           <SwiperSlide key={project.id}>
@@ -86,7 +85,7 @@ const Work = () => {
                 <div className="wrapper absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 flex gap-x-3 items-center justify-center opacity-0 transition duration-300 group-hover:opacity-100">
                   <span className="block h-0.5 w-6 bg-primary sm:w-16" />
                   <h4 className="font-bold text-xl md:text-3xl lg:text-5xl tracking-wider">
-                    {project.first_name}{" "}
+                    {project.first_name}
                     <span className="text-primary">{project.last_name}</span>
                   </h4>
                   <span className="block h-0.5 w-6 bg-primary sm:w-16" />
@@ -96,6 +95,22 @@ const Work = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+      <div className="wrapper w-full flex justify-center space-x-5 mt-3 md:mt-5 lg:mt-8">
+        <button
+          type="button"
+          onClick={() => swiperRef.current?.slidePrev()}
+          className="relative inline-block px-6 py-3 border-2 border-black text-black overflow-hidden group cursor-pointer"
+        >
+          <img src={blackarrow} alt="previous_slide" className="rotate-180 transition duration-300 group-hover:-translate-x-2" />
+        </button>
+        <button
+          type="button"
+          onClick={() => swiperRef.current?.slideNext()}
+          className="relative inline-block px-6 py-3 border-2 border-black text-black overflow-hidden group cursor-pointer"
+        >
+          <img src={blackarrow} alt="next_slide"  className="transition duration-300 group-hover:translate-x-2" />
+        </button>
+      </div>
     </section>
   );
 };

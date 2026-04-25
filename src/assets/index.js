@@ -9,6 +9,8 @@ import instagram from "./instagram.svg"
 import tiktok from "./tiktok.svg"
 import parallax from "./parallax.png"
 import project_1 from "./swiper-project-1.png"
+import staff from "./staff.png"
+
 
 
 export {
@@ -22,5 +24,6 @@ export {
     instagram,
     tiktok,
     parallax,
-    project_1
+    project_1,
+    staff,
 };
