@@ -10,7 +10,7 @@ const NAV_ITEMS = [
   { to: "#", text: "CONTACT" },
 ];
 
-const menuIcon = "absolute inset-0 text-4xl text-white";
+const menuIcon = "absolute inset-0 text-4xl text-white transition duration-300";
 const MainLink = "uppercase tracking-wider text-xl text-white";
 
 function Menu() {
