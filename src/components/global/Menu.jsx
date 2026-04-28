@@ -1,71 +1,89 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
 
+const NAV_ITEMS = [
+    { to: "/", text: "HOME" },
+  { to: "/about", text: "ABOUT" },
+  { to: "#", text: "WORK" },
+  { to: "#", text: "CONTACT" },
+];
+
+const menuIcon = "absolute inset-0 text-4xl text-white";
+const MainLink = "uppercase tracking-wider text-xl text-white";
+
 function Menu() {
-  const [isMenuOpen, setisMenuOpen] = useState(false);
-  const menuItems = ["ABOUT", "WORK", "CONTACT"];
+  const [open, setOpen] = useState(false);
+  const close = () => setOpen(false);
 
   useEffect(() => {
-    document.body.style.overflow = isMenuOpen ? "hidden" : "";
+    document.body.style.overflow = open ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
     };
-  }, [isMenuOpen]);
+  }, [open]);
 
   return (
     <div className="lg:hidden">
       <button
-        onClick={() => setisMenuOpen(!isMenuOpen)}
-        className="p-2 relative z-70"
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        className="relative z-70 p-2"
         aria-label="Menu"
+        aria-expanded={open}
       >
-        <div className="relative w-6 h-6">
+        <div className="relative size-6">
           <HiOutlineMenuAlt3
-            className={`absolute inset-0 text-4xl text-white transition-all duration-300 
-            ${isMenuOpen ? "opacity-0 rotate-90" : "opacity-100 rotate-0"}`}
+            aria-hidden
+            className={`${menuIcon} ${open ? "rotate-90 opacity-0" : "opacity-100"}`}
           />
-
           <IoMdClose
-            className={`absolute inset-0 text-4xl text-white transition-all duration-300 
-            ${isMenuOpen ? "opacity-100 rotate-0" : "opacity-0 -rotate-90"}`}
+            aria-hidden
+            className={`${menuIcon} ${open ? "opacity-100" : "-rotate-90 opacity-0"}`}
           />
         </div>
       </button>
 
       <div
+        role="presentation"
         className={`fixed inset-0 z-60 bg-black/40 transition-opacity duration-300 ${
-          isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          open ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
-        onClick={() => setisMenuOpen(false)}
+        onClick={close}
       />
 
-      <div
-        className={`fixed flex flex-col items-center justify-center gap-32 top-0 left-0 h-screen right-0 z-65 bg-black/95 backdrop-blur-md transition-transform duration-500 ease-out ${
-          isMenuOpen ? "translate-y-0" : "-translate-y-full"
+      <nav
+        className={`fixed inset-x-0 top-0 z-65 flex min-h-screen flex-col items-center justify-center gap-32 bg-black/95 backdrop-blur-md transition-transform duration-500 ease-out ${
+          open ? "translate-y-0" : "-translate-y-full"
         }`}
+        aria-hidden={!open}
       >
-        <ul className="flex flex-col items-center gap-y-16 text-white text-xl tracking-wider">
-          {menuItems.map((label, index) => (
+        <ul className="flex flex-col items-center gap-y-16 text-xl tracking-wider">
+          {NAV_ITEMS.map((item, i) => (
             <li
-              key={label}
+              key={item.to + item.text}
               className={`transition-all duration-500 ${
-                isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-3"
+                open ? "translate-y-0 opacity-100" : "-translate-y-3 opacity-0"
               }`}
-              style={{ transitionDelay: isMenuOpen ? `${index * 90}ms` : "0ms" }}
+              style={{ transitionDelay: open ? `${i * 90}ms` : "0ms" }}
             >
-              <button
-                type="button"
-                onClick={() => setisMenuOpen(false)}
-                className="bg-transparent cursor-pointer uppercase tracking-wider text-xl text-white hover:text-primary transition duration-300"
-              >
-                {label}
-              </button>
+              <Link to={item.to} onClick={close} className={MainLink}>
+                {item.text}
+              </Link>
             </li>
           ))}
         </ul>
-        <a href="#" className="flex text-xl tracking-wider text-primary">EN | EL</a>
-      </div>
+        <span
+          className={`text-xl tracking-wider text-primary transition-all duration-500 ${
+            open ? "translate-y-0 opacity-100" : "-translate-y-3 opacity-0"
+          }`}
+          style={{ transitionDelay: open ? `${NAV_ITEMS.length * 90}ms` : "0ms" }}
+          aria-label="Language"
+        >
+          EN | EL
+        </span>
+      </nav>
     </div>
   );
 }
