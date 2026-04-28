@@ -9,6 +9,46 @@ import { blackarrow } from "../../assets";
 
 const Staff = () => {
   const swiperRef = useRef(null);
+  const members = [
+    {
+      id: 1,
+      title: "founding partner",
+      link: "#",
+      image: staff,
+      alt: "staff name",
+      name: "sotirios daskalou",
+      profession: "architecture & design",
+    },
+    {
+      id: 2,
+      title: "founding partner",
+      link: "#",
+      image: staff,
+      alt: "staff name",
+      name: "sotirios daskalou",
+      profession: "architecture & design",
+    },
+    {
+      id: 3,
+      title: "founding partner",
+      link: "#",
+      image: staff,
+      alt: "staff name",
+
+      name: "sotirios daskalou",
+      profession: "architecture & design",
+    },
+    {
+      id: 4,
+      title: "founding partner",
+      link: "#",
+      image: staff,
+      alt: "staff name",
+
+      name: "sotirios daskalou",
+      profession: "architecture & design",
+    },
+  ];
 
   return (
     <div className="section-margin section-padding">
@@ -20,7 +60,7 @@ const Staff = () => {
         consequat.
       </p>
       <Swiper
-        className="site-swiper mt-10"
+        className="site-swiper mt-10 mb-6"
         modules={Navigation}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
@@ -46,18 +86,36 @@ const Staff = () => {
         navigation
         pagination={{ clickable: true }}
       >
-        <SwiperSlide className="flex! justify-center lg:justify-start">
-          <img src={staff} alt="" />
-        </SwiperSlide>
-        <SwiperSlide className="flex! justify-center lg:justify-start">
-          <img src={staff} alt="" />
-        </SwiperSlide>
-        <SwiperSlide className="flex! justify-center lg:justify-start">
-          <img src={staff} alt="" />
-        </SwiperSlide>
-        <SwiperSlide className="flex! justify-center lg:justify-start">
-          <img src={staff} alt="" />
-        </SwiperSlide>
+        {members.map((member) => (
+          <SwiperSlide
+            key={member.id}
+            className="flex! justify-center lg:justify-start"
+          >
+            <a
+              href={member.link}
+              title={member.name}
+              className="group overflow-hidden relative"
+            >
+              <img
+                src={member.image}
+                alt={member.alt}
+                className="brightness-75 lg:brightness-100 transition duration-300 group-hover:scale-110 group-hover:brightness-75"
+              />
+              <div className="wrapper opacity-100 lg:opacity-0 absolute bottom-0 left-5 duration-300 transition group-hover:opacity-100">
+                <h5 className="text-primary uppercase tracking-wider text-lg">
+                  {member.title}
+                </h5>
+                <h4 className="mt-1 mb-3 text-white uppercase tracking-wider text-xl">
+                  {member.name}
+                </h4>
+                <span className="block h-0.5 w-8 bg-primary sm:w-18" />
+                <h5 className="mt-3 mb-5 text-primary uppercase tracking-wider text-base font-bold">
+                  {member.profession}
+                </h5>
+              </div>
+            </a>
+          </SwiperSlide>
+        ))}
       </Swiper>
       <div className="wrapper w-full flex lg:hidden justify-center space-x-5 mt-3 md:mt-5 lg:mt-8">
         <button
@@ -65,14 +123,22 @@ const Staff = () => {
           onClick={() => swiperRef.current?.slidePrev()}
           className="relative inline-block px-6 py-3 border-2 border-black text-black overflow-hidden group cursor-pointer"
         >
-          <img src={blackarrow} alt="previous_slide" className="rotate-180 transition duration-300 group-hover:-translate-x-2" />
+          <img
+            src={blackarrow}
+            alt="previous_slide"
+            className="rotate-180 transition duration-300 group-hover:-translate-x-2"
+          />
         </button>
         <button
           type="button"
           onClick={() => swiperRef.current?.slideNext()}
           className="relative inline-block px-6 py-3 border-2 border-black text-black overflow-hidden group cursor-pointer"
         >
-          <img src={blackarrow} alt="next_slide"  className="transition duration-300 group-hover:translate-x-2" />
+          <img
+            src={blackarrow}
+            alt="next_slide"
+            className="transition duration-300 group-hover:translate-x-2"
+          />
         </button>
       </div>
     </div>

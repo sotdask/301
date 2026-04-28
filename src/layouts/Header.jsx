@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { logo } from "../assets/index";
 import Menu from "../components/global/Menu";
+import Navbar from "./Navbar";
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,14 +18,14 @@ function Header() {
   }, []);
 
   return (
-    <header className="w-full">
-      <div
-        className={`fixed top-0 z-50 flex w-full items-center justify-between section-padding transition-all duration-300 shadow-2xl ${
-          isScrolled
-            ? "bg-black/95 py-4 shadow-xl backdrop-blur-sm"
-            : "bg-transparent py-5"
-        }`}
-      >
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 shadow-2xl ${
+        isScrolled
+          ? "bg-black/95 py-4 shadow-xl backdrop-blur-sm"
+          : "bg-transparent py-5"
+      }`}
+    >
+      <div className="section-padding flex items-center justify-between">
         <a href="/">
           <img
             src={logo}
@@ -35,28 +35,7 @@ function Header() {
             }`}
           />
         </a>
-        <Menu />
-        <ul className="hidden lg:flex text-xl tracking-wider gap-x-10 text-white">
-          <li>
-            <Link
-              to="/about"
-              className="duration-300 transition hover:text-primary"
-            >
-              ABOUT
-            </Link>
-          </li>
-          <li>
-            <a href="#" className="duration-300 transition hover:text-primary">
-              WORK
-            </a>
-          </li>
-          <li>
-            <a href="#" className="duration-300 transition hover:text-primary">
-              CONTACT
-            </a>
-          </li>
-          <li className="ml-12">EN | EL</li>
-        </ul>
+        <Navbar />
       </div>
     </header>
   );

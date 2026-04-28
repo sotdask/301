@@ -8,6 +8,8 @@
 
 
 .section-padding {
+  width: min(100%, 1560px);
+  margin-inline: auto;
   padding-inline: clamp(1.75rem, 6.22vw + 0.389rem, 6.688rem);
 }
 
