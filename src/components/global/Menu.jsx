@@ -4,7 +4,7 @@ import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
 
 const NAV_ITEMS = [
-    { to: "/", text: "HOME" },
+  { to: "/", text: "HOME" },
   { to: "/about", text: "ABOUT" },
   { to: "#", text: "WORK" },
   { to: "#", text: "CONTACT" },
@@ -74,7 +74,7 @@ function Menu() {
             </li>
           ))}
         </ul>
-        <span
+        {/* <span
           className={`text-xl tracking-wider text-primary transition-all duration-500 ${
             open ? "translate-y-0 opacity-100" : "-translate-y-3 opacity-0"
           }`}
@@ -82,7 +82,7 @@ function Menu() {
           aria-label="Language"
         >
           EN | EL
-        </span>
+        </span> */}
       </nav>
     </div>
   );
