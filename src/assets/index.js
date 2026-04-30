@@ -1,4 +1,5 @@
 import hero from "./hero.png";
+import projectshero from "./projectshero.png";
 import abouthero from "./abouthero.png";
 import logo from "./logo.svg";
 import footerlogo from "./footerlogo.svg";
@@ -16,6 +17,7 @@ import staff from "./staff.png"
 export {
     hero,
     abouthero,
+    projectshero,
     logo,
     footerlogo,
     arrow,

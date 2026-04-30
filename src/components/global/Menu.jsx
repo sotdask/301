@@ -6,7 +6,7 @@ import { IoMdClose } from "react-icons/io";
 const NAV_ITEMS = [
   { to: "/", text: "HOME" },
   { to: "/about", text: "ABOUT" },
-  { to: "#", text: "WORK" },
+  { to: "/projects", text: "WORK" },
   { to: "#", text: "CONTACT" },
 ];
 

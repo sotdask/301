@@ -34,7 +34,7 @@ function Footer() {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/projects"
                     className="transition duration-300 hover:text-primary"
                   >
                     Our Work
@@ -150,8 +150,7 @@ function Footer() {
             title="Visit sotdask.gr"
             className="text-sm text-center lg:text-right flex items-center gap-1"
           >
-            Created using
-            <span className="inline-block animate-sparkle">✨</span> by SD
+            Design & Development by SD
           </a>
         </div>
       </div>

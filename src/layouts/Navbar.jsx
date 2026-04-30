@@ -17,7 +17,7 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <a href="#" className="duration-300 transition hover:text-primary">
+            <a href="/projects" className="duration-300 transition hover:text-primary">
               WORK
             </a>
           </li>

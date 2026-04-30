@@ -43,8 +43,8 @@ const Info = () => {
         <span className="uppercase text-base">design & create</span>
       </div>
       <div className="wrapper flex flex-col md:flex-row mt-8 gap-y-4  md:gap-x-10">
-        <Button to="#" text="View Our Portfolio" title="Work" />
-        <Button to="#" text="View Our Team" title="About" />
+        <Button to="/projects" text="View Our Portfolio" title="Work" />
+        <Button to="/about" text="View Our Team" title="About" />
       </div>
     </section>
   );
