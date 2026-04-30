@@ -83,12 +83,12 @@ const Work = () => {
                   className="relative h-105 w-full rounded-2xl object-cover transition duration-300 group-hover:brightness-50 md:h-130"
                 />
                 <div className="wrapper absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 flex gap-x-3 items-center justify-center opacity-0 transition duration-300 group-hover:opacity-100">
-                  <span className="block h-0.5 w-6 bg-primary sm:w-16" />
+                  <span className="block transition-all duration-500 h-0.5 w-6 bg-primary sm:w-16 lg:w-0 lg:group-hover:w-16"/>
                   <h4 className="font-bold text-xl md:text-3xl lg:text-5xl tracking-wider">
                     {project.first_name}
                     <span className="text-primary">{project.last_name}</span>
                   </h4>
-                  <span className="block h-0.5 w-6 bg-primary sm:w-16" />
+                  <span className="block transition-all duration-500 h-0.5 w-6 bg-primary sm:w-16 lg:w-0 lg:group-hover:w-16"/>
                 </div>
               </a>
             </div>

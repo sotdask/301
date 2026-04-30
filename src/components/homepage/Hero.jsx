@@ -24,7 +24,7 @@ const Hero = () => {
             </h4>
           </div>
           <div className="wrapper mt-4 sm:mt-5">
-            <h1 className="text-4xl text-white sm:text-5xl md:text-6xl">
+            <h1 trig-target className="text-4xl text-white sm:text-5xl md:text-6xl">
               "We Don't Build Structures.
             </h1>
             <h1 className="mt-3 text-4xl italic text-white sm:mt-4 sm:text-5xl md:mt-6 md:text-6xl">

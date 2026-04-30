@@ -11,6 +11,9 @@ import tiktok from "./tiktok.svg"
 import parallax from "./parallax.png"
 import project_1 from "./swiper-project-1.png"
 import staff from "./staff.png"
+import villaspitaki from "./villaspitaki.png"
+import villahouse from "./villahouse.png"
+import villaspiti from "./villaspiti.png"
 
 
 
@@ -28,4 +31,7 @@ export {
     parallax,
     project_1,
     staff,
+    villaspitaki,
+    villahouse,
+    villaspiti,
 };
