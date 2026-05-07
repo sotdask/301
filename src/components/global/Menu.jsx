@@ -7,7 +7,7 @@ const NAV_ITEMS = [
   { to: "/", text: "HOME" },
   { to: "/about", text: "ABOUT" },
   { to: "/projects", text: "WORK" },
-  { to: "#", text: "CONTACT" },
+  { to: "/contact", text: "CONTACT" },
 ];
 
 const menuIcon = "absolute inset-0 text-4xl text-white transition duration-300";
