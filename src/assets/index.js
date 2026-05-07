@@ -14,6 +14,7 @@ import staff from "./staff.png"
 import villaspitaki from "./villaspitaki.png"
 import villahouse from "./villahouse.png"
 import villaspiti from "./villaspiti.png"
+import contact from "./contact.png"
 
 
 
@@ -34,4 +35,5 @@ export {
     villaspitaki,
     villahouse,
     villaspiti,
+    contact
 };

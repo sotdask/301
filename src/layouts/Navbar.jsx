@@ -22,7 +22,7 @@ function Navbar() {
             </a>
           </li>
           <li>
-            <a href="#" className="duration-300 transition hover:text-primary">
+            <a href="/contact" className="duration-300 transition hover:text-primary">
               CONTACT
             </a>
           </li>

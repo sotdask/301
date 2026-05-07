@@ -50,7 +50,7 @@ function Footer() {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/contact"
                     className="transition duration-300 hover:text-primary"
                   >
                     Contact
