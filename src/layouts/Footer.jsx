@@ -65,20 +65,20 @@ function Footer() {
               </h4>
               <ul className="text-lg space-y-2">
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/privacy-policy"
                     className="transition duration-300 hover:text-primary"
                   >
                     Privacy Policy
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/cookies-policy"
                     className="transition duration-300 hover:text-primary"
                   >
                     Cookie Policy
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

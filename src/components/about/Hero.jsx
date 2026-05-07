@@ -12,7 +12,7 @@ const Hero = () => {
       <div className="relative z-10 grid min-h-svh w-full grid-cols-1 content-start gap-y-12 section-padding pb-12 pt-[20svh] md:pb-16 md:pt-[25svh] lg:grid-cols-2 lg:pt-[33svh]">
         <div className="wrapper flex flex-col items-center lg:items-start">
           <span className="block h-0.5 w-28 bg-primary sm:w-86" />
-          <div className="wrapper mt-4 sm:mt-5">
+          <div  data-aos="fade-right" data-aos-duration="1000" className="wrapper mt-4 sm:mt-5">
             <h4 className="text-xl text-center lg:text-start text-white italic uppercase tracking-widest sm:text-3xl md:text-4xl">
               more on
             </h4>
@@ -29,7 +29,7 @@ const Hero = () => {
         </div>
         <div className="wrapper flex flex-col items-center lg:items-end">
           <span className="block h-0.5 w-28 bg-primary sm:w-86" />
-          <div className="wrapper mt-4 sm:mt-5">
+          <div data-aos="fade-left" data-aos-duration="1000" className="wrapper mt-4 sm:mt-5">
             <h4 className="text-xl text-center lg:text-end text-white italic uppercase tracking-widest sm:text-3xl md:text-4xl">
               more on
             </h4>

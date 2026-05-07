@@ -55,7 +55,7 @@ const Work = () => {
   ];
 
   return (
-    <section className="section-padding section-margin">
+    <section data-aos="fade-up" data-aos-duration="1000" className="section-padding section-margin">
       <h3 className="uppercase text-2xl lg:text-3xl text-center lg:text-end">
         our featured <span className="text-primary font-bold">works</span>
       </h3>

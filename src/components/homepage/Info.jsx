@@ -5,14 +5,14 @@ import Button from "../global/Button";
 const Info = () => {
   return (
     <section className="section-padding section-margin flex flex-col items-center text-center">
-      <div className="flex justify-center">
+      <div className="flex justify-center" data-gsap-stagger>
         <h2 className="mr-1 lg:mr-3 text-xl md:text-2xl lg:text-3xl uppercase text-primary">
           welcome!
         </h2>
-        <span className="mr-1 lg:mr-3 text-xl md:text-2xl lg:text-3xl uppercase">
+        <span data-aos="fade-up" data-aos-duration="1000" className="mr-1 lg:mr-3 text-xl md:text-2xl lg:text-3xl uppercase">
           we
         </span>
-        <span className="mb-4 lg:mb-8 text-xl md:text-2xl lg:text-3xl uppercase font-bold">
+        <span data-aos="fade-up" data-aos-duration="1000" className="mb-4 lg:mb-8 text-xl md:text-2xl lg:text-3xl uppercase font-bold">
           are 301 studio
         </span>
       </div>

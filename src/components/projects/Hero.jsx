@@ -11,7 +11,7 @@ const Hero = () => {
       />
       <div className="relative z-10 flex flex-col items-center justify-center min-h-svh w-full section-padding">
        <div className="relative wrapper">
-        <span className="block h-0.5 w-28 bg-primary sm:w-46" />
+        <span  data-aos="fade-right" data-aos-duration="1000" className="block h-0.5 w-28 bg-primary sm:w-46" />
         <h1
           className="tracking-widest text-white uppercase"
           style={{
@@ -20,7 +20,7 @@ const Hero = () => {
         >
           projects
         </h1>
-        <span className="block absolute right-0 h-0.5 w-28 bg-primary sm:w-46" />
+        <span data-aos="fade-left" data-aos-duration="1000" className="block absolute right-0 h-0.5 w-28 bg-primary sm:w-46" />
        </div>
        <span className="block absolute bottom-18 text-white text-xl lg:text-2xl text-center">Explore spaces designed with intention</span>
       </div>

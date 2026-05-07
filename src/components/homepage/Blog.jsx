@@ -5,10 +5,10 @@ import { blackarrow } from "../../assets";
 const Blog = () => {
   return (
     <section className="section-margin section-padding flex flex-col items-center">
-      <h3 className="uppercase text-2xl lg:text-3xl">
+      <h3 data-aos="fade-up" data-aos-duration="1000" className="uppercase text-2xl lg:text-3xl">
         articles by our <span className="text-primary font-bold">studio</span>
       </h3>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-4 my-6 lg:my-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-4 my-6 lg:my-10" data-gsap-stagger>
         <div className="border-b-primary border-b-3 lg:border-r-primary lg:border-r-3 lg:border-b-0 pt-3 pb-6 md:py-6 lg:px-10">
           <a
             href="#"

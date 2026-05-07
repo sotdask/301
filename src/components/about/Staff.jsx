@@ -52,10 +52,10 @@ const Staff = () => {
 
   return (
     <div className="section-margin section-padding">
-      <h3 className="uppercase text-2xl lg:text-3xl text-center lg:text-start mb-3 lg:mb-4">
+      <h3  data-aos="fade-up" data-aos-duration="1000" className="uppercase text-2xl lg:text-3xl text-center lg:text-start mb-3 lg:mb-4">
         meet our <span className="text-primary font-bold">staff</span>
       </h3>
-      <p className="max-w-110">
+      <p className="max-w-110 text-center lg:text-start">
         Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat.
       </p>

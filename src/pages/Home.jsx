@@ -9,10 +9,10 @@ function Home() {
   return (
     <div>
       <Hero />
-      <Info/> 
-      <Parallax/>
-      <Work/>
-      <Blog/>
+      <Info />
+      <Parallax />
+      <Work />
+      <Blog />
     </div>
   );
 }

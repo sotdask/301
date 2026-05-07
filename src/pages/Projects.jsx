@@ -5,11 +5,11 @@ import Showcase from "../components/projects/Showcase";
 
 function Projects() {
   return (
-    <>
+    <div>
       <Hero />
       <Quote />
       <Showcase />
-    </>
+    </div>
   );
 }
 

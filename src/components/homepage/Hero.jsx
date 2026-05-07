@@ -17,14 +17,14 @@ const Hero = () => {
       />
       <div className="relative z-10 flex min-h-svh w-full flex-col justify-start gap-y-12 pb-12 pt-[25svh] text-center section-padding md:flex-row md:items-center md:justify-between md:text-start lg:pt-[33svh]">
         <div className="wrapper">
-          <div className="wrapper flex items-center gap-x-3 sm:gap-x-5">
+          <div data-aos="fade-up" data-aos-duration="800" className="wrapper flex items-center gap-x-3 sm:gap-x-5">
             <span className="block h-0.5 w-8 bg-primary sm:w-26" />
             <h4 className="text-primary text-sm tracking-wide sm:text-lg md:text-2xl">
               ARCHITECTURE & INTERIOR DESIGN
             </h4>
           </div>
-          <div className="wrapper mt-4 sm:mt-5">
-            <h1 trig-target className="text-4xl text-white sm:text-5xl md:text-6xl">
+          <div data-aos="fade-up" data-aos-duration="800" className="wrapper mt-4 sm:mt-5" data-gsap-stagger>
+            <h1 className="text-4xl text-white sm:text-5xl md:text-6xl">
               "We Don't Build Structures.
             </h1>
             <h1 className="mt-3 text-4xl italic text-white sm:mt-4 sm:text-5xl md:mt-6 md:text-6xl">

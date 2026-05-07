@@ -6,7 +6,7 @@ const Hero = () => {
     <section className="min-h-[50vh] bg-black flex flex-col justify-center pt-28 md:pt-32 lg:pt-36 lg:pb-24">
       <div className="section-padding relative">
         <div className="lg:pr-105 xl:pr-130">
-          <h1 className="text-primary text-center font-bold lg:text-start text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+          <h1 data-aos="fade-up" data-aos-duration="1000" className="text-primary text-center font-bold lg:text-start text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
             Contact Us
           </h1>
           <p className="text-white text-center lg:text-start mt-5 text-xl">

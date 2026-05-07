@@ -17,7 +17,7 @@ const ParallaxSection = () => (
       <div className="section-padding relative flex h-full items-center">
         <div className="grid w-full gap-10 text-white md:grid-cols-2 md:gap-16 text-center md:text-start">
           <div>
-            <h2 className="text-3xl leading-tight md:text-5xl uppercase font-bold text-primary">
+            <h2 data-aos="fade-up" data-aos-duration="800" className="text-3xl leading-tight md:text-5xl uppercase font-bold text-primary">
               some interesting facts
             </h2>
           </div>
