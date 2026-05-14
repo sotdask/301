@@ -4,10 +4,10 @@ import ContactInfo from "../components/contact/ContactInfo";
 
 function Contact() {
   return (
-    <div>
+    <main id="main-content">
       <Hero />
       <ContactInfo />
-    </div>
+    </main>
   );
 }
 
