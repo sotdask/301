@@ -3,7 +3,7 @@ import { projectshero } from "../../assets";
 
 const Hero = () => {
   return (
-    <section className="section-padding relative isolate min-h-svh w-full md:min-h-dvh">
+    <section className="relative isolate min-h-svh w-full md:min-h-dvh">
       <img
         src={projectshero}
         alt=""
