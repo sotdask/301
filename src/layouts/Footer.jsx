@@ -42,7 +42,7 @@ function Footer() {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/articles"
                     className="transition duration-300 hover:text-primary"
                   >
                     Articles

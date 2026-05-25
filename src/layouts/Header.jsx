@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { logo } from "../assets/index";
 import Menu from "../components/global/Menu";
 import Navbar from "./Navbar";
 
 function Header() {
+  const { pathname } = useLocation();
+  const isArticlesPage = pathname === "/articles";
   const [isScrolled, setIsScrolled] = useState(false);
+  const showSolidHeader = isScrolled || isArticlesPage;
 
   useEffect(() => {
     const onScroll = () => {
@@ -20,7 +24,7 @@ function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 shadow-2xl ${
-        isScrolled
+        showSolidHeader
           ? "bg-black/95 py-4 shadow-xl backdrop-blur-sm"
           : "bg-transparent py-5"
       }`}
@@ -31,7 +35,7 @@ function Header() {
             src={logo}
             alt="logo"
             className={`transition-all duration-300 ${
-              isScrolled ? "w-28 md:w-32" : "w-32 md:w-40"
+              showSolidHeader ? "w-28 md:w-32" : "w-32 md:w-40"
             }`}
           />
         </a>
