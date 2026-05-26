@@ -56,7 +56,7 @@ const Blog = () => {
           </a>
         </div>
       </div>
-      <Button to="#" text="All Articles" title="All Articles" />
+      <Button to="/articles" text="All Articles" title="All Articles" />
     </section>
   );
 };

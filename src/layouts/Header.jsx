@@ -4,11 +4,23 @@ import { logo } from "../assets/index";
 import Menu from "../components/global/Menu";
 import Navbar from "./Navbar";
 
+const KNOWN_ROUTES = new Set([
+  "/",
+  "/about",
+  "/projects",
+  "/contact",
+  "/articles",
+  "/kamari-santorinis",
+  "/privacy-policy",
+  "/cookies-policy",
+]);
+
 function Header() {
   const { pathname } = useLocation();
   const isArticlesPage = pathname === "/articles";
+  const isNotFoundPage = !KNOWN_ROUTES.has(pathname);
   const [isScrolled, setIsScrolled] = useState(false);
-  const showSolidHeader = isScrolled || isArticlesPage;
+  const showSolidHeader = isScrolled || isArticlesPage || isNotFoundPage;
 
   useEffect(() => {
     const onScroll = () => {

@@ -5,8 +5,8 @@ function Showcase() {
   const projects = [
     {
       id: 1,
-      title: "Villa Spitaki",
-      link: "#",
+      title: "Kamari Santorinis",
+      link: "/kamari-santorinis",
       image: villaspitaki,
       alt: villaspitaki,
     },
