@@ -1,4 +1,5 @@
 import React from "react";
+import AppLink from "../global/AppLink";
 import { villaspitaki, villahouse, villaspiti } from "../../assets";
 
 function Showcase() {
@@ -72,8 +73,8 @@ function Showcase() {
     <section className="section-margin section-padding grid grid-cols-1 gap-y-10 gap-x-4 md:grid-cols-2 lg:grid-cols-3">
       {projects.map((project) => (
         <div key={project.id} className="group flex justify-center">
-          <a
-            href={project.link}
+          <AppLink
+            to={project.link}
             className="relative block overflow-hidden ring-1 ring-white/10 transition-all duration-500 ease-out group-hover:ring-primary/70"
           >
             <img
@@ -96,7 +97,7 @@ function Showcase() {
               </span>
               <span className="h-0.5 w-14 bg-primary transition-all duration-500 lg:w-0 lg:group-hover:w-14" />
             </div>
-          </a>
+          </AppLink>
         </div>
       ))}
     </section>

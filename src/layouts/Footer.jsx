@@ -33,28 +33,28 @@ function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <a
-                    href="/projects"
+                  <Link
+                    to="/projects"
                     className="transition duration-300 hover:text-primary"
                   >
                     Our Work
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="/articles"
+                  <Link
+                    to="/articles"
                     className="transition duration-300 hover:text-primary"
                   >
                     Articles
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="/contact"
+                  <Link
+                    to="/contact"
                     className="transition duration-300 hover:text-primary"
                   >
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

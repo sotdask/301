@@ -2,6 +2,7 @@ import hero from "./hero.png";
 import projectshero from "./projectshero.png";
 import abouthero from "./abouthero.png";
 import logo from "./logo.svg";
+import loadinglogo from "./loading-logo.png";
 import footerlogo from "./footerlogo.svg";
 import arrow from "./arrow.svg"
 import blackarrow from "./blackarrow.svg"
@@ -38,4 +39,5 @@ export {
     villaspiti,
     contact,
     kamari,
+    loadinglogo,
 };

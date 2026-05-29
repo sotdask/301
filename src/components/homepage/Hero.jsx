@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   hero,
   arrow,
@@ -23,12 +24,12 @@ const Hero = () => {
               ARCHITECTURE & INTERIOR DESIGN
             </h4>
           </div>
-          <div data-aos="fade-up" data-aos-duration="800" className="wrapper mt-4 sm:mt-5" data-gsap-stagger>
-            <h1 className="text-4xl text-white sm:text-5xl md:text-6xl">
-              "We Don't Build Structures.
+          <div className="wrapper mt-4 sm:mt-5">
+            <h1 trig-target className="text-4xl text-white sm:text-5xl md:text-6xl">
+              "We Don’t Just Design Spaces
             </h1>
             <h1 className="mt-3 text-4xl italic text-white sm:mt-4 sm:text-5xl md:mt-6 md:text-6xl">
-              We Shape Lives."
+              We Create Experiences"
             </h1>
           </div>
           <p className="my-6 max-w-xl text-lg text-white sm:my-8 md:my-12 md:max-w-150 md:text-xl">
@@ -36,13 +37,13 @@ const Hero = () => {
             meaning and every room tells a story.
           </p>
 
-          <a
-            href="#"
+          <Link
+            to="/projects"
             className="text-sm flex gap-x-3 justify-center md:justify-start uppercase tracking-wider text-primary transition duration-300 sm:text-base md:text-xl hover:translate-x-3"
           >
             explore our work
             <img src={arrow} alt="" />
-          </a>
+          </Link>
         </div>
         <ul className="wrapper flex flex-row md:flex-col justify-center md:justify-end gap-12">
           <li>

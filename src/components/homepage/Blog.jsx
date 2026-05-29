@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Button from "../global/Button";
 import { blackarrow } from "../../assets";
 
@@ -24,21 +25,21 @@ const Blog = () => {
             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
             .
           </p>
-          <a
-            href="#"
+          <Link
+            to="/articles"
             className="ml-auto inline-flex w-fit items-center gap-x-3 border-b lg:border-b-2 border-current pb-0.5 text-sm uppercase tracking-wider transition duration-300 sm:text-sm md:text-base hover:translate-x-3"
           >
             read the article
             <img src={blackarrow} alt="" />
-          </a>
+          </Link>
         </div>
         <div className="py-3 md:py-6 lg:px-10">
-          <a
-            href="#"
+          <Link
+            to="/articles"
             className="text-primary text-lg md:text-2xl lg:text-3xl italic transition duration-300 hover:text-black"
           >
             Η Επιστροφή του Φυσικού Υλικού στη Σύγχρονη Κατοικία.
-          </a>
+          </Link>
           <p className="my-3 lg:my-6">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -47,13 +48,13 @@ const Blog = () => {
             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
             .
           </p>
-          <a
-            href="#"
+          <Link
+            to="/articles"
             className="ml-auto inline-flex w-fit items-center gap-x-3 border-b lg:border-b-2 border-current pb-0.5 text-sm uppercase tracking-wider transition duration-300 sm:text-sm md:text-base hover:translate-x-3"
           >
             read the article
             <img src={blackarrow} alt="" />
-          </a>
+          </Link>
         </div>
       </div>
       <Button to="/articles" text="All Articles" title="All Articles" />

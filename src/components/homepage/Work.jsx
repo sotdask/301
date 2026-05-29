@@ -4,6 +4,7 @@ import { project_1 } from "../../assets";
 import "swiper/css";
 import "swiper/css/scrollbar";
 import { blackarrow } from "../../assets";
+import AppLink from "../global/AppLink";
 
 const Work = () => {
   const swiperRef = useRef(null);
@@ -76,7 +77,7 @@ const Work = () => {
                 <span className="block h-0.5 w-6 bg-primary sm:w-16" />
                 <p className="text-base ">{project.category}</p>
               </div>
-              <a href={project.link} title={project.title}>
+              <AppLink to={project.link} title={project.title}>
                 <img
                   src={project.img}
                   alt={project.alt}
@@ -90,7 +91,7 @@ const Work = () => {
                   </h4>
                   <span className="block transition-all duration-500 h-0.5 w-6 bg-primary sm:w-16 lg:w-0 lg:group-hover:w-16"/>
                 </div>
-              </a>
+              </AppLink>
             </div>
           </SwiperSlide>
         ))}

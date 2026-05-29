@@ -1,4 +1,5 @@
 import React from "react";
+import AppLink from "../global/AppLink";
 import { arrow } from "../../assets";
 
 const SingleArticle = () => {
@@ -53,13 +54,13 @@ const SingleArticle = () => {
                 </a>
                 <p>{singleArticle.description}</p>
               </div>
-              <a
-                href={singleArticle.link}
+              <AppLink
+                to={singleArticle.link}
                 className="text-sm mt-3 flex gap-x-3 justify-end uppercase tracking-wider text-primary transition duration-300 sm:text-base md:text-xl hover:translate-x-3"
               >
                 read more
                 <img src={arrow} alt="" />
-              </a>
+              </AppLink>
             </div>
           </div>
         </div>

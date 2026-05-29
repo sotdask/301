@@ -1,10 +1,5 @@
-import React, { useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import AOS from "aos";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -17,33 +12,41 @@ import Kamari from "./pages/Kamari";
 import NotFound from "./pages/NotFound";
 import Header from "./layouts/Header";
 import Footer from "./layouts/Footer";
+import LoadingScreen from "./components/global/LoadingScreen";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
-
   useEffect(() => {
     window.scrollTo(0, 0);
     AOS.refreshHard();
   }, [pathname]);
-
   return null;
 }
 
 function App() {
-  const rawBase = import.meta.env.BASE_URL;
-  const routerBase =
-    rawBase && rawBase !== "/" && rawBase !== "/./"
-      ? rawBase.replace(/\/+$/, "")
-      : undefined;
+  const [showLoader, setShowLoader] = useState(true);
 
   useEffect(() => {
-    AOS.init({
-      duration: 800,
-      easing: "ease-out-cubic",
-      once: true,
-      offset: 80,
-    });
+    AOS.init({ duration: 800, easing: "ease-out-cubic", once: true, offset: 80 });
   }, []);
+
+  useEffect(() => {
+    const hide = () => setTimeout(() => setShowLoader(false), 1200);
+
+    if (document.readyState === "complete") {
+      hide();
+    } else {
+      window.addEventListener("load", hide);
+      return () => window.removeEventListener("load", hide);
+    }
+  }, []);
+
+  const rawBase = import.meta.env.BASE_URL;
+  const routerBase = rawBase && rawBase !== "/" && rawBase !== "/./"
+    ? rawBase.replace(/\/+$/, "")
+    : undefined;
+
+  if (showLoader) return <LoadingScreen />;
 
   return (
     <Router basename={routerBase}>

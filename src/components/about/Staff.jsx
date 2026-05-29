@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import AppLink from "../global/AppLink";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -91,8 +92,8 @@ const Staff = () => {
             key={member.id}
             className="flex! justify-center lg:justify-start"
           >
-            <a
-              href={member.link}
+            <AppLink
+              to={member.link}
               title={member.name}
               className="group overflow-hidden relative"
             >
@@ -113,7 +114,7 @@ const Staff = () => {
                   {member.profession}
                 </h5>
               </div>
-            </a>
+            </AppLink>
           </SwiperSlide>
         ))}
       </Swiper>

@@ -17,14 +17,20 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <a href="/projects" className="duration-300 transition hover:text-primary">
+            <Link
+              to="/projects"
+              className="duration-300 transition hover:text-primary"
+            >
               WORK
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/contact" className="duration-300 transition hover:text-primary">
+            <Link
+              to="/contact"
+              className="duration-300 transition hover:text-primary"
+            >
               CONTACT
-            </a>
+            </Link>
           </li>
           <li className="ml-12">EN | EL</li>
         </ul>
