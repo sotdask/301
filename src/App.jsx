@@ -13,6 +13,9 @@ import NotFound from "./pages/NotFound";
 import Header from "./layouts/Header";
 import Footer from "./layouts/Footer";
 import LoadingScreen from "./components/global/LoadingScreen";
+import EleniHouse from "./pages/EleniHouse";
+import EventVenue from "./pages/EventVenue";
+
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -61,6 +64,9 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/articles" element={<Articles />} />
             <Route path="/kamari-santorinis" element={<Kamari />} />
+                        <Route path="/elenis-house" element={<EleniHouse />} />
+                                                <Route path="/event-venue" element={<EventVenue />} />
+
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/cookies-policy" element={<CookiesPolicy />} />
             <Route path="*" element={<NotFound />} />

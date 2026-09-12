@@ -1,6 +1,6 @@
 import React from "react";
 import AppLink from "../global/AppLink";
-import { villaspitaki, villahouse, villaspiti } from "../../assets";
+import { villaspitaki, villahouse, villaspiti, elenikitchenLounge, eventskyView } from "../../assets";
 
 function Showcase() {
   const projects = [
@@ -13,59 +13,17 @@ function Showcase() {
     },
     {
       id: 2,
-      title: "Villa Spitaki",
-      link: "#",
-      image: villaspiti,
-      alt: villaspiti,
+      title: "Eleni's House",
+      link: "/elenis-house",
+      image: elenikitchenLounge,
+      alt: elenikitchenLounge,
     },
     {
       id: 3,
-      title: "Villa Spitaki",
-      link: "#",
-      image: villahouse,
-      alt: villahouse,
-    },
-    {
-      id: 4,
-      title: "Villa Spitaki",
-      link: "#",
-      image: villahouse,
-      alt: villahouse,
-    },
-    {
-      id: 5,
-      title: "Villa Spitaki",
-      link: "#",
-      image: villaspitaki,
-      alt: villahouse,
-    },
-    {
-      id: 6,
-      title: "Villa Spitaki",
-      link: "#",
-      image: villaspiti,
-      alt: villaspiti,
-    },
-        {
-      id: 7,
-      title: "Villa Spitaki",
-      link: "#",
-      image: villahouse,
-      alt: villahouse,
-    },
-    {
-      id: 8,
-      title: "Villa Spitaki",
-      link: "#",
-      image: villaspiti,
-      alt: villaspiti,
-    },
-    {
-      id: 9,
-      title: "Villa Spitaki",
-      link: "#",
-      image: villaspitaki,
-      alt: villahouse,
+      title: "Event Venue",
+      link: "/event-venue",
+      image: eventskyView,
+      alt: eventskyView,
     },
   ];
 
@@ -75,12 +33,12 @@ function Showcase() {
         <div key={project.id} className="group flex justify-center">
           <AppLink
             to={project.link}
-            className="relative block overflow-hidden ring-1 ring-white/10 transition-all duration-500 ease-out group-hover:ring-primary/70"
+            className="relative block aspect-3/4 w-full overflow-hidden ring-1 ring-white/10 transition-all duration-500 ease-out group-hover:ring-primary/70"
           >
             <img
               src={project.image}
               alt={project.alt}
-              className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105"
+              className="absolute inset-0 h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105"
             />
 
             <span className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/75 via-black/25 to-transparent opacity-65 transition duration-500 group-hover:opacity-100" />

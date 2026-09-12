@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { project_1 } from "../../assets";
+import { project_1, kamariKitchenIsland, elenikitchenLounge, eventskyView } from "../../assets";
 import "swiper/css";
 import "swiper/css/scrollbar";
 import { blackarrow } from "../../assets";
@@ -13,50 +13,43 @@ const Work = () => {
       id: 1,
       date: "February 12th 2025",
       category: "Interior",
-      link: "#",
-      title: "Villa Spitaki",
-      img: project_1,
-      alt: "project_1",
-      first_name: "Villa",
-      last_name: "Spitaki",
+      link: "/kamari-santorinis",
+      title: "Kamari Santorinis",
+      img: kamariKitchenIsland,
+      alt: "Kamari kitchen island",
+      first_name: "Kamari ",
+      last_name: "Santorinis",
     },
     {
       id: 2,
       date: "February 12th 2025",
-      category: "Interior",
-      link: "#",
-      title: "Villa Spitaki",
-      img: project_1,
-      alt: "project_1",
-      first_name: "Villa",
-      last_name: "Spitaki",
+      category: "Renovation",
+      link: "/elenis-house",
+      title: "Eleni's House",
+      img: elenikitchenLounge,
+      alt: "elenikitchenLounge",
+      first_name: "Eleni's ",
+      last_name: "House",
     },
     {
       id: 3,
       date: "February 12th 2025",
-      category: "Interior",
-      link: "#",
-      title: "Villa Spitaki",
-      img: project_1,
-      alt: "project_1",
-      first_name: "Villa",
-      last_name: "Spitaki",
-    },
-    {
-      id: 4,
-      date: "February 12th 2025",
-      category: "Interior",
-      link: "#",
-      title: "Villa Spitaki",
-      img: project_1,
-      alt: "project_1",
-      first_name: "Villa",
-      last_name: "Spitaki",
+      category: "Architecture",
+      link: "/event-venue",
+      title: "Event Venue",
+      img: eventskyView,
+      alt: "eventskyView",
+      first_name: "Event ",
+      last_name: "Venue",
     },
   ];
 
   return (
-    <section data-aos="fade-up" data-aos-duration="1000" className="section-padding section-margin">
+    <section
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      className="section-padding section-margin"
+    >
       <h3 className="uppercase text-2xl lg:text-3xl text-center lg:text-end">
         our featured <span className="text-primary font-bold">works</span>
       </h3>
@@ -84,12 +77,12 @@ const Work = () => {
                   className="relative h-105 w-full rounded-2xl object-cover transition duration-300 group-hover:brightness-50 md:h-130"
                 />
                 <div className="wrapper absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 flex gap-x-3 items-center justify-center opacity-0 transition duration-300 group-hover:opacity-100">
-                  <span className="block transition-all duration-500 h-0.5 w-6 bg-primary sm:w-16 lg:w-0 lg:group-hover:w-16"/>
+                  <span className="block transition-all duration-500 h-0.5 w-6 bg-primary sm:w-16 lg:w-0 lg:group-hover:w-16" />
                   <h4 className="font-bold text-xl md:text-3xl lg:text-5xl tracking-wider">
                     {project.first_name}
                     <span className="text-primary">{project.last_name}</span>
                   </h4>
-                  <span className="block transition-all duration-500 h-0.5 w-6 bg-primary sm:w-16 lg:w-0 lg:group-hover:w-16"/>
+                  <span className="block transition-all duration-500 h-0.5 w-6 bg-primary sm:w-16 lg:w-0 lg:group-hover:w-16" />
                 </div>
               </AppLink>
             </div>
@@ -102,14 +95,22 @@ const Work = () => {
           onClick={() => swiperRef.current?.slidePrev()}
           className="relative inline-block px-6 py-3 border-2 border-black text-black overflow-hidden group cursor-pointer"
         >
-          <img src={blackarrow} alt="previous_slide" className="rotate-180 transition duration-300 group-hover:-translate-x-2" />
+          <img
+            src={blackarrow}
+            alt="previous_slide"
+            className="rotate-180 transition duration-300 group-hover:-translate-x-2"
+          />
         </button>
         <button
           type="button"
           onClick={() => swiperRef.current?.slideNext()}
           className="relative inline-block px-6 py-3 border-2 border-black text-black overflow-hidden group cursor-pointer"
         >
-          <img src={blackarrow} alt="next_slide"  className="transition duration-300 group-hover:translate-x-2" />
+          <img
+            src={blackarrow}
+            alt="next_slide"
+            className="transition duration-300 group-hover:translate-x-2"
+          />
         </button>
       </div>
     </section>

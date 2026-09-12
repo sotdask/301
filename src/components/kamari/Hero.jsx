@@ -1,11 +1,11 @@
 import React from "react";
-import { kamari } from "../../assets";
+import { kamariHero } from "../../assets";
 
 const Hero = () => {
   return (
     <section className="relative isolate min-h-svh w-full md:min-h-dvh">
       <img
-        src={kamari}
+        src={kamariHero}
         alt=""
         className="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover object-center brightness-40"
       />
