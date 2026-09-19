@@ -2,6 +2,9 @@ import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 
+const ACCESS_KEY = "772baf88-40d2-4406-ac3f-6b4dce5ba7ff";
+const HCAPTCHA_SITEKEY = "50b2fe65-b00b-4b9e-ad62-3ba471098be2";
+
 const fieldClass =
   "w-full min-w-0 border border-stone-300 bg-white px-3 py-2.5 text-neutral-800 outline-none transition duration-300 placeholder:text-neutral-400 focus:border-primary focus:ring-1 focus:ring-primary";
 
@@ -11,39 +14,68 @@ export default function Form() {
   const captchaRef = useRef(null);
   const [captchaToken, setCaptchaToken] = useState("");
   const [status, setStatus] = useState("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const resetCaptcha = () => {
+    setCaptchaToken("");
+    captchaRef.current?.resetCaptcha();
+  };
 
   const onSubmit = async (event) => {
     event.preventDefault();
+    setErrorMessage("");
 
     if (!captchaToken) {
-      setStatus("captcha");
+      setStatus("error");
+      setErrorMessage("Please complete the captcha before submitting.");
       return;
     }
 
     setStatus("sending");
 
-    const formData = new FormData(event.target);
-    formData.append("access_key", "772baf88-40d2-4406-ac3f-6b4dce5ba7ff");
-    formData.append("h-captcha-response", captchaToken);
+    const form = event.currentTarget;
+    const firstName = form.fname.value.trim();
+    const lastName = form.lname.value.trim();
+    const subject = form.subject.value.trim();
+
+    const payload = {
+      access_key: ACCESS_KEY,
+      name: `${firstName} ${lastName}`.trim(),
+      email: form.email.value.trim(),
+      phone: form.phone.value.trim(),
+      subject: subject || "New contact message from website",
+      message: subject || "No message provided.",
+      "h-captcha-response": captchaToken,
+    };
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        body: formData,
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
       });
 
       const data = await response.json();
 
       if (data.success) {
         setStatus("success");
-        event.target.reset();
-        setCaptchaToken("");
-        captchaRef.current?.resetCaptcha();
-      } else {
-        setStatus("error");
+        form.reset();
+        resetCaptcha();
+        return;
       }
+
+      setStatus("error");
+      setErrorMessage(
+        data.message || "Something went wrong. Please try again.",
+      );
+      resetCaptcha();
     } catch {
       setStatus("error");
+      setErrorMessage("Network error. Please check your connection and try again.");
+      resetCaptcha();
     }
   };
 
@@ -51,8 +83,7 @@ export default function Form() {
     return (
       <section className="section-margin section-padding flex w-full flex-col items-center">
         <div
-          data-aos="fade-up"
-          className="mx-auto flex w-full max-w-xl flex-col items-center bg-white px-5 py-14 text-center md:px-10 md:py-20"
+          className="mx-auto flex w-full max-w-xl animate-loading-fade-in flex-col items-center bg-white px-5 py-14 text-center md:px-10 md:py-20"
           role="status"
           aria-live="polite"
         >
@@ -196,24 +227,22 @@ export default function Form() {
 
           <HCaptcha
             ref={captchaRef}
-            sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+            sitekey={HCAPTCHA_SITEKEY}
             reCaptchaCompat={false}
             onVerify={(token) => {
               setCaptchaToken(token);
-              if (status === "captcha") setStatus("idle");
+              setErrorMessage("");
             }}
-            onExpire={() => setCaptchaToken("")}
+            onExpire={resetCaptcha}
+            onError={() => {
+              resetCaptcha();
+              setErrorMessage("Captcha failed to load. Please refresh and try again.");
+            }}
           />
 
-          {status === "captcha" && (
+          {errorMessage && (
             <p className="text-sm text-red-600" role="alert">
-              Please complete the captcha before submitting.
-            </p>
-          )}
-
-          {status === "error" && (
-            <p className="text-sm text-red-600" role="alert">
-              Something went wrong. Please try again.
+              {errorMessage}
             </p>
           )}
 
