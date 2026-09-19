@@ -13,10 +13,10 @@ const bodyCopy =
 
 const Specs = () => {
   return (
-    <section className="section-padding pt-10 md:pt-14 lg:pt-20">
-      <ul className="grid w-max max-w-full grid-cols-1 justify-items-start gap-x-12 gap-y-6 md:grid-cols-[repeat(2,max-content)] md:gap-x-16 lg:grid-cols-[repeat(3,max-content)] lg:gap-x-20 md:gap-y-8 text-lg">
+    <section className="section-padding w-full pt-10 md:pt-14 lg:pt-20">
+      <ul className="grid w-full grid-cols-1 justify-items-start gap-x-12 gap-y-6 md:grid-cols-2 md:gap-x-16 md:gap-y-8 lg:grid-cols-3 lg:gap-x-20">
         {SPECS.map((spec) => (
-          <li key={spec.label} className={`${bodyCopy}`}>
+          <li key={spec.label} className={`min-w-0 max-w-full break-words ${bodyCopy}`}>
             <span className="font-bold">{spec.label} </span>
             <span>{spec.value}</span>
           </li>
