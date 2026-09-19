@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 
@@ -9,24 +8,82 @@ const fieldClass =
 const labelClass = "text-xs uppercase tracking-[0.18em] text-neutral-500";
 
 export default function Form() {
-  const onHCaptchaChange = (token) => {
-    setValue("h-captcha-response", token);
-  };
-  const [result, setResult] = useState("");
+  const captchaRef = useRef(null);
+  const [captchaToken, setCaptchaToken] = useState("");
+  const [status, setStatus] = useState("idle");
 
   const onSubmit = async (event) => {
     event.preventDefault();
+
+    if (!captchaToken) {
+      setStatus("captcha");
+      return;
+    }
+
+    setStatus("sending");
+
     const formData = new FormData(event.target);
     formData.append("access_key", "772baf88-40d2-4406-ac3f-6b4dce5ba7ff");
+    formData.append("h-captcha-response", captchaToken);
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
 
-    const data = await response.json();
-    setResult(data.success ? "Success!" : "Error");
+      const data = await response.json();
+
+      if (data.success) {
+        setStatus("success");
+        event.target.reset();
+        setCaptchaToken("");
+        captchaRef.current?.resetCaptcha();
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   };
+
+  if (status === "success") {
+    return (
+      <section className="section-margin section-padding flex w-full flex-col items-center">
+        <div
+          data-aos="fade-up"
+          className="mx-auto flex w-full max-w-xl flex-col items-center bg-white px-5 py-14 text-center md:px-10 md:py-20"
+          role="status"
+          aria-live="polite"
+        >
+          <span className="mb-6 block h-0.5 w-14 bg-primary" />
+          <p className="text-xs uppercase tracking-[0.25em] text-primary">
+            Message sent
+          </p>
+          <h4 className="mt-4 text-2xl tracking-tight text-neutral-900 md:text-3xl">
+            Thank you
+          </h4>
+          <p className="mt-4 max-w-md text-base leading-relaxed text-neutral-600 md:text-lg">
+            We&apos;ve received your message and will get back to you as soon as
+            we can.
+          </p>
+          <button
+            type="button"
+            onClick={() => setStatus("idle")}
+            className="group relative mt-10 inline-flex cursor-pointer items-center justify-center overflow-hidden border-2 border-black px-6 py-3 text-black"
+          >
+            <span className="relative z-10 text-sm uppercase tracking-[0.2em] transition-colors duration-400 group-hover:text-white">
+              Send another message
+            </span>
+            <span
+              className="absolute top-0 left-[-10%] h-full w-0 origin-left -skew-x-12 bg-black transition-all duration-400 group-hover:w-[120%]"
+              aria-hidden="true"
+            />
+          </button>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="section-margin section-padding flex w-full flex-col items-center">
@@ -137,12 +194,36 @@ export default function Form() {
             </span>
           </label>
 
+          <HCaptcha
+            ref={captchaRef}
+            sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+            reCaptchaCompat={false}
+            onVerify={(token) => {
+              setCaptchaToken(token);
+              if (status === "captcha") setStatus("idle");
+            }}
+            onExpire={() => setCaptchaToken("")}
+          />
+
+          {status === "captcha" && (
+            <p className="text-sm text-red-600" role="alert">
+              Please complete the captcha before submitting.
+            </p>
+          )}
+
+          {status === "error" && (
+            <p className="text-sm text-red-600" role="alert">
+              Something went wrong. Please try again.
+            </p>
+          )}
+
           <button
             type="submit"
-            className="group relative mt-2 inline-flex w-full cursor-pointer items-center justify-center overflow-hidden border-2 border-black px-6 py-3 text-black md:w-auto md:self-start"
+            disabled={status === "sending"}
+            className="group relative mt-2 inline-flex w-full cursor-pointer items-center justify-center overflow-hidden border-2 border-black px-6 py-3 text-black disabled:cursor-wait disabled:opacity-60 md:w-auto md:self-start"
           >
             <span className="relative z-10 text-sm uppercase tracking-[0.2em] transition-colors duration-400 group-hover:text-white">
-              Submit
+              {status === "sending" ? "Sending..." : "Submit"}
             </span>
             <span
               className="absolute top-0 left-[-10%] h-full w-0 origin-left -skew-x-12 bg-black transition-all duration-400 group-hover:w-[120%]"
@@ -150,11 +231,6 @@ export default function Form() {
             />
           </button>
         </div>
-        <HCaptcha
-          sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
-          reCaptchaCompat={false}
-          onVerify={onHCaptchaChange}
-        />
       </form>
     </section>
   );
