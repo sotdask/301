@@ -1,14 +1,17 @@
 import React from "react";
-import { useState } from 'react';
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 const fieldClass =
   "w-full min-w-0 border border-stone-300 bg-white px-3 py-2.5 text-neutral-800 outline-none transition duration-300 placeholder:text-neutral-400 focus:border-primary focus:ring-1 focus:ring-primary";
 
-const labelClass =
-  "text-xs uppercase tracking-[0.18em] text-neutral-500";
+const labelClass = "text-xs uppercase tracking-[0.18em] text-neutral-500";
 
 export default function Form() {
+  const onHCaptchaChange = (token) => {
+    setValue("h-captcha-response", token);
+  };
   const [result, setResult] = useState("");
 
   const onSubmit = async (event) => {
@@ -18,7 +21,7 @@ export default function Form() {
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
-      body: formData
+      body: formData,
     });
 
     const data = await response.json();
@@ -37,7 +40,10 @@ export default function Form() {
         </p>
       </div>
 
-      <form onSubmit={onSubmit} className="mx-auto mt-8 w-full max-w-xl bg-white p-5 md:mt-10 md:p-8 lg:mt-12 lg:p-10">
+      <form
+        onSubmit={onSubmit}
+        className="mx-auto mt-8 w-full max-w-xl bg-white p-5 md:mt-10 md:p-8 lg:mt-12 lg:p-10"
+      >
         <div className="flex w-full flex-col gap-6">
           <div className="flex w-full flex-col gap-6 md:flex-row md:gap-5">
             <div className="flex min-w-0 flex-1 flex-col gap-2">
@@ -144,6 +150,11 @@ export default function Form() {
             />
           </button>
         </div>
+        <HCaptcha
+          sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+          reCaptchaCompat={false}
+          onVerify={onHCaptchaChange}
+        />
       </form>
     </section>
   );

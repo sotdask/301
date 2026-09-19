@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import AOS from "aos";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -16,7 +21,6 @@ import LoadingScreen from "./components/global/LoadingScreen";
 import EleniHouse from "./pages/EleniHouse";
 import EventVenue from "./pages/EventVenue";
 
-
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -30,7 +34,12 @@ function App() {
   const [showLoader, setShowLoader] = useState(true);
 
   useEffect(() => {
-    AOS.init({ duration: 800, easing: "ease-out-cubic", once: true, offset: 80 });
+    AOS.init({
+      duration: 800,
+      easing: "ease-out-cubic",
+      once: true,
+      offset: 80,
+    });
   }, []);
 
   useEffect(() => {
@@ -45,9 +54,10 @@ function App() {
   }, []);
 
   const rawBase = import.meta.env.BASE_URL;
-  const routerBase = rawBase && rawBase !== "/" && rawBase !== "/./"
-    ? rawBase.replace(/\/+$/, "")
-    : undefined;
+  const routerBase =
+    rawBase && rawBase !== "/" && rawBase !== "/./"
+      ? rawBase.replace(/\/+$/, "")
+      : undefined;
 
   if (showLoader) return <LoadingScreen />;
 
@@ -64,9 +74,8 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/articles" element={<Articles />} />
             <Route path="/kamari-santorinis" element={<Kamari />} />
-                        <Route path="/elenis-house" element={<EleniHouse />} />
-                                                <Route path="/event-venue" element={<EventVenue />} />
-
+            <Route path="/elenis-house" element={<EleniHouse />} />
+            <Route path="/event-venue" element={<EventVenue />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/cookies-policy" element={<CookiesPolicy />} />
             <Route path="*" element={<NotFound />} />
