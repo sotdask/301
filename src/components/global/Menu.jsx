@@ -72,7 +72,7 @@ function Menu() {
       />
 
       <nav
-        className={`fixed inset-0 z-65 flex h-dvh max-h-dvh flex-col items-center justify-center overflow-y-auto overscroll-contain bg-black/95 pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)] backdrop-blur-md transition-transform duration-500 ease-out ${
+        className={`fixed inset-0 z-65 flex min-h-screen max-h-dvh flex-col items-center justify-center overflow-y-auto overscroll-contain bg-black/95 pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)] backdrop-blur-md transition-transform duration-500 ease-out ${
           open ? "translate-y-0" : "-translate-y-full"
         }`}
         aria-hidden={!open}
