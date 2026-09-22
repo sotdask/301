@@ -6,35 +6,21 @@ const SingleArticle = () => {
   const singleArticles = [
     {
       id: 1,
-      date: "20 May 2026",
-      title: "Minimal Living: ο Xώρος Aναπνέει με Λιγότερα.",
+      date: "22 September 2026",
+      title:
+        "The Architecture of Santorini: Form Shaped by Landscape and Light",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt esse eos nam beatae sequi natus ut neque. Beatae culpa sint consequuntur, et quos maiores, odio maxime ea optio vero illo.",
-      link: "#",
+        "From the island's small villages to the cliffs of the Caldera, Santorini reveals an architecture that is anything but accidental, carefully and thoroughly expressing geology, climate, and the beauty of Aegean light.",
+      link: "/articles/architecture-of-santorini",
     },
     {
       id: 2,
-      date: "20 May 2026",
-      title: "Η Επιστροφή του Φυσικού Υλικού στη Σύγχρονη Κατοικία.",
+      date: "22 September 2026",
+      title:
+        "When the Roof Becomes the Architecture: Renovation, Wood, and Light",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt esse eos nam beatae sequi natus ut neque. Beatae culpa sint consequuntur, et quos maiores, odio maxime ea optio vero illo.",
-      link: "#",
-    },
-    {
-      id: 3,
-      date: "20 May 2026",
-      title: "Minimal Living: ο Xώρος Aναπνέει με Λιγότερα.",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt esse eos nam beatae sequi natus ut neque. Beatae culpa sint consequuntur, et quos maiores, odio maxime ea optio vero illo.",
-      link: "#",
-    },
-    {
-      id: 4,
-      date: "20 May 2026",
-      title: "Minimal Living: ο Xώρος Aναπνέει με Λιγότερα.",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt esse eos nam beatae sequi natus ut neque. Beatae culpa sint consequuntur, et quos maiores, odio maxime ea optio vero illo.",
-      link: "#",
+        "In residential renovation, the strongest interventions are often not decorative. They are structural decisions that redefine how a house feels, how it holds light, and how daily life unfolds inside it.",
+      link: "/articles/when-the-roof-becomes-the-architecture",
     },
   ];
 
@@ -43,20 +29,22 @@ const SingleArticle = () => {
       {singleArticles.map((singleArticle) => (
         <div key={singleArticle.id} className="border-t-2">
           <div className="section-padding">
-            <div className="card py-6 flex flex-col">
-              <span className="text-primary font-bold">{singleArticle.date}</span>
-              <div className="wrapper mx-auto max-w-205 mt-3 flex w-full flex-col justify-center">
-                <a
-                  href={singleArticle.link}
-                  className="mb-3 text-primary text-lg md:text-2xl lg:text-3xl italic transition duration-300 hover:text-black"
+            <div className="card flex flex-col py-6">
+              <span className="font-bold text-primary">
+                {singleArticle.date}
+              </span>
+              <div className="wrapper mx-auto mt-3 flex w-full max-w-205 flex-col justify-center">
+                <AppLink
+                  to={singleArticle.link}
+                  className="mb-3 text-lg italic text-primary transition duration-300 hover:text-black md:text-2xl lg:text-3xl"
                 >
                   {singleArticle.title}
-                </a>
+                </AppLink>
                 <p>{singleArticle.description}</p>
               </div>
               <AppLink
                 to={singleArticle.link}
-                className="text-sm mt-3 flex gap-x-3 justify-end uppercase tracking-wider text-primary transition duration-300 sm:text-base md:text-xl hover:translate-x-3"
+                className="mt-3 flex justify-end gap-x-3 text-sm uppercase tracking-wider text-primary transition duration-300 hover:translate-x-3 sm:text-base md:text-xl"
               >
                 read more
                 <img src={arrow} alt="" />
@@ -65,7 +53,6 @@ const SingleArticle = () => {
           </div>
         </div>
       ))}
-      ;
     </>
   );
 };

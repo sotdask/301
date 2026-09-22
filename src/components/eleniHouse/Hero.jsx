@@ -35,7 +35,7 @@ const Hero = () => {
           data-aos-duration="1000"
           className="mt-10 max-w-xl text-xl text-white lg:text-2xl"
         >
-          Where Modernity Meets Greece&apos;s Essence
+          A Renovation in Timber, Light, and Space
         </p>
       </div>
     </section>

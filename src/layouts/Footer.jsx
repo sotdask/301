@@ -90,18 +90,18 @@ function Footer() {
               <ul className="text-lg space-y-2">
                 <li>
                   <a
-                    href="mailto:sotdaskalou@gmail.com"
+                    href="mailto:301archstudio@gmail.com"
                     className="transition duration-300 hover:text-primary"
                   >
-                    sotdaskalou@gmail.com
+                    301archstudio@gmail.com
                   </a>
                 </li>
                 <li>
                   <a
-                    href="tel:6940883297"
+                    href="tel:6943023146"
                     className="transition duration-300 hover:text-primary"
                   >
-                    6940883297
+                    694 302 3146
                   </a>
                 </li>
               </ul>
@@ -112,10 +112,10 @@ function Footer() {
                 BUSINESS HOURS
               </h4>
               <ul className="text-lg space-y-2">
-                <li>Monday: 9:00-17:00</li>
-                <li>Tuesday: 9:00-17:00</li>
-                <li>Wednesday: 9:00-17:00</li>
-                <li>Thursday: 9:00-17:00</li>
+                <li>Monday: 9:00-21:00</li>
+                <li>Tuesday: 9:00-21:00</li>
+                <li>Wednesday: 9:00-21:00</li>
+                <li>Thursday: 9:00-21:00</li>
                 <li>Saturday: Closed</li>
                 <li>Sunday: Closed</li>
               </ul>

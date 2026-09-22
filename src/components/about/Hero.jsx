@@ -20,11 +20,12 @@ const Hero = () => {
               who we are
             </h2>
           </div>
-          <p className="my-3 max-w-xl text-base text-white text-center lg:text-start sm:my-8 md:my-12 md:max-w-150 md:text-lg lg:text-xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+          <p className="my-3 max-w-xl text-base leading-relaxed text-white text-center lg:text-start sm:my-8 md:my-12 md:max-w-150 md:text-lg lg:text-xl">
+            We are 301 Architecture Studio, a young architectural team shaped by
+            a shared passion for design and creative problem-solving. Working
+            across Greece and Cyprus, we approach every project with fresh
+            perspective, attention to detail, and a genuine desire to turn each
+            idea into a space that feels thoughtful, functional, and unique.
           </p>
         </div>
         <div className="wrapper flex flex-col items-center lg:items-end">
@@ -37,11 +38,12 @@ const Hero = () => {
               what we offer
             </h2>
           </div>
-          <p className="my-3 max-w-xl text-base text-white text-center lg:text-end sm:my-8 md:my-12 md:max-w-150 md:text-lg lg:text-xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+          <p className="my-3 max-w-xl text-base leading-relaxed text-white text-center lg:text-end sm:my-8 md:my-12 md:max-w-150 md:text-lg lg:text-xl">
+            We offer architecture and interior design services that move from
+            concept to delivery with clarity and care. From residential
+            renovations to hospitality and landscape concepts, we design spaces
+            with intention, where every detail carries meaning and every room
+            becomes part of a complete experience.
           </p>
         </div>
 

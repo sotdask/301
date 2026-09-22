@@ -1,6 +1,6 @@
-import hero from "./hero.png";
-import projectshero from "./projectshero.png";
-import abouthero from "./abouthero.png";
+import hero from "./hero.avif";
+import projectshero from "./projectshero.avif";
+import abouthero from "./abouthero.avif";
 import logo from "./logo.svg";
 import loadinglogo from "./loading-logo.png";
 import footerlogo from "./footerlogo.svg";
@@ -10,7 +10,6 @@ import facebook from "./facebook.svg";
 import instagram from "./instagram.svg";
 import tiktok from "./tiktok.svg";
 import parallax from "./parallax.png";
-import project_1 from "./swiper-project-1.png";
 import staff from "./staff.png";
 import villaspitaki from "./villaspitaki.png";
 import villahouse from "./villahouse.png";
@@ -42,6 +41,9 @@ import eventBlueprints from "./eventvenue/blueprints.avif"
 import eventPool from "./eventvenue/pool.avif"
 import eventPorch from "./eventvenue/porch.avif"
 import eventskyView from "./eventvenue/sky-view.avif"
+import eleni from "./eleni.avif"
+import marios from "./marios.avif"
+import giorgos from "./giorgos.avif"
 
 
 
@@ -59,7 +61,6 @@ export {
   instagram,
   tiktok,
   parallax,
-  project_1,
   staff,
   villaspitaki,
   villahouse,
@@ -92,4 +93,7 @@ export {
   eventPool,
   eventPorch,
   eventskyView,
+  eleni,
+  marios,
+  giorgos,
 };

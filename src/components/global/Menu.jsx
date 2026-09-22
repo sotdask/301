@@ -7,8 +7,7 @@ const NAV_ITEMS = [
   { to: "/", text: "HOME" },
   { to: "/about", text: "ABOUT" },
   { to: "/projects", text: "WORK" },
-    { to: "/articles", text: "ARTICLES" },
-
+  { to: "/articles", text: "ARTICLES" },
   { to: "/contact", text: "CONTACT" },
 ];
 
@@ -20,9 +19,26 @@ function Menu() {
   const close = () => setOpen(false);
 
   useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
+    if (!open) {
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.width = "";
+      document.body.style.top = "";
+      return;
+    }
+
+    const scrollY = window.scrollY;
+    document.body.style.overflow = "hidden";
+    document.body.style.position = "fixed";
+    document.body.style.width = "100%";
+    document.body.style.top = `-${scrollY}px`;
+
     return () => {
       document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.width = "";
+      document.body.style.top = "";
+      window.scrollTo(0, scrollY);
     };
   }, [open]);
 
@@ -56,12 +72,12 @@ function Menu() {
       />
 
       <nav
-        className={`fixed inset-x-0 top-0 z-65 flex min-h-screen flex-col items-center justify-center gap-32 bg-black/95 backdrop-blur-md transition-transform duration-500 ease-out ${
+        className={`fixed inset-0 z-65 flex h-dvh max-h-dvh flex-col items-center justify-center overflow-y-auto overscroll-contain bg-black/95 pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)] backdrop-blur-md transition-transform duration-500 ease-out ${
           open ? "translate-y-0" : "-translate-y-full"
         }`}
         aria-hidden={!open}
       >
-        <ul className="flex flex-col items-center gap-y-16 text-xl tracking-wider">
+        <ul className="flex flex-col items-center gap-y-10 py-16 text-xl tracking-wider sm:gap-y-14">
           {NAV_ITEMS.map((item, i) => (
             <li
               key={item.to + item.text}
@@ -76,15 +92,6 @@ function Menu() {
             </li>
           ))}
         </ul>
-        {/* <span
-          className={`text-xl tracking-wider text-primary transition-all duration-500 ${
-            open ? "translate-y-0 opacity-100" : "-translate-y-3 opacity-0"
-          }`}
-          style={{ transitionDelay: open ? `${NAV_ITEMS.length * 90}ms` : "0ms" }}
-          aria-label="Language"
-        >
-          EN | EL
-        </span> */}
       </nav>
     </div>
   );

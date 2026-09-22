@@ -11,23 +11,21 @@ const Blog = () => {
       </h3>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-4 my-6 lg:my-10" data-gsap-stagger>
         <div className="border-b-primary border-b-3 lg:border-r-primary lg:border-r-3 lg:border-b-0 pt-3 pb-6 md:py-6 lg:px-10">
-          <a
-            href="#"
-            className="text-primary text-lg md:text-2xl lg:text-3xl italic transition duration-300 hover:text-black"
+          <Link
+            to="/articles/architecture-of-santorini"
+            className="text-lg italic text-primary transition duration-300 hover:text-black md:text-2xl lg:text-3xl"
           >
-            Minimal Living: ο Xώρος Aναπνέει με Λιγότερα.
-          </a>
+            The Architecture of Santorini: Form Shaped by Landscape and Light
+          </Link>
           <p className="my-3 lg:my-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud .Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            .
+            From the island's small villages to the cliffs of the Caldera,
+            Santorini reveals an architecture that is anything but accidental,
+            carefully and thoroughly expressing geology, climate, and the beauty
+            of Aegean light.
           </p>
           <Link
-            to="/articles"
-            className="ml-auto inline-flex w-fit items-center gap-x-3 border-b lg:border-b-2 border-current pb-0.5 text-sm uppercase tracking-wider transition duration-300 sm:text-sm md:text-base hover:translate-x-3"
+            to="/articles/architecture-of-santorini"
+            className="ml-auto inline-flex w-fit items-center gap-x-3 border-b border-current pb-0.5 text-sm uppercase tracking-wider transition duration-300 hover:translate-x-3 sm:text-sm md:text-base lg:border-b-2"
           >
             read the article
             <img src={blackarrow} alt="" />
@@ -35,22 +33,19 @@ const Blog = () => {
         </div>
         <div className="py-3 md:py-6 lg:px-10">
           <Link
-            to="/articles"
-            className="text-primary text-lg md:text-2xl lg:text-3xl italic transition duration-300 hover:text-black"
+            to="/articles/when-the-roof-becomes-the-architecture"
+            className="text-lg italic text-primary transition duration-300 hover:text-black md:text-2xl lg:text-3xl"
           >
-            Η Επιστροφή του Φυσικού Υλικού στη Σύγχρονη Κατοικία.
+            When the Roof Becomes the Architecture: Renovation, Wood, and Light
           </Link>
           <p className="my-3 lg:my-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud .Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            .
+            In residential renovation, the strongest interventions are often not
+            decorative. They are structural decisions that redefine how a house
+            feels, how it holds light, and how daily life unfolds inside it.
           </p>
           <Link
-            to="/articles"
-            className="ml-auto inline-flex w-fit items-center gap-x-3 border-b lg:border-b-2 border-current pb-0.5 text-sm uppercase tracking-wider transition duration-300 sm:text-sm md:text-base hover:translate-x-3"
+            to="/articles/when-the-roof-becomes-the-architecture"
+            className="ml-auto inline-flex w-fit items-center gap-x-3 border-b border-current pb-0.5 text-sm uppercase tracking-wider transition duration-300 hover:translate-x-3 sm:text-sm md:text-base lg:border-b-2"
           >
             read the article
             <img src={blackarrow} alt="" />

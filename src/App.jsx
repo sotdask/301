@@ -20,6 +20,8 @@ import Footer from "./layouts/Footer";
 import LoadingScreen from "./components/global/LoadingScreen";
 import EleniHouse from "./pages/EleniHouse";
 import EventVenue from "./pages/EventVenue";
+import SantoriniArchitecture from "./pages/SantoriniArchitecture";
+import ExposedStructureLiving from "./pages/ExposedStructureLiving";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -73,6 +75,14 @@ function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/articles" element={<Articles />} />
+            <Route
+              path="/articles/architecture-of-santorini"
+              element={<SantoriniArchitecture />}
+            />
+            <Route
+              path="/articles/when-the-roof-becomes-the-architecture"
+              element={<ExposedStructureLiving />}
+            />
             <Route path="/kamari-santorinis" element={<Kamari />} />
             <Route path="/elenis-house" element={<EleniHouse />} />
             <Route path="/event-venue" element={<EventVenue />} />

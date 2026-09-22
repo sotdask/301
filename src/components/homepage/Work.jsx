@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { project_1, kamariKitchenIsland, elenikitchenLounge, eventskyView } from "../../assets";
+import { kamariKitchenIsland, elenikitchenLounge, eventskyView } from "../../assets";
 import "swiper/css";
 import "swiper/css/scrollbar";
 import { blackarrow } from "../../assets";

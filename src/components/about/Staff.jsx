@@ -1,11 +1,10 @@
 import React, { useRef } from "react";
-import AppLink from "../global/AppLink";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/scrollbar";
-import { staff } from "../../assets";
+import { eleni, marios, giorgos } from "../../assets";
 import { blackarrow } from "../../assets";
 
 const Staff = () => {
@@ -14,39 +13,25 @@ const Staff = () => {
     {
       id: 1,
       title: "founding partner",
-      link: "#",
-      image: staff,
+      image: giorgos,
       alt: "staff name",
-      name: "sotirios daskalou",
+      name: "georgios stagkos",
       profession: "architecture & design",
     },
     {
       id: 2,
       title: "founding partner",
-      link: "#",
-      image: staff,
+      image: eleni,
       alt: "staff name",
-      name: "sotirios daskalou",
+      name: "eleni geronimou",
       profession: "architecture & design",
     },
     {
       id: 3,
       title: "founding partner",
-      link: "#",
-      image: staff,
+      image: marios,
       alt: "staff name",
-
-      name: "sotirios daskalou",
-      profession: "architecture & design",
-    },
-    {
-      id: 4,
-      title: "founding partner",
-      link: "#",
-      image: staff,
-      alt: "staff name",
-
-      name: "sotirios daskalou",
+      name: "marios zaranis",
       profession: "architecture & design",
     },
   ];
@@ -57,8 +42,7 @@ const Staff = () => {
         meet our <span className="text-primary font-bold">staff</span>
       </h3>
       <p className="max-w-110 text-center lg:text-start">
-        Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat.
+        Meet the talented individuals who drive our firm's success with their dedication and hard work.
       </p>
       <Swiper
         className="site-swiper mt-10 mb-6"
@@ -92,29 +76,27 @@ const Staff = () => {
             key={member.id}
             className="flex! justify-center lg:justify-start"
           >
-            <AppLink
-              to={member.link}
-              title={member.name}
-              className="group overflow-hidden relative"
+            <div
+              className="group relative block aspect-3/4 w-full overflow-hidden"
             >
               <img
                 src={member.image}
                 alt={member.alt}
-                className="brightness-75 lg:brightness-100 transition duration-300 group-hover:scale-110 group-hover:brightness-75"
+                className="absolute inset-0 h-full w-full object-cover object-top brightness-75 transition duration-300 group-hover:scale-110 group-hover:brightness-75 lg:brightness-100"
               />
-              <div className="wrapper opacity-100 lg:opacity-0 absolute bottom-0 left-5 duration-300 transition group-hover:opacity-100">
-                <h5 className="text-primary uppercase tracking-wider text-lg">
+              <div className="wrapper absolute bottom-0 left-5 opacity-100 transition duration-300 lg:opacity-0 group-hover:opacity-100">
+                <h5 className="text-lg uppercase tracking-wider text-primary">
                   {member.title}
                 </h5>
-                <h4 className="mt-1 mb-3 text-white uppercase tracking-wider text-xl">
+                <h4 className="mt-1 mb-3 text-xl uppercase tracking-wider text-white">
                   {member.name}
                 </h4>
                 <span className="block h-0.5 w-8 bg-primary sm:w-18" />
-                <h5 className="mt-3 mb-5 text-primary uppercase tracking-wider text-base font-bold">
+                <h5 className="mt-3 mb-5 text-base font-bold uppercase tracking-wider text-primary">
                   {member.profession}
                 </h5>
               </div>
-            </AppLink>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>

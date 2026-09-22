@@ -10,14 +10,19 @@ const KNOWN_ROUTES = new Set([
   "/projects",
   "/contact",
   "/articles",
+  "/articles/architecture-of-santorini",
+  "/articles/when-the-roof-becomes-the-architecture",
   "/kamari-santorinis",
+  "/elenis-house",
+  "/event-venue",
   "/privacy-policy",
   "/cookies-policy",
 ]);
 
 function Header() {
   const { pathname } = useLocation();
-  const isArticlesPage = pathname === "/articles";
+  const isArticlesPage =
+    pathname === "/articles" || pathname.startsWith("/articles/");
   const isNotFoundPage = !KNOWN_ROUTES.has(pathname);
   const [isScrolled, setIsScrolled] = useState(false);
   const showSolidHeader = isScrolled || isArticlesPage || isNotFoundPage;

@@ -8,27 +8,27 @@ const locations = [
   {
     id: "thessaloniki",
     label: "Thessaloniki",
-    phoneTel: "+306940883297",
-    phoneDisplay: "+30 694 088 3297",
+    phoneTel: "6943023146",
+    phoneDisplay: "+30 694 302 3146",
   },
   {
     id: "santorini",
     label: "Santorini",
-    phoneTel: "+306971112233",
-    phoneDisplay: "+30 697 111 2233",
+    phoneTel: "6947819692",
+    phoneDisplay: "+30 694 781 9692",
   },
   {
     id: "irakleio",
     label: "Irakleio",
-    phoneTel: "+306982223344",
-    phoneDisplay: "+30 698 222 3344",
+    phoneTel: "6945113282",
+    phoneDisplay: "+30 694 511 3282",
   },
-  {
+ /* {
     id: "cyprus",
     label: "Cyprus",
     phoneTel: "+35799111222",
     phoneDisplay: "+357 99 111 222",
-  },
+  },*/
 ];
 
 const ContactInfo = () => {
@@ -122,14 +122,14 @@ const ContactInfo = () => {
         </header>
         <div className="wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-2">
           <a
-            href="mailto:sotdaskalou@gmail.com"
+            href="mailto:301archstudio@gmail.com"
             className="bodyWrapper mt-6 flex w-full flex-col items-start gap-2 rounded-xl border border-stone-200 bg-white p-6 text-neutral-700 shadow-sm transition duration-500 ease-in-out hover:-translate-y-2 hover:border-primary/40 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 md:gap-4 md:p-8"
           >
             <div className="rounded-xl bg-primary/30 p-2">
               <IoIosMail className="text-4xl text-primary" aria-hidden="true" />
             </div>
             <span className="text-lg font-bold tracking-wide text-neutral-900 sm:text-lg">
-              sotdaskalou@gmail.com
+              301archstudio@gmail.com
             </span>
           </a>
           <a
