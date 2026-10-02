@@ -10,21 +10,21 @@ const Info = () => {
     <section className="section-padding section-margin flex flex-col items-center text-center">
       <div className="flex justify-center" data-gsap-stagger>
         <h2 className="mr-1 text-xl uppercase text-primary md:text-2xl lg:mr-3 lg:text-3xl">
-          {t("info.welcome")}
+         welcome!
         </h2>
         <span
           data-aos="fade-up"
           data-aos-duration="1000"
           className="mr-1 text-xl uppercase md:text-2xl lg:mr-3 lg:text-3xl"
         >
-          {t("info.we")}
+          we are
         </span>
         <span
           data-aos="fade-up"
           data-aos-duration="1000"
           className="mb-4 text-xl font-bold uppercase md:text-2xl lg:mb-8 lg:text-3xl"
         >
-          {t("info.studio")}
+          301 studio
         </span>
       </div>
       <p className="mb-3 max-w-205 lg:mb-5">{t("info.p1")}</p>

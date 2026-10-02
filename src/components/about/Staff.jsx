@@ -1,10 +1,7 @@
 import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/scrollbar";
 import { eleni, marios, giorgos } from "../../assets";
 import { blackarrow } from "../../assets";
 
@@ -45,7 +42,6 @@ const Staff = () => {
       <p className="max-w-110 text-center lg:text-start">{t("staff.intro")}</p>
       <Swiper
         className="site-swiper mt-10 mb-6"
-        modules={[Navigation]}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
@@ -67,8 +63,6 @@ const Staff = () => {
             spaceBetween: 50,
           },
         }}
-        navigation
-        pagination={{ clickable: true }}
       >
         {members.map((member) => (
           <SwiperSlide
