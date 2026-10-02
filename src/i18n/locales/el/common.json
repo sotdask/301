@@ -1,10 +1,10 @@
 {
   "nav": {
-    "home": "Αρχικη",
-    "about": "Σχετικα",
+    "home": "Αρχική",
+    "about": "Σχετικά",
     "work": "Έργα",
     "articles": "Άρθρα",
-    "contact": "Επικοινωνια"
+    "contact": "Επικοινωνία"
   },
   "footer": {
     "navigation": "ΠΛΟΗΓΗΣΗ",
@@ -21,11 +21,25 @@
     "thursday": "Πέμπτη: 9:00-21:00",
     "saturday": "Σάββατο: Κλειστά",
     "sunday": "Κυριακή: Κλειστά",
+    "rights": "© {{year}} 301 Architecture Studio. Με επιφύλαξη παντός δικαιώματος",
     "designBy": "Design & Development by SD"
   },
   "brand": {
     "tagline": "Architecture & Interior Design",
     "studio": "301 Architecture Studio"
+  },
+  "a11y": {
+    "skipToContent": "Μετάβαση στο κύριο περιεχόμενο",
+    "openMenu": "Άνοιγμα μενού",
+    "closeMenu": "Κλείσιμο μενού",
+    "language": "Γλώσσα",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "tiktok": "TikTok",
+    "linkedin": "LinkedIn",
+    "prevSlide": "Προηγούμενη διαφάνεια",
+    "nextSlide": "Επόμενη διαφάνεια",
+    "logoHome": "301 Architecture Studio — Αρχική"
   },
   "notFound": {
     "title": "Η σελίδα δεν βρέθηκε",
@@ -40,5 +54,59 @@
     "allArticles": "Όλα τα άρθρα",
     "backToArticles": "Πίσω στα άρθρα",
     "exploreWork": "εξερευνήστε τα έργα μας"
+  },
+  "seo": {
+    "home": {
+      "title": "301 Architecture Studio | Architecture & Interior Design",
+      "description": "Νεαρό architecture studio με έργα σε Ελλάδα και Κύπρο. Σχεδιάζουμε κατοικίες, hospitality και interiors με πρόθεση, φως και λεπτομέρεια."
+    },
+    "about": {
+      "title": "Σχετικά με εμάς",
+      "description": "Γνωρίστε το 301 Architecture Studio — την ομάδα, την προσέγγιση και τις υπηρεσίες architecture & interior design."
+    },
+    "projects": {
+      "title": "Έργα",
+      "description": "Εξερευνήστε τα έργα του 301 Architecture Studio: κατοικίες, ανακαινίσεις και hospitality concepts."
+    },
+    "contact": {
+      "title": "Επικοινωνία",
+      "description": "Επικοινωνήστε με το 301 Architecture Studio. Μοιραστείτε το brief σας και θα επικοινωνήσουμε μαζί σας."
+    },
+    "articles": {
+      "title": "Άρθρα",
+      "description": "Άρθρα για architecture, ανακαίνιση, υλικά και σχεδιασμό από το 301 Architecture Studio."
+    },
+    "articleSantorini": {
+      "title": "Η Αρχιτεκτονική της Σαντορίνης",
+      "description": "Πώς η γεωλογία, το φως και το τοπίο διαμορφώνουν την αρχιτεκτονική της Σαντορίνης."
+    },
+    "articleRoof": {
+      "title": "Όταν η Στέγη Γίνεται Αρχιτεκτονική",
+      "description": "Για τη δομή, το ξύλο και το φως στις οικιστικές ανακαινίσεις — με αναφορά στο Eleni's House."
+    },
+    "kamari": {
+      "title": "Kamari Santorinis",
+      "description": "Οικιστική ανακαίνιση στο Καμάρι της Σαντορίνης από το 301 Architecture Studio."
+    },
+    "eleni": {
+      "title": "Eleni's House",
+      "description": "Οικιστική ανακαίνιση στο Ηράκλειο Κρήτης — ξύλο, φως και εκτεθειμένη δομή."
+    },
+    "eventVenue": {
+      "title": "Event Venue",
+      "description": "Χώρος εκδηλώσεων και hospitality concept στη Σαντορίνη από το 301 Architecture Studio."
+    },
+    "privacy": {
+      "title": "Πολιτική Απορρήτου",
+      "description": "Πολιτική απορρήτου και GDPR πληροφορίες για τον ιστότοπο του 301 Architecture Studio."
+    },
+    "cookies": {
+      "title": "Πολιτική Cookies",
+      "description": "Πληροφορίες για τη χρήση cookies στον ιστότοπο του 301 Architecture Studio."
+    },
+    "notFound": {
+      "title": "Η σελίδα δεν βρέθηκε",
+      "description": "Η σελίδα που ζητήσατε δεν υπάρχει."
+    }
   }
 }

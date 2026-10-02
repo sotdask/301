@@ -2,11 +2,11 @@ import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { eleni, marios, giorgos } from "../../assets";
-import { blackarrow } from "../../assets";
+import { eleni, marios, giorgos, blackarrow } from "../../assets";
 
 const Staff = () => {
   const { t } = useTranslation("about");
+  const { t: tc } = useTranslation("common");
   const swiperRef = useRef(null);
   const members = [
     {
@@ -96,10 +96,12 @@ const Staff = () => {
           type="button"
           onClick={() => swiperRef.current?.slidePrev()}
           className="relative inline-block px-6 py-3 border-2 border-black text-black overflow-hidden group cursor-pointer"
+          aria-label={tc("a11y.prevSlide")}
         >
           <img
             src={blackarrow}
-            alt="previous_slide"
+            alt=""
+            aria-hidden="true"
             className="rotate-180 transition duration-300 group-hover:-translate-x-2"
           />
         </button>
@@ -107,10 +109,12 @@ const Staff = () => {
           type="button"
           onClick={() => swiperRef.current?.slideNext()}
           className="relative inline-block px-6 py-3 border-2 border-black text-black overflow-hidden group cursor-pointer"
+          aria-label={tc("a11y.nextSlide")}
         >
           <img
             src={blackarrow}
-            alt="next_slide"
+            alt=""
+            aria-hidden="true"
             className="transition duration-300 group-hover:translate-x-2"
           />
         </button>

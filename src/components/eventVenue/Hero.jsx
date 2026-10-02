@@ -10,6 +10,7 @@ const Hero = () => {
       <img
         src={eventPorch}
         alt=""
+        aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover object-center brightness-40"
       />
       <div className="relative z-10 flex min-h-svh w-full flex-col items-center justify-center section-padding pb-24 pt-32 text-center">

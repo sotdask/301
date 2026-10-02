@@ -10,6 +10,7 @@ const Hero = () => {
       <img
         src={projectshero}
         alt=""
+        aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover object-center"
       />
       <div className="relative z-10 flex flex-col items-center justify-center min-h-svh w-full section-padding">

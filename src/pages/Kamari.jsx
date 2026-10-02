@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Hero from "../components/kamari/Hero";
 import Specs from "../components/kamari/Specs";
 import Body from "../components/kamari/Body";

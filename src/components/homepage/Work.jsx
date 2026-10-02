@@ -9,35 +9,39 @@ import AppLink from "../global/AppLink";
 
 const Work = () => {
   const { t } = useTranslation("home");
+  const { t: tc } = useTranslation("common");
   const swiperRef = useRef(null);
   const projects = [
     {
       id: 1,
       categoryKey: "interior",
+      dateKey: "date1",
       link: "/kamari-santorinis",
       title: "Kamari Santorinis",
       img: kamariKitchenIsland,
-      alt: "Kamari kitchen island",
+      alt: "Kamari Santorinis kitchen island",
       first_name: "Kamari ",
       last_name: "Santorinis",
     },
     {
       id: 2,
       categoryKey: "renovation",
+      dateKey: "date2",
       link: "/elenis-house",
       title: "Eleni's House",
       img: elenikitchenLounge,
-      alt: "elenikitchenLounge",
+      alt: "Eleni's House kitchen and lounge",
       first_name: "Eleni's ",
       last_name: "House",
     },
     {
       id: 3,
       categoryKey: "architecture",
+      dateKey: "date3",
       link: "/event-venue",
       title: "Event Venue",
       img: eventskyView,
-      alt: "eventskyView",
+      alt: "Event Venue aerial view",
       first_name: "Event ",
       last_name: "Venue",
     },
@@ -66,7 +70,7 @@ const Work = () => {
             <div className="group relative">
               <div className="wrapper mb-2 flex items-center justify-center gap-x-3 md:justify-start">
                 <span className="block h-0.5 w-6 bg-primary sm:w-16" />
-                <p className="text-base">{t("work.date")}</p>
+                <p className="text-base">{t(`work.${project.dateKey}`)}</p>
                 <span className="block h-0.5 w-6 bg-primary sm:w-16" />
                 <p className="text-base">
                   {t(`work.categories.${project.categoryKey}`)}
@@ -96,10 +100,12 @@ const Work = () => {
           type="button"
           onClick={() => swiperRef.current?.slidePrev()}
           className="group relative inline-block cursor-pointer overflow-hidden border-2 border-black px-6 py-3 text-black"
+          aria-label={tc("a11y.prevSlide")}
         >
           <img
             src={blackarrow}
-            alt="previous_slide"
+            alt=""
+            aria-hidden="true"
             className="rotate-180 transition duration-300 group-hover:-translate-x-2"
           />
         </button>
@@ -107,10 +113,12 @@ const Work = () => {
           type="button"
           onClick={() => swiperRef.current?.slideNext()}
           className="group relative inline-block cursor-pointer overflow-hidden border-2 border-black px-6 py-3 text-black"
+          aria-label={tc("a11y.nextSlide")}
         >
           <img
             src={blackarrow}
-            alt="next_slide"
+            alt=""
+            aria-hidden="true"
             className="transition duration-300 group-hover:translate-x-2"
           />
         </button>

@@ -10,7 +10,7 @@ function Navbar() {
   return (
     <>
       <Menu />
-      <nav className="hidden lg:flex">
+      <nav className="hidden lg:flex" aria-label={t("footer.navigation")}>
         <ul className="flex gap-x-10 text-xl tracking-wider text-white">
           <li>
             <Link

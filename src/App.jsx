@@ -19,6 +19,9 @@ import Header from "./layouts/Header";
 import Footer from "./layouts/Footer";
 import LoadingScreen from "./components/global/LoadingScreen";
 import FloatingLanguageToggle from "./components/global/FloatingLanguageToggle";
+import DocumentMeta from "./components/global/DocumentMeta";
+import SkipToContent from "./components/global/SkipToContent";
+import JsonLd from "./components/global/JsonLd";
 import EleniHouse from "./pages/EleniHouse";
 import EventVenue from "./pages/EventVenue";
 import SantoriniArchitecture from "./pages/SantoriniArchitecture";
@@ -67,9 +70,12 @@ function App() {
   return (
     <Router basename={routerBase}>
       <ScrollToTop />
+      <DocumentMeta />
+      <JsonLd />
       <div className="min-h-screen flex flex-col">
+        <SkipToContent />
         <Header />
-        <main className="flex-1">
+        <main id="main-content" className="flex-1" tabIndex={-1}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

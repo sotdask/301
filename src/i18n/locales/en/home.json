@@ -18,7 +18,9 @@
   "work": {
     "title": "our featured",
     "titleAccent": "works",
-    "date": "February 12th 2025",
+    "date1": "September 2025",
+    "date2": "May 2024",
+    "date3": "October 2024",
     "categories": {
       "interior": "Interior",
       "renovation": "Renovation",

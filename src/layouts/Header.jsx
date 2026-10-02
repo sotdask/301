@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { logo } from "../assets/index";
-import Menu from "../components/global/Menu";
 import Navbar from "./Navbar";
 
 const KNOWN_ROUTES = new Set([
@@ -20,6 +20,7 @@ const KNOWN_ROUTES = new Set([
 ]);
 
 function Header() {
+  const { t } = useTranslation("common");
   const { pathname } = useLocation();
   const isArticlesPage =
     pathname === "/articles" || pathname.startsWith("/articles/");
@@ -47,15 +48,15 @@ function Header() {
       }`}
     >
       <div className="section-padding flex items-center justify-between">
-        <a href="/">
+        <Link to="/" aria-label={t("a11y.logoHome")}>
           <img
             src={logo}
-            alt="logo"
+            alt={t("brand.studio")}
             className={`transition-all duration-300 ${
               showSolidHeader ? "w-28 md:w-32" : "w-32 md:w-40"
             }`}
           />
-        </a>
+        </Link>
         <Navbar />
       </div>
     </header>

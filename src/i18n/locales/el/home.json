@@ -18,7 +18,9 @@
   "work": {
     "title": "τα επιλεγμένα",
     "titleAccent": "έργα μας",
-    "date": "12 Φεβρουαρίου 2025",
+    "date1": "Σεπτέμβριος 2025",
+    "date2": "Μάϊος 2024",
+    "date3": "Οκτώβριος 2024",
     "categories": {
       "interior": "Interior",
       "renovation": "Renovation",
@@ -38,7 +40,7 @@
     "allArticles": "Όλα τα άρθρα"
   },
   "quote": {
-    "text": "Η αρχιτεκτονική είναι η προσπάθεια να φτάσουμε στην αλήθεια.",
+    "text": "Architecture is the reaching out for the truth.",
     "author": "Louis Kahn"
   }
 }

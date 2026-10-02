@@ -37,14 +37,14 @@ const ParallaxSection = () => {
 
               <div className="mt-8 grid grid-cols-3 gap-6">
                 <div>
-                  <p className="text-3xl font-bold text-primary md:text-4xl">20+</p>
+                  <p className="text-3xl font-bold text-primary md:text-4xl">10+</p>
                   <p className="mt-2 text-sm font-bold uppercase tracking-wider text-white/80">
                     {t("parallax.projects")}
                   </p>
                 </div>
 
                 <div>
-                  <p className="text-3xl font-bold text-primary md:text-4xl">30+</p>
+                  <p className="text-3xl font-bold text-primary md:text-4xl">10+</p>
                   <p className="mt-2 text-sm font-bold uppercase tracking-wider text-white/80">
                     {t("parallax.customers")}
                   </p>

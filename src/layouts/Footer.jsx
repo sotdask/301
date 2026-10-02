@@ -10,8 +10,8 @@ function Footer() {
     <footer className="bg-black pb-1">
       <div className="section-padding">
         <div className="flex flex-col items-center gap-18 pt-22 text-white md:gap-24 lg:flex-row lg:items-start lg:gap-30 xl:gap-38">
-          <Link to="/">
-            <img src={footerlogo} alt="" />
+          <Link to="/" aria-label={t("a11y.logoHome")}>
+            <img src={footerlogo} alt={t("brand.studio")} />
           </Link>
           <div className="footer-columns grid w-full grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4">
             <div>
@@ -106,24 +106,36 @@ function Footer() {
         </div>
         <ul className="wrapper my-5 flex justify-center gap-12 md:my-7 lg:my-9">
           <li>
-            <a href="#">
-              <img src={facebook} alt="" className="opacity-70 transition duration-300 hover:scale-110" />
+            <a href="#" aria-label={t("a11y.facebook")}>
+              <img
+                src={facebook}
+                alt=""
+                className="opacity-70 transition duration-300 hover:scale-110"
+              />
             </a>
           </li>
           <li>
-            <a href="#">
-              <img src={instagram} alt="" className="opacity-70 transition duration-300 hover:scale-110" />
+            <a href="#" aria-label={t("a11y.instagram")}>
+              <img
+                src={instagram}
+                alt=""
+                className="opacity-70 transition duration-300 hover:scale-110"
+              />
             </a>
           </li>
           <li>
-            <a href="#">
-              <img src={tiktok} alt="" className="opacity-70 transition duration-300 hover:scale-110" />
+            <a href="#" aria-label={t("a11y.tiktok")}>
+              <img
+                src={tiktok}
+                alt=""
+                className="opacity-70 transition duration-300 hover:scale-110"
+              />
             </a>
           </li>
         </ul>
         <div className="flex w-full flex-col items-center justify-between gap-2 text-white lg:flex-row lg:gap-4">
           <p className="text-center text-sm lg:text-right">
-            © 2025 301 Architecture Studio. All rights reserved
+            {t("footer.rights", { year: new Date().getFullYear() })}
           </p>
           <a
             href="https://sotdask.gr"

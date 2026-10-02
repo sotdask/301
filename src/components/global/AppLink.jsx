@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export function isInternalPath(path) {
+function isInternalPath(path) {
   return typeof path === "string" && path.startsWith("/") && !path.startsWith("//");
 }
 

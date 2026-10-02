@@ -21,11 +21,25 @@
     "thursday": "Thursday: 9:00-21:00",
     "saturday": "Saturday: Closed",
     "sunday": "Sunday: Closed",
+    "rights": "© {{year}} 301 Architecture Studio. All rights reserved",
     "designBy": "Design & Development by SD"
   },
   "brand": {
     "tagline": "Architecture & Interior Design",
     "studio": "301 Architecture Studio"
+  },
+  "a11y": {
+    "skipToContent": "Skip to main content",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "tiktok": "TikTok",
+    "linkedin": "LinkedIn",
+    "prevSlide": "Previous slide",
+    "nextSlide": "Next slide",
+    "logoHome": "301 Architecture Studio — Home"
   },
   "notFound": {
     "title": "Page not found",
@@ -40,5 +54,59 @@
     "allArticles": "All articles",
     "backToArticles": "Back to articles",
     "exploreWork": "explore our work"
+  },
+  "seo": {
+    "home": {
+      "title": "301 Architecture Studio | Architecture & Interior Design",
+      "description": "A young architecture studio working across Greece and Cyprus. We design homes, hospitality spaces, and interiors with intention, light, and detail."
+    },
+    "about": {
+      "title": "About us",
+      "description": "Meet 301 Architecture Studio — our team, approach, and architecture & interior design services."
+    },
+    "projects": {
+      "title": "Projects",
+      "description": "Explore projects by 301 Architecture Studio: residences, renovations, and hospitality concepts."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Get in touch with 301 Architecture Studio. Share your brief and we will get back to you."
+    },
+    "articles": {
+      "title": "Articles",
+      "description": "Articles on architecture, renovation, materials, and design from 301 Architecture Studio."
+    },
+    "articleSantorini": {
+      "title": "The Architecture of Santorini",
+      "description": "How geology, light, and landscape shape the architecture of Santorini."
+    },
+    "articleRoof": {
+      "title": "When the Roof Becomes the Architecture",
+      "description": "On structure, wood, and light in residential renovation — with reference to Eleni's House."
+    },
+    "kamari": {
+      "title": "Kamari Santorinis",
+      "description": "Residential renovation in Kamari, Santorini by 301 Architecture Studio."
+    },
+    "eleni": {
+      "title": "Eleni's House",
+      "description": "Residential renovation in Heraklion, Crete — timber, light, and exposed structure."
+    },
+    "eventVenue": {
+      "title": "Event Venue",
+      "description": "Events and hospitality concept in Santorini by 301 Architecture Studio."
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "description": "Privacy policy and GDPR information for the 301 Architecture Studio website."
+    },
+    "cookies": {
+      "title": "Cookies Policy",
+      "description": "Cookie usage information for the 301 Architecture Studio website."
+    },
+    "notFound": {
+      "title": "Page not found",
+      "description": "The page you requested does not exist."
+    }
   }
 }

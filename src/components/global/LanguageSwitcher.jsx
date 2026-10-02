@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 function LanguageSwitcher({ className = "" }) {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation("common");
   const current = (i18n.resolvedLanguage || i18n.language || "el").startsWith(
     "el",
   )
@@ -17,7 +17,7 @@ function LanguageSwitcher({ className = "" }) {
     <div
       className={`flex items-center gap-2 text-xl tracking-wider text-white ${className}`}
       role="group"
-      aria-label="Language"
+      aria-label={t("a11y.language")}
     >
       <button
         type="button"
@@ -26,6 +26,8 @@ function LanguageSwitcher({ className = "" }) {
           current === "en" ? "text-primary" : "text-white"
         }`}
         aria-pressed={current === "en"}
+        aria-label="English"
+        lang="en"
       >
         EN
       </button>
@@ -37,6 +39,8 @@ function LanguageSwitcher({ className = "" }) {
           current === "el" ? "text-primary" : "text-white"
         }`}
         aria-pressed={current === "el"}
+        aria-label="Ελληνικά"
+        lang="el"
       >
         EL
       </button>

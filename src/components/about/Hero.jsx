@@ -10,6 +10,7 @@ const Hero = () => {
       <img
         src={abouthero}
         alt=""
+        aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover object-center"
       />
       <div className="relative z-10 grid min-h-svh w-full grid-cols-1 content-start gap-y-12 section-padding pb-12 pt-[20svh] md:pb-16 md:pt-[25svh] lg:grid-cols-2 lg:pt-[33svh]">

@@ -33,8 +33,9 @@ function Menu() {
         type="button"
         onClick={() => setOpen((o) => !o)}
         className="relative z-70 p-2"
-        aria-label="Menu"
+        aria-label={open ? t("a11y.closeMenu") : t("a11y.openMenu")}
         aria-expanded={open}
+        aria-controls="mobile-menu"
       >
         <div className="relative size-6">
           <HiOutlineMenuAlt3
@@ -57,10 +58,12 @@ function Menu() {
       />
 
       <nav
+        id="mobile-menu"
         className={`fixed inset-x-0 top-0 z-65 flex min-h-screen flex-col items-center justify-center gap-24 bg-black/95 backdrop-blur-md transition-transform duration-500 ease-out ${
           open ? "translate-y-0" : "-translate-y-full"
         }`}
         aria-hidden={!open}
+        aria-label={t("footer.navigation")}
       >
         <ul className="flex flex-col items-center gap-y-16 text-xl tracking-wider">
           {NAV_ITEMS.map((item, i) => (
