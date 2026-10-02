@@ -1,9 +1,9 @@
 export const SITE_NAME = "301 Architecture Studio";
 export const SITE_TAGLINE = "Architecture & Interior Design";
 
-/** Absolute site origin — set VITE_SITE_URL in .env for production (e.g. https://301architecturestudio.com) */
+/** Absolute site origin — set VITE_SITE_URL in .env for production */
 export const SITE_URL = (
-  import.meta.env.VITE_SITE_URL || "https://301architecturestudio.com"
+  import.meta.env.VITE_SITE_URL || "https://301-dusky.vercel.app"
 ).replace(/\/+$/, "");
 
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;

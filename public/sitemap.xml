@@ -1,62 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://301architecturestudio.com/</loc>
+    <loc>https://301-dusky.vercel.app/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://301architecturestudio.com/about</loc>
+    <loc>https://301-dusky.vercel.app/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://301architecturestudio.com/projects</loc>
+    <loc>https://301-dusky.vercel.app/projects</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://301architecturestudio.com/contact</loc>
+    <loc>https://301-dusky.vercel.app/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://301architecturestudio.com/articles</loc>
+    <loc>https://301-dusky.vercel.app/articles</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://301architecturestudio.com/articles/architecture-of-santorini</loc>
+    <loc>https://301-dusky.vercel.app/articles/architecture-of-santorini</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://301architecturestudio.com/articles/when-the-roof-becomes-the-architecture</loc>
+    <loc>https://301-dusky.vercel.app/articles/when-the-roof-becomes-the-architecture</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://301architecturestudio.com/kamari-santorinis</loc>
+    <loc>https://301-dusky.vercel.app/kamari-santorinis</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://301architecturestudio.com/elenis-house</loc>
+    <loc>https://301-dusky.vercel.app/elenis-house</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://301architecturestudio.com/event-venue</loc>
+    <loc>https://301-dusky.vercel.app/event-venue</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://301architecturestudio.com/privacy-policy</loc>
+    <loc>https://301-dusky.vercel.app/privacy-policy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://301architecturestudio.com/cookies-policy</loc>
+    <loc>https://301-dusky.vercel.app/cookies-policy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
