@@ -6,7 +6,7 @@ function NotFound() {
   const { t } = useTranslation("common");
 
   return (
-    <section className="flex min-h-dvh flex-col items-center justify-center bg-black px-6 pt-32 pb-20 text-center text-white">
+    <section className="flex min-h-screen flex-col items-center justify-center bg-black px-6 pt-32 pb-20 text-center text-white">
       <p className="text-sm uppercase tracking-[0.35em] text-primary md:text-base">
         {t("brand.studio")}
       </p>

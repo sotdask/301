@@ -6,16 +6,6 @@
     --color-primary: #C9A96E;
 }
 
-html {
-  min-height: 100%;
-  min-height: 100dvh;
-}
-
-body {
-  min-height: 100%;
-  min-height: 100dvh;
-}
-
 
 .section-padding {
   width: min(100%, 1560px);

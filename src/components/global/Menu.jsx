@@ -58,16 +58,12 @@ function Menu() {
       />
 
       <nav
-        className={`fixed inset-0 z-65 flex flex-col items-center justify-center gap-12 overflow-y-auto overscroll-contain bg-black/95 px-6 backdrop-blur-md transition-transform duration-500 ease-out sm:gap-16 md:gap-24 ${
+        className={`fixed inset-x-0 top-0 z-65 flex min-h-screen flex-col items-center justify-center gap-24 bg-black/95 backdrop-blur-md transition-transform duration-500 ease-out ${
           open ? "translate-y-0" : "-translate-y-full"
         }`}
-        style={{
-          paddingTop: "max(3rem, env(safe-area-inset-top))",
-          paddingBottom: "max(2rem, env(safe-area-inset-bottom))",
-        }}
         aria-hidden={!open}
       >
-        <ul className="flex flex-col items-center gap-y-10 text-xl tracking-wider sm:gap-y-12 md:gap-y-16">
+        <ul className="flex flex-col items-center gap-y-16 text-xl tracking-wider">
           {NAV_ITEMS.map((item, i) => (
             <li
               key={item.to + item.text}
@@ -83,7 +79,7 @@ function Menu() {
           ))}
         </ul>
         <div
-          className={`shrink-0 transition-all duration-500 ${
+          className={`transition-all duration-500 ${
             open ? "translate-y-0 opacity-100" : "-translate-y-3 opacity-0"
           }`}
           style={{ transitionDelay: open ? `${NAV_ITEMS.length * 90}ms` : "0ms" }}

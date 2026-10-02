@@ -6,7 +6,7 @@ function CookiesPolicy() {
   const sections = [1, 2, 3, 4, 5, 6, 7, 8];
 
   return (
-    <section className="bg-black text-white min-h-dvh pt-32 pb-20">
+    <section className="bg-black text-white min-h-screen pt-32 pb-20">
       <div className="section-padding max-w-4xl">
         <h1 className="text-primary text-3xl md:text-4xl lg:text-5xl font-bold">
           {t("cookies.title")}

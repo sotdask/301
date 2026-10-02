@@ -66,7 +66,7 @@ function App() {
   return (
     <Router basename={routerBase}>
       <ScrollToTop />
-      <div className="min-h-dvh flex flex-col">
+      <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1">
           <Routes>
