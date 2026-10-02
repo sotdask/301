@@ -1,33 +1,41 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import Button from "../global/Button";
 import { blackarrow } from "../../assets";
 
 const Blog = () => {
+  const { t } = useTranslation(["home", "articles", "common"]);
+
   return (
     <section className="section-margin section-padding flex flex-col items-center">
-      <h3 data-aos="fade-up" data-aos-duration="1000" className="uppercase text-2xl lg:text-3xl">
-        articles by our <span className="text-primary font-bold">studio</span>
+      <h3
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        className="text-2xl uppercase lg:text-3xl"
+      >
+        {t("blog.title")}{" "}
+        <span className="font-bold text-primary">{t("blog.titleAccent")}</span>
       </h3>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-4 my-6 lg:my-10" data-gsap-stagger>
-        <div className="border-b-primary border-b-3 lg:border-r-primary lg:border-r-3 lg:border-b-0 pt-3 pb-6 md:py-6 lg:px-10">
+      <div
+        className="my-6 grid grid-cols-1 gap-y-4 lg:my-10 lg:grid-cols-2"
+        data-gsap-stagger
+      >
+        <div className="border-b-3 border-b-primary pt-3 pb-6 md:py-6 lg:border-r-3 lg:border-b-0 lg:border-r-primary lg:px-10">
           <Link
             to="/articles/architecture-of-santorini"
             className="text-lg italic text-primary transition duration-300 hover:text-black md:text-2xl lg:text-3xl"
           >
-            The Architecture of Santorini: Form Shaped by Landscape and Light
+            {t("items.santorini.title", { ns: "articles" })}
           </Link>
           <p className="my-3 lg:my-6">
-            From the island's small villages to the cliffs of the Caldera,
-            Santorini reveals an architecture that is anything but accidental,
-            carefully and thoroughly expressing geology, climate, and the beauty
-            of Aegean light.
+            {t("items.santorini.description", { ns: "articles" })}
           </p>
           <Link
             to="/articles/architecture-of-santorini"
             className="ml-auto inline-flex w-fit items-center gap-x-3 border-b border-current pb-0.5 text-sm uppercase tracking-wider transition duration-300 hover:translate-x-3 sm:text-sm md:text-base lg:border-b-2"
           >
-            read the article
+            {t("common.readArticle", { ns: "common" })}
             <img src={blackarrow} alt="" />
           </Link>
         </div>
@@ -36,23 +44,25 @@ const Blog = () => {
             to="/articles/when-the-roof-becomes-the-architecture"
             className="text-lg italic text-primary transition duration-300 hover:text-black md:text-2xl lg:text-3xl"
           >
-            When the Roof Becomes the Architecture: Renovation, Wood, and Light
+            {t("items.roof.title", { ns: "articles" })}
           </Link>
           <p className="my-3 lg:my-6">
-            In residential renovation, the strongest interventions are often not
-            decorative. They are structural decisions that redefine how a house
-            feels, how it holds light, and how daily life unfolds inside it.
+            {t("items.roof.description", { ns: "articles" })}
           </p>
           <Link
             to="/articles/when-the-roof-becomes-the-architecture"
             className="ml-auto inline-flex w-fit items-center gap-x-3 border-b border-current pb-0.5 text-sm uppercase tracking-wider transition duration-300 hover:translate-x-3 sm:text-sm md:text-base lg:border-b-2"
           >
-            read the article
+            {t("common.readArticle", { ns: "common" })}
             <img src={blackarrow} alt="" />
           </Link>
         </div>
       </div>
-      <Button to="/articles" text="All Articles" title="All Articles" />
+      <Button
+        to="/articles"
+        text={t("blog.allArticles")}
+        title={t("blog.allArticles")}
+      />
     </section>
   );
 };

@@ -1,29 +1,35 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import AppLink from "../global/AppLink";
-import { villaspitaki, villahouse, villaspiti, elenikitchenLounge, eventskyView } from "../../assets";
+import {
+  villaspitaki,
+  elenikitchenLounge,
+  eventskyView,
+} from "../../assets";
 
 function Showcase() {
+  const { t } = useTranslation("projects");
   const projects = [
     {
       id: 1,
       title: "Kamari Santorinis",
       link: "/kamari-santorinis",
       image: villaspitaki,
-      alt: villaspitaki,
+      alt: "Kamari Santorinis",
     },
     {
       id: 2,
       title: "Eleni's House",
       link: "/elenis-house",
       image: elenikitchenLounge,
-      alt: elenikitchenLounge,
+      alt: "Eleni's House",
     },
     {
       id: 3,
       title: "Event Venue",
       link: "/event-venue",
       image: eventskyView,
-      alt: eventskyView,
+      alt: "Event Venue",
     },
   ];
 
@@ -51,7 +57,7 @@ function Showcase() {
 
             <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-5">
               <span className="text-sm uppercase tracking-widest italic text-white transition-all duration-500 lg:translate-y-6 lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100">
-                View Project
+                {t("viewProject")}
               </span>
               <span className="h-0.5 w-14 bg-primary transition-all duration-500 lg:w-0 lg:group-hover:w-14" />
             </div>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { FaInstagram } from "react-icons/fa";
@@ -23,15 +24,10 @@ const locations = [
     phoneTel: "6945113282",
     phoneDisplay: "+30 694 511 3282",
   },
- /* {
-    id: "cyprus",
-    label: "Cyprus",
-    phoneTel: "+35799111222",
-    phoneDisplay: "+357 99 111 222",
-  },*/
 ];
 
 const ContactInfo = () => {
+  const { t } = useTranslation("contact");
   const [activeIndex, setActiveIndex] = useState(0);
   const active = locations[activeIndex];
 
@@ -46,18 +42,17 @@ const ContactInfo = () => {
             id="contact-info-heading"
             className="text-2xl font-bold tracking-tight text-neutral-900 md:text-3xl"
           >
-            Contact information
+            {t("info.heading")}
           </h2>
           <p className="mt-3 text-base leading-relaxed text-neutral-600 md:text-lg">
-            Choose the place that works best for you. Every link opens in the
-            Phone app on your device.
+            {t("info.intro")}
           </p>
         </header>
 
         <div
           className="menuWrapper mt-4 flex w-full flex-col items-stretch gap-5 md:mt-6 lg:mt-8 md:flex-row md:items-center md:justify-center"
           role="group"
-          aria-label="Office locations"
+          aria-label={t("info.locationsAria")}
         >
           {locations.map(({ id, label }, index) => {
             const isActive = index === activeIndex;
@@ -110,14 +105,11 @@ const ContactInfo = () => {
           </a>
         </div>
         <header className="mt-8 lg:mt-10 mx-auto max-w-2xl text-center lg:mx-0 lg:max-w-none lg:text-left">
-          <h2
-            id="contact-info-heading"
-            className="text-2xl font-bold tracking-tight text-neutral-900 md:text-3xl"
-          >
-            Email and Socials
+          <h2 className="text-2xl font-bold tracking-tight text-neutral-900 md:text-3xl">
+            {t("info.emailHeading")}
           </h2>
           <p className="mt-3 text-base leading-relaxed text-neutral-600 md:text-lg">
-            Not a phone person? We get it. Here's more ways to contact us.
+            {t("info.emailIntro")}
           </p>
         </header>
         <div className="wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-2">

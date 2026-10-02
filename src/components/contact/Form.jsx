@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 const ACCESS_KEY = "772baf88-40d2-4406-ac3f-6b4dce5ba7ff";
@@ -11,6 +12,7 @@ const fieldClass =
 const labelClass = "text-xs uppercase tracking-[0.18em] text-neutral-500";
 
 export default function Form() {
+  const { t } = useTranslation("contact");
   const captchaRef = useRef(null);
   const [captchaToken, setCaptchaToken] = useState("");
   const [status, setStatus] = useState("idle");
@@ -27,7 +29,7 @@ export default function Form() {
 
     if (!captchaToken) {
       setStatus("error");
-      setErrorMessage("Please complete the captcha before submitting.");
+      setErrorMessage(t("form.captchaRequired"));
       return;
     }
 
@@ -43,8 +45,8 @@ export default function Form() {
       name: `${firstName} ${lastName}`.trim(),
       email: form.email.value.trim(),
       phone: form.phone.value.trim(),
-      subject: subject || "New contact message from website",
-      message: subject || "No message provided.",
+      subject: subject || t("form.defaultSubject"),
+      message: subject || t("form.defaultMessage"),
       "h-captcha-response": captchaToken,
     };
 
@@ -68,13 +70,11 @@ export default function Form() {
       }
 
       setStatus("error");
-      setErrorMessage(
-        data.message || "Something went wrong. Please try again.",
-      );
+      setErrorMessage(data.message || t("form.errorGeneric"));
       resetCaptcha();
     } catch {
       setStatus("error");
-      setErrorMessage("Network error. Please check your connection and try again.");
+      setErrorMessage(t("form.errorNetwork"));
       resetCaptcha();
     }
   };
@@ -89,14 +89,13 @@ export default function Form() {
         >
           <span className="mb-6 block h-0.5 w-14 bg-primary" />
           <p className="text-xs uppercase tracking-[0.25em] text-primary">
-            Message sent
+            {t("form.successEyebrow")}
           </p>
           <h4 className="mt-4 text-2xl tracking-tight text-neutral-900 md:text-3xl">
-            Thank you
+            {t("form.successTitle")}
           </h4>
           <p className="mt-4 max-w-md text-base leading-relaxed text-neutral-600 md:text-lg">
-            We&apos;ve received your message and will get back to you as soon as
-            we can.
+            {t("form.successBody")}
           </p>
           <button
             type="button"
@@ -104,7 +103,7 @@ export default function Form() {
             className="group relative mt-10 inline-flex cursor-pointer items-center justify-center overflow-hidden border-2 border-black px-6 py-3 text-black"
           >
             <span className="relative z-10 text-sm uppercase tracking-[0.2em] transition-colors duration-400 group-hover:text-white">
-              Send another message
+              {t("form.sendAnother")}
             </span>
             <span
               className="absolute top-0 left-[-10%] h-full w-0 origin-left -skew-x-12 bg-black transition-all duration-400 group-hover:w-[120%]"
@@ -121,10 +120,10 @@ export default function Form() {
       <div className="flex flex-col items-center text-center">
         <span className="mb-5 block h-0.5 w-14 bg-primary" />
         <h4 className="max-w-full text-2xl tracking-tight text-neutral-900 md:text-3xl">
-          Send a message
+          {t("form.title")}
         </h4>
         <p className="mt-3 max-w-md text-base leading-relaxed text-neutral-600 md:text-lg">
-          Share a few details and we&apos;ll get back to you as soon as we can.
+          {t("form.subtitle")}
         </p>
       </div>
 
@@ -136,26 +135,26 @@ export default function Form() {
           <div className="flex w-full flex-col gap-6 md:flex-row md:gap-5">
             <div className="flex min-w-0 flex-1 flex-col gap-2">
               <label htmlFor="firstname" className={labelClass}>
-                First Name*
+                {t("form.firstName")}
               </label>
               <input
                 type="text"
                 name="fname"
                 id="firstname"
-                placeholder="Enter your first name"
+                placeholder={t("form.firstNamePh")}
                 required
                 className={fieldClass}
               />
             </div>
             <div className="flex min-w-0 flex-1 flex-col gap-2">
               <label htmlFor="lastname" className={labelClass}>
-                Last Name*
+                {t("form.lastName")}
               </label>
               <input
                 type="text"
                 name="lname"
                 id="lastname"
-                placeholder="Enter your last name"
+                placeholder={t("form.lastNamePh")}
                 required
                 className={fieldClass}
               />
@@ -164,13 +163,13 @@ export default function Form() {
 
           <div className="flex w-full flex-col gap-2">
             <label htmlFor="phone" className={labelClass}>
-              Phone*
+              {t("form.phone")}
             </label>
             <input
               type="tel"
               name="phone"
               id="phone"
-              placeholder="Enter your phone"
+              placeholder={t("form.phonePh")}
               required
               className={fieldClass}
             />
@@ -178,13 +177,13 @@ export default function Form() {
 
           <div className="flex w-full flex-col gap-2">
             <label htmlFor="email" className={labelClass}>
-              Email*
+              {t("form.email")}
             </label>
             <input
               type="email"
               name="email"
               id="email"
-              placeholder="Enter your email"
+              placeholder={t("form.emailPh")}
               required
               className={fieldClass}
             />
@@ -192,12 +191,12 @@ export default function Form() {
 
           <div className="flex w-full flex-col gap-2">
             <label htmlFor="subject" className={labelClass}>
-              Subject
+              {t("form.subject")}
             </label>
             <textarea
               name="subject"
               id="subject"
-              placeholder="Write something.."
+              placeholder={t("form.subjectPh")}
               rows={5}
               className={`${fieldClass} min-h-28 resize-y md:min-h-40`}
             />
@@ -215,12 +214,12 @@ export default function Form() {
               className="mt-0.5 size-4 shrink-0 accent-primary"
             />
             <span>
-              I agree to the{" "}
+              {t("form.terms")}{" "}
               <Link
                 to="/privacy-policy"
                 className="text-neutral-900 underline decoration-primary/60 underline-offset-2 transition hover:text-primary"
               >
-                Terms and Conditions
+                {t("form.termsLink")}
               </Link>
             </span>
           </label>
@@ -236,7 +235,7 @@ export default function Form() {
             onExpire={resetCaptcha}
             onError={() => {
               resetCaptcha();
-              setErrorMessage("Captcha failed to load. Please refresh and try again.");
+              setErrorMessage(t("form.captchaLoad"));
             }}
           />
 
@@ -252,7 +251,7 @@ export default function Form() {
             className="group relative mt-2 inline-flex w-full cursor-pointer items-center justify-center overflow-hidden border-2 border-black px-6 py-3 text-black disabled:cursor-wait disabled:opacity-60 md:w-auto md:self-start"
           >
             <span className="relative z-10 text-sm uppercase tracking-[0.2em] transition-colors duration-400 group-hover:text-white">
-              {status === "sending" ? "Sending..." : "Submit"}
+              {status === "sending" ? t("form.sending") : t("form.submit")}
             </span>
             <span
               className="absolute top-0 left-[-10%] h-full w-0 origin-left -skew-x-12 bg-black transition-all duration-400 group-hover:w-[120%]"

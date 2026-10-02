@@ -1,7 +1,10 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { contact } from "../../assets";
 
 const Hero = () => {
+  const { t } = useTranslation("contact");
+
   return (
     <section
       aria-labelledby="contact-hero-heading"
@@ -26,7 +29,7 @@ const Hero = () => {
             >
               <span className="block h-0.5 w-10 shrink-0 bg-primary sm:w-14" />
               <p className="text-xs font-medium uppercase tracking-[0.2em] text-primary sm:text-sm">
-                Get in touch
+                {t("hero.eyebrow")}
               </p>
             </div>
 
@@ -37,8 +40,8 @@ const Hero = () => {
               data-aos-delay="50"
               className="mt-5 text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl"
             >
-              Let&apos;s talk about{" "}
-              <span className="text-primary">your next space</span>
+              {t("hero.titleBefore")}{" "}
+              <span className="text-primary">{t("hero.titleAccent")}</span>
             </h1>
 
             <p
@@ -47,9 +50,7 @@ const Hero = () => {
               data-aos-delay="100"
               className="mt-6 text-lg leading-relaxed text-neutral-300 sm:text-xl"
             >
-              Whether you have a brief, a question, or you&apos;re still
-              exploring ideas, we&apos;re happy to hear from you. Share a few
-              details and we&apos;ll get back to you as soon as we can.
+              {t("hero.body")}
             </p>
           </div>
 

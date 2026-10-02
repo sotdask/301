@@ -1,0 +1,60 @@
+{
+  "list": {
+    "title": "articles by our",
+    "titleAccent": "studio",
+    "intro": "We delve into the world of Architecture, exploring the latest trends, regulations and best practices."
+  },
+  "items": {
+    "santorini": {
+      "date": "22 September 2026",
+      "title": "The Architecture of Santorini: Form Shaped by Landscape and Light",
+      "description": "From the island's small villages to the cliffs of the Caldera, Santorini reveals an architecture that is anything but accidental, carefully and thoroughly expressing geology, climate, and the beauty of Aegean light."
+    },
+    "roof": {
+      "date": "22 September 2026",
+      "title": "When the Roof Becomes the Architecture: Renovation, Wood, and Light",
+      "description": "In residential renovation, the strongest interventions are often not decorative. They are structural decisions that redefine how a house feels, how it holds light, and how daily life unfolds inside it."
+    }
+  },
+  "santorini": {
+    "date": "22 September 2026",
+    "title": "The Architecture of Santorini: Form Shaped by Landscape and Light",
+    "lead": "From the island's small villages to the cliffs of the Caldera, Santorini reveals an architecture that is anything but accidental, carefully and thoroughly expressing geology, climate, and the beauty of Aegean light.",
+    "p1": "From the island's small villages to the cliffs of the Caldera, Santorini reveals an architecture that is anything but accidental, carefully and thoroughly expressing geology, climate, and the beauty of Aegean light.",
+    "p2": "Although Santorini's landscape ranks among the most recognizable in the Mediterranean, its architectural character steadily follows the familiar and beloved pattern of Cycladic culture: white houses with blue domes and sunlit terraces filled with flowers. Behind this pattern, however, lies a deeper logic. The architecture of the island was born to meet the practical needs of survival, and over time it evolved into the identity it carries today.",
+    "h1": "Geology as the first architect",
+    "p3": "Almost every design decision, and every realization of that design, is determined by the island's volcanic geology. Volcanic tuff and soft pumice allowed the inhabitants to carve settlements into the rock, creating cave dwellings with spaces that remain cool in summer and protected from the winds of the Aegean. This carving of settlements creates a density in which houses stay low and compact, producing on the one hand shade and coolness, and on the other the picturesque image of Santorini that everyone knows.",
+    "p4": "The villages of Santorini function as a single architectural organism, adapted to cover changes in elevation and to serve the island's views: the lanes, balconies, and courtyards of the houses follow the slope of the ground rather than trying to conceal it. Circulation across the island, therefore, becomes a sequence of narrow alleys, stepped passages, and sudden openings toward the sea.",
+    "h2": "Vaults, curves, and structural honesty",
+    "p5": "One of the most distinctive features of Santorini's interiors is the vaulted ceiling. Throughout human history, vaults were structurally essential in regions with limited timber. Their curves allowed loads and household belongings to be distributed and stored within the home, while at the same time creating spacious, generous volumes.",
+    "p6": "Today, these geometries retain their identity both because of their heritage and because of their effect on space. They create a sense of continuity by softening the corners of the house, and on a more practical level they capture light and keep the interior bright and sunlit.",
+    "h3": "Light, whitewash, and material restraint",
+    "p7": "Even the openings are carefully considered. Small, discreet windows, combined with deep wall reveals, act as protection against the intense reflection of light without closing off the beautiful view the island offers. Because in Santorini the view is not simply a postcard background; it is an active part of the architectural composition.",
+    "h4": "Contemporary practice without imitation",
+    "p8": "For architects today, our main challenge is to honor tradition without trapping ourselves in nostalgia, while at the same time bringing a sense of renewal and modernity to the landscape. A contemporary project in Santorini should not merely reproduce white volumes and large openings as stylistic devices. It must revisit the fundamental principles: adaptation to climate, respect for topography, restraint in materials, and the design of spaces that serve both everyday life and aesthetic pleasure. In residential work, this often means placing particular emphasis on comfort within a generous space, while preserving the island's domestic, local character.",
+    "h5": "An architecture of belonging",
+    "p9": "The lasting quality of Santorini's architecture is not simply a static glossary of rules to follow, but a complete way of thinking. The island teaches us that architecture can appear restrained at first glance and yet remain complex in the experience it offers: carved into the rock, shaped by the wind, bathed in light, and oriented toward the horizon.",
+    "p10": "For an architecture studio like ours, moving between tradition and contemporary life, this character of Santorini is a vital lesson. The island's design does not try to draw attention to itself. It reads the place, makes precise choices, and allows the natural environment to complete the work."
+  },
+  "roof": {
+    "date": "22 September 2026",
+    "title": "When the Roof Becomes the Architecture: Renovation, Wood, and Light",
+    "lead": "In residential renovation, the strongest interventions are often not decorative. They are structural decisions that redefine how a house feels, how it holds light, and how daily life unfolds inside it.",
+    "p1": "In residential renovation, the strongest interventions are often not decorative. They are structural decisions that redefine how a house feels, how it holds light, and how daily life unfolds inside it. Projects like Eleni's House in Heraklion remind us that contemporary living does not always begin with a blank page. It begins with an existing shell, a set of constraints, and the question of what deserves to remain and what must be reinvented.",
+    "h1": "Dialogue between old and new",
+    "p2": "A successful renovation is rarely about erasing the past. It is about establishing a clear dialogue between the original building and the new architectural language introduced into it. The goal is not to disguise the existing shell, but to open it up: to make it brighter, more continuous, and more responsive to the way people actually live today.",
+    "p3": "In this approach, the old fabric becomes a partner rather than an obstacle. Walls may be simplified, openings enlarged, and materials recalibrated, yet the memory of the place remains present. The result feels neither purely historic nor aggressively new. It feels resolved.",
+    "h2": "Structure as identity",
+    "p4": "One of the most powerful moves in contemporary renovation is to let structure become visible again. An exposed wooden roof, for example, does more than cover the house. It gives the interior height, warmth, and a precise architectural character. Beams, joins, and rhythm stop being hidden technical details and become the main expression of the space.",
+    "p5": "When interior height increases, new possibilities appear. A loft introduced as a lightweight metal structure can add a second level of use without breaking the sense of an open, unified plan. The contrast between warm timber and slender metal becomes part of the composition: one material grounds the house, the other keeps it light.",
+    "h3": "Organizing everyday life",
+    "p6": "Spatial organization remains essential. A clear separation between day zones and private areas allows the house to feel generous where it should and quieter where it must. Living, dining, and kitchen spaces can flow into one another as a continuous field of everyday life, while bedrooms and more intimate functions withdraw into calmer parts of the plan.",
+    "p7": "This is not open-plan living for its own sake. It is a practical reading of domestic rhythm: shared moments in the light, private moments in retreat, and a plan that supports both without friction.",
+    "h4": "Palette, texture, and natural light",
+    "p8": "Material restraint strengthens this clarity. Soft whites and earthy surfaces create a quiet backdrop for warm wood and carefully chosen furniture. Against that neutrality, natural textures become more readable, and light moves more freely across the interior.",
+    "p9": "Large openings and through-organization allow daylight to travel deep into the house. Clean geometries and minimal finishes ensure that the roof and the structure remain the protagonists. Nothing competes unnecessarily. Everything supports the experience of a calm, bright, Mediterranean interior.",
+    "h5": "A contemporary Mediterranean home",
+    "p10": "What emerges from this way of working is not a style, but a position. Renovation becomes an opportunity to combine the familiarity of natural wood and daylight with a contemporary, minimal architectural language. The house feels open without becoming cold, modern without becoming abstract, and personal without becoming decorative.",
+    "p11": "For a studio working between tradition and present-day living, that balance is central. Good renovation does not shout over the existing building. It edits carefully, reveals structure where it matters, and lets light complete the work."
+  }
+}

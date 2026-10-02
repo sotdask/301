@@ -1,0 +1,45 @@
+{
+  "nav": {
+    "home": "Αρχική",
+    "about": "Σχετικά",
+    "work": "Έργα",
+    "articles": "Άρθρα",
+    "contact": "Επικοινωνία"
+  },
+  "footer": {
+    "navigation": "ΠΛΟΗΓΗΣΗ",
+    "information": "ΠΛΗΡΟΦΟΡΙΕΣ",
+    "contactLinks": "ΕΠΙΚΟΙΝΩΝΙΑ",
+    "businessHours": "ΩΡΑΡΙΟ",
+    "aboutUs": "Σχετικά με εμάς",
+    "ourWork": "Τα έργα μας",
+    "privacyPolicy": "Πολιτική Απορρήτου",
+    "cookiePolicy": "Πολιτική Cookies",
+    "monday": "Δευτέρα: 9:00-21:00",
+    "tuesday": "Τρίτη: 9:00-21:00",
+    "wednesday": "Τετάρτη: 9:00-21:00",
+    "thursday": "Πέμπτη: 9:00-21:00",
+    "saturday": "Σάββατο: Κλειστά",
+    "sunday": "Κυριακή: Κλειστά",
+    "rights": "© {{year}} 301 Architecture Studio. Με επιφύλαξη παντός δικαιώματος",
+    "designBy": "Design & Development by SD"
+  },
+  "brand": {
+    "tagline": "Architecture & Interior Design",
+    "studio": "301 Architecture Studio"
+  },
+  "notFound": {
+    "title": "Η σελίδα δεν βρέθηκε",
+    "body": "Η σελίδα που ψάχνετε δεν υπάρχει ή μπορεί να έχει μετακινηθεί. Επιστρέψτε στην αρχική ή εξερευνήστε τα έργα μας.",
+    "backHome": "Επιστροφή στην αρχική",
+    "viewWork": "Δείτε τα έργα μας"
+  },
+  "common": {
+    "readMore": "διαβάστε περισσότερα",
+    "readArticle": "διαβάστε το άρθρο",
+    "viewProject": "Δείτε το έργο",
+    "allArticles": "Όλα τα άρθρα",
+    "backToArticles": "Πίσω στα άρθρα",
+    "exploreWork": "εξερευνήστε τα έργα μας"
+  }
+}

@@ -1,16 +1,18 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import SingleArticle from "../components/articles/SingleArticle";
 
 function Articles() {
+  const { t } = useTranslation("articles");
+
   return (
     <section>
       <div className="section-padding section-margin pt-22 flex flex-col items-center">
         <h1 className="uppercase text-2xl lg:text-3xl text-center">
-          articles by our <span className="text-primary font-bold">studio</span>
+          {t("list.title")}{" "}
+          <span className="text-primary font-bold">{t("list.titleAccent")}</span>
         </h1>
-        <p className="max-w-175 mt-3 lg:mt-5 text-center">
-          We delve into the world of Architecture, exploring the latest trends, regulations and best practices.
-        </p>
+        <p className="max-w-175 mt-3 lg:mt-5 text-center">{t("list.intro")}</p>
       </div>
       <SingleArticle />
     </section>

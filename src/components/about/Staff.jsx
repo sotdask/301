@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -8,45 +9,43 @@ import { eleni, marios, giorgos } from "../../assets";
 import { blackarrow } from "../../assets";
 
 const Staff = () => {
+  const { t } = useTranslation("about");
   const swiperRef = useRef(null);
   const members = [
     {
       id: 1,
-      title: "founding partner",
       image: giorgos,
-      alt: "staff name",
-      name: "georgios stagkos",
-      profession: "architecture & design",
+      alt: t("staff.names.giorgos"),
+      nameKey: "staff.names.giorgos",
     },
     {
       id: 2,
-      title: "founding partner",
       image: eleni,
-      alt: "staff name",
-      name: "eleni geronimou",
-      profession: "architecture & design",
+      alt: t("staff.names.eleni"),
+      nameKey: "staff.names.eleni",
     },
     {
       id: 3,
-      title: "founding partner",
       image: marios,
-      alt: "staff name",
-      name: "marios zaranis",
-      profession: "architecture & design",
+      alt: t("staff.names.marios"),
+      nameKey: "staff.names.marios",
     },
   ];
 
   return (
     <div className="section-margin section-padding">
-      <h3  data-aos="fade-up" data-aos-duration="1000" className="uppercase text-2xl lg:text-3xl text-center lg:text-start mb-3 lg:mb-4">
-        meet our <span className="text-primary font-bold">staff</span>
+      <h3
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        className="uppercase text-2xl lg:text-3xl text-center lg:text-start mb-3 lg:mb-4"
+      >
+        {t("staff.title")}{" "}
+        <span className="text-primary font-bold">{t("staff.titleAccent")}</span>
       </h3>
-      <p className="max-w-110 text-center lg:text-start">
-        Meet the talented individuals who drive our firm's success with their dedication and hard work.
-      </p>
+      <p className="max-w-110 text-center lg:text-start">{t("staff.intro")}</p>
       <Swiper
         className="site-swiper mt-10 mb-6"
-        modules={Navigation}
+        modules={[Navigation]}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
@@ -76,9 +75,7 @@ const Staff = () => {
             key={member.id}
             className="flex! justify-center lg:justify-start"
           >
-            <div
-              className="group relative block aspect-3/4 w-full overflow-hidden"
-            >
+            <div className="group relative block aspect-3/4 w-full overflow-hidden">
               <img
                 src={member.image}
                 alt={member.alt}
@@ -86,14 +83,14 @@ const Staff = () => {
               />
               <div className="wrapper absolute bottom-0 left-5 opacity-100 transition duration-300 lg:opacity-0 group-hover:opacity-100">
                 <h5 className="text-lg uppercase tracking-wider text-primary">
-                  {member.title}
+                  {t("staff.titleRole")}
                 </h5>
                 <h4 className="mt-1 mb-3 text-xl uppercase tracking-wider text-white">
-                  {member.name}
+                  {t(member.nameKey)}
                 </h4>
                 <span className="block h-0.5 w-8 bg-primary sm:w-18" />
                 <h5 className="mt-3 mb-5 text-base font-bold uppercase tracking-wider text-primary">
-                  {member.profession}
+                  {t("staff.profession")}
                 </h5>
               </div>
             </div>

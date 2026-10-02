@@ -1,41 +1,46 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import Menu from "../components/global/Menu";
+import LanguageSwitcher from "../components/global/LanguageSwitcher";
 
 function Navbar() {
+  const { t } = useTranslation("common");
+
   return (
     <>
       <Menu />
       <nav className="hidden lg:flex">
-        <ul className="flex text-xl tracking-wider gap-x-10 text-white">
+        <ul className="flex gap-x-10 text-xl tracking-wider text-white">
           <li>
             <Link
               to="/about"
-              className="duration-300 transition hover:text-primary"
+              className="transition duration-300 hover:text-primary"
             >
-              ABOUT
+              {t("nav.about").toUpperCase()}
             </Link>
           </li>
           <li>
             <Link
               to="/projects"
-              className="duration-300 transition hover:text-primary"
+              className="transition duration-300 hover:text-primary"
             >
-              WORK
+              {t("nav.work").toUpperCase()}
             </Link>
           </li>
           <li>
             <Link
               to="/contact"
-              className="duration-300 transition hover:text-primary"
+              className="transition duration-300 hover:text-primary"
             >
-              CONTACT
+              {t("nav.contact").toUpperCase()}
             </Link>
           </li>
-          <li className="ml-12">EN | EL</li>
+          <li className="ml-12">
+            <LanguageSwitcher />
+          </li>
         </ul>
       </nav>
-      
     </>
   );
 }

@@ -1,7 +1,10 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { loadinglogo } from "../../assets";
 
 const LoadingScreen = ({ exiting = false }) => {
+  const { t } = useTranslation("common");
+
   return (
     <div
       className={`fixed inset-0 z-100 flex flex-col items-center justify-center bg-black transition-opacity duration-700 ease-out ${
@@ -29,7 +32,7 @@ const LoadingScreen = ({ exiting = false }) => {
           className="animate-loading-fade-in mt-10 text-xs uppercase tracking-[0.35em] text-primary sm:text-sm"
           style={{ animationDelay: "0.15s" }}
         >
-          Architecture & Interior Design
+          {t("brand.tagline")}
         </p>
 
         <div

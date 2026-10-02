@@ -1,64 +1,58 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { arrow } from "../../assets";
 import Button from "../global/Button";
 
 const Info = () => {
+  const { t } = useTranslation("home");
+
   return (
     <section className="section-padding section-margin flex flex-col items-center text-center">
       <div className="flex justify-center" data-gsap-stagger>
-        <h2 className="mr-1 lg:mr-3 text-xl md:text-2xl lg:text-3xl uppercase text-primary">
-          welcome!
+        <h2 className="mr-1 text-xl uppercase text-primary md:text-2xl lg:mr-3 lg:text-3xl">
+          {t("info.welcome")}
         </h2>
         <span
           data-aos="fade-up"
           data-aos-duration="1000"
-          className="mr-1 lg:mr-3 text-xl md:text-2xl lg:text-3xl uppercase"
+          className="mr-1 text-xl uppercase md:text-2xl lg:mr-3 lg:text-3xl"
         >
-          we
+          {t("info.we")}
         </span>
         <span
           data-aos="fade-up"
           data-aos-duration="1000"
-          className="mb-4 lg:mb-8 text-xl md:text-2xl lg:text-3xl uppercase font-bold"
+          className="mb-4 text-xl font-bold uppercase md:text-2xl lg:mb-8 lg:text-3xl"
         >
-          are 301 studio
+          {t("info.studio")}
         </span>
       </div>
-      <p className="max-w-205 mb-3 lg:mb-5">
-        What began as a common passion for architecture, design and creative
-        problem-solving has grown into a young architectural team undertaking
-        projects across Greece and Cyprus.
-      </p>
-      <p className="max-w-205">
-        Today, we approach every project with the same energy that brought us
-        together: fresh perspective, attention to detail, and a genuine desire
-        to turn each idea into a space that feels thoughtful, functional and
-        unique.
-      </p>
-      <div className="mt-8 flex items-center flex-col md:flex-row space-x-3">
-        <span className="uppercase text-base">form an idea</span>
+      <p className="mb-3 max-w-205 lg:mb-5">{t("info.p1")}</p>
+      <p className="max-w-205">{t("info.p2")}</p>
+      <div className="mt-8 flex flex-col items-center space-x-3 md:flex-row">
+        <span className="text-base uppercase">{t("info.step1")}</span>
         <img
           src={arrow}
           alt=""
-          className="max-w-16 my-10 md:my-0 rotate-90 md:rotate-0"
+          className="my-10 max-w-16 rotate-90 md:my-0 md:rotate-0"
         />
-        <span className="uppercase text-base">discuss & plan</span>
+        <span className="text-base uppercase">{t("info.step2")}</span>
         <img
-          src={arrow} 
+          src={arrow}
           alt=""
-          className="max-w-16 my-10 md:my-0 rotate-90 md:rotate-0"
+          className="my-10 max-w-16 rotate-90 md:my-0 md:rotate-0"
         />
-        <span className="uppercase text-base">design & create</span>
-                <img
-          src={arrow} 
+        <span className="text-base uppercase">{t("info.step3")}</span>
+        <img
+          src={arrow}
           alt=""
-          className="max-w-16 my-10 md:my-0 rotate-90 md:rotate-0"
+          className="my-10 max-w-16 rotate-90 md:my-0 md:rotate-0"
         />
-        <span className="uppercase text-base">deliver the space</span>
+        <span className="text-base uppercase">{t("info.step4")}</span>
       </div>
-      <div className="wrapper flex flex-col md:flex-row mt-8 gap-y-4  md:gap-x-10">
-        <Button to="/projects" text="View Our Portfolio" title="Work" />
-        <Button to="/about" text="View Our Team" title="About" />
+      <div className="wrapper mt-8 flex flex-col gap-y-4 md:flex-row md:gap-x-10">
+        <Button to="/projects" text={t("info.portfolio")} title="Work" />
+        <Button to="/about" text={t("info.team")} title="About" />
       </div>
     </section>
   );

@@ -1,7 +1,10 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { abouthero } from "../../assets";
 
 const Hero = () => {
+  const { t } = useTranslation("about");
+
   return (
     <section className="relative isolate min-h-svh w-full md:min-h-dvh">
       <img
@@ -12,41 +15,40 @@ const Hero = () => {
       <div className="relative z-10 grid min-h-svh w-full grid-cols-1 content-start gap-y-12 section-padding pb-12 pt-[20svh] md:pb-16 md:pt-[25svh] lg:grid-cols-2 lg:pt-[33svh]">
         <div className="wrapper flex flex-col items-center lg:items-start">
           <span className="block h-0.5 w-28 bg-primary sm:w-86" />
-          <div  data-aos="fade-right" data-aos-duration="1000" className="wrapper mt-4 sm:mt-5">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            className="wrapper mt-4 sm:mt-5"
+          >
             <h4 className="text-xl text-center lg:text-start text-white italic uppercase tracking-widest sm:text-3xl md:text-4xl">
-              more on
+              {t("moreOn")}
             </h4>
             <h2 className="mt-2 text-center lg:text-start text-2xl uppercase text-primary sm:mt-4 sm:text-4xl md:mt-6 md:text-5xl">
-              who we are
+              {t("whoWeAre")}
             </h2>
           </div>
           <p className="my-3 max-w-xl text-base leading-relaxed text-white text-center lg:text-start sm:my-8 md:my-12 md:max-w-150 md:text-lg lg:text-xl">
-            We are 301 Architecture Studio, a young architectural team shaped by
-            a shared passion for design and creative problem-solving. Working
-            across Greece and Cyprus, we approach every project with fresh
-            perspective, attention to detail, and a genuine desire to turn each
-            idea into a space that feels thoughtful, functional, and unique.
+            {t("whoBody")}
           </p>
         </div>
         <div className="wrapper flex flex-col items-center lg:items-end">
           <span className="block h-0.5 w-28 bg-primary sm:w-86" />
-          <div data-aos="fade-left" data-aos-duration="1000" className="wrapper mt-4 sm:mt-5">
+          <div
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            className="wrapper mt-4 sm:mt-5"
+          >
             <h4 className="text-xl text-center lg:text-end text-white italic uppercase tracking-widest sm:text-3xl md:text-4xl">
-              more on
+              {t("moreOn")}
             </h4>
             <h2 className="mt-2 text-center lg:text-end text-2xl uppercase text-primary sm:mt-4 sm:text-4xl md:mt-6 md:text-5xl">
-              what we offer
+              {t("whatWeOffer")}
             </h2>
           </div>
           <p className="my-3 max-w-xl text-base leading-relaxed text-white text-center lg:text-end sm:my-8 md:my-12 md:max-w-150 md:text-lg lg:text-xl">
-            We offer architecture and interior design services that move from
-            concept to delivery with clarity and care. From residential
-            renovations to hospitality and landscape concepts, we design spaces
-            with intention, where every detail carries meaning and every room
-            becomes part of a complete experience.
+            {t("offerBody")}
           </p>
         </div>
-
       </div>
     </section>
   );

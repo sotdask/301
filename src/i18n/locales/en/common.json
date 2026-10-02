@@ -1,0 +1,45 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "work": "Work",
+    "articles": "Articles",
+    "contact": "Contact"
+  },
+  "footer": {
+    "navigation": "NAVIGATION",
+    "information": "INFORMATION",
+    "contactLinks": "CONTACT LINKS",
+    "businessHours": "BUSINESS HOURS",
+    "aboutUs": "About us",
+    "ourWork": "Our Work",
+    "privacyPolicy": "Privacy Policy",
+    "cookiePolicy": "Cookie Policy",
+    "monday": "Monday: 9:00-21:00",
+    "tuesday": "Tuesday: 9:00-21:00",
+    "wednesday": "Wednesday: 9:00-21:00",
+    "thursday": "Thursday: 9:00-21:00",
+    "saturday": "Saturday: Closed",
+    "sunday": "Sunday: Closed",
+    "rights": "© {{year}} 301 Architecture Studio. All rights reserved",
+    "designBy": "Design & Development by SD"
+  },
+  "brand": {
+    "tagline": "Architecture & Interior Design",
+    "studio": "301 Architecture Studio"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "The page you are looking for does not exist or may have been moved. Return home or explore our work.",
+    "backHome": "Back to home",
+    "viewWork": "View our work"
+  },
+  "common": {
+    "readMore": "read more",
+    "readArticle": "read the article",
+    "viewProject": "View Project",
+    "allArticles": "All articles",
+    "backToArticles": "Back to articles",
+    "exploreWork": "explore our work"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "hero": {
+    "title": "Event Venue",
+    "subtitle": "Redefining Luxury Hospitality in Santorini"
+  },
+  "specs": {
+    "year": "Year:",
+    "location": "Location:",
+    "type": "Project Type:",
+    "size": "Size:",
+    "status": "Status:",
+    "yearValue": "2025",
+    "locationValue": "Santorini, Greece",
+    "typeValue": "Architecture | Landscape Design | Hospitality Concept",
+    "sizeValue": "133m²",
+    "statusValue": "Finished Study"
+  },
+  "body": {
+    "p1": "The project concerns the creation of a comprehensive events and hospitality venue in Santorini, designed to support gatherings of a different character, from private events and celebrations to corporate gatherings and bespoke events.",
+    "p2": "The core idea of the study was to create a destination that does not simply function as a space for hosting an event, but as a complete hospitality experience. The large site is organized into separate zones with different atmospheres and uses, allowing visitors to move naturally from more open, social spaces to more private and quiet areas.",
+    "p3": "The architectural composition develops through organic layouts, curved pathways, and different levels, which follow the natural terrain and create continuous interplay between architecture, landscape, and water. Pools, seating areas, dining spaces, outdoor plazas, and covered zones are connected to one another, forming an environment capable of adapting to different scales and types of events.",
+    "p4": "The goal of the design is to create a space that can host an event not as an isolated occurrence, but as a multi-layered experience of stay, gathering, and entertainment, with an emphasis on privacy, flexibility, and a direct relationship with the distinctive landscape of Santorini.",
+    "h1": "Water & Shade",
+    "t1": "Water features form a key part of the composition, functioning both as focal points and as elements that organize the movement and experience of the space. At the same time, the large wooden pergolas and light shading create sheltered areas for dining, gathering, and relaxation, without interrupting the visual connection to the landscape.",
+    "h2": "Landscape Materials",
+    "t2": "The choice of materials is based on a natural, Mediterranean palette, with local stone, wood, light-colored surfaces, and rich planting. The architecture remains low-lying and discreet, so that it blends into the Cycladic landscape and lets the natural surroundings and the view play the leading role.",
+    "h3": "Private Destination",
+    "t3": "A private villa is also part of the complex, offering the possibility of accommodation and greater privacy for organizers or event guests. The experience is completed by high-level services and amenities, including private boat access and connection to marina facilities, reinforcing the venue's character as a complete destination venue."
+  }
+}

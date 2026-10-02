@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import {
   kamariDining,
   kamariLivingRoom,
@@ -31,6 +32,8 @@ const bodyCopy =
   "text-[clamp(0.9375rem,0.82rem+0.55vw,1.125rem)] leading-[1.75] sm:leading-[1.8]";
 
 const Body = () => {
+  const { t } = useTranslation("kamari");
+
   return (
     <article className="section-margin text-neutral-700">
       <section className="section-padding">
@@ -40,30 +43,15 @@ const Body = () => {
             className={`flex flex-col gap-5 lg:col-span-5 order-2 md:order-1 ${bodyCopy}`}
           >
             <span className="block h-0.5 w-16 bg-primary" />
-            <p>
-              The residence in Kamari, Santorini, was designed with a different
-              starting point from that often encountered in island properties:
-              to serve as a genuine home for the owners themselves, rather than
-              yet another investment or tourist property.
-            </p>
-            <p>
-              The primary aim of the design was to create an interior that
-              conveys warmth, familiarity, and a sense of permanence, while
-              maintaining a clean and contemporary architectural language. The
-              residence was organized so that each space responds to the real
-              needs of everyday life, with particular emphasis on comfort,
-              storage, and functionality.
-            </p>
-            <p>
-              The color palette is based on earthy and natural tones, with
-              shades of off-white, beige, sand, and brown combined with warm
-              wooden surfaces. Wood is used both as a functional and
-              compositional element, through custom constructions, bookcases,
-              partitions, and furnishings, adding depth and a sense of
-              naturalness to the spaces.
-            </p>
+            <p>{t("body.p1")}</p>
+            <p>{t("body.p2")}</p>
+            <p>{t("body.p3")}</p>
           </div>
-          <div data-aos="fade-up" data-aos-delay="80" className="lg:col-span-7 order-1 md:order-2">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="80"
+            className="lg:col-span-7 order-1 md:order-2"
+          >
             <Frame
               src={kamariDining}
               alt="Dining room with custom wooden partition and bookcase"
@@ -106,20 +94,8 @@ const Body = () => {
             className={`flex flex-col gap-5 lg:col-span-7 ${bodyCopy}`}
           >
             <span className="block h-0.5 w-16 bg-primary" />
-            <p>
-              Textured surfaces, fabrics, and soft finishes enhance the homely
-              atmosphere, while curves and vaulted geometries reappear
-              selectively throughout the interior, creating a subtle connection
-              to the architectural identity of Santorini without turning the
-              house into a thematic representation of Cycladic aesthetics.
-            </p>
-            <p>
-              Particular emphasis was placed on lighting, which is integrated
-              into the architecture through concealed and linear light sources.
-              Indirect lighting highlights the curved ceilings, textures, and
-              wooden surfaces, creating different atmospheres throughout the
-              day.
-            </p>
+            <p>{t("body.p4")}</p>
+            <p>{t("body.p5")}</p>
           </div>
         </div>
       </section>
@@ -129,14 +105,7 @@ const Body = () => {
           data-aos="fade-up"
           className={`mx-auto mb-10 max-w-3xl md:mb-14 ${bodyCopy}`}
         >
-          <p>
-            In the communal areas, the living room is organized as a space for
-            relaxation with a strong sense of warmth, where the fireplace, soft
-            surfaces, and natural tones serve as key elements of the
-            composition. Similarly, the kitchen was designed as a fully
-            functional space for everyday use, featuring clean lines, generous
-            work surfaces, and a balance between lighter and darker wood tones.
-          </p>
+          <p>{t("body.p6")}</p>
         </div>
         <div
           data-aos="fade-up"
@@ -216,12 +185,7 @@ const Body = () => {
           className={`mx-auto max-w-3xl text-center ${bodyCopy}`}
         >
           <span className="mx-auto mb-8 block h-0.5 w-16 bg-primary" />
-          <p>
-            The result is a contemporary residence with a strong domestic
-            character, where functionality is not treated independently from
-            aesthetics. It is a space designed not simply to look beautiful, but
-            to be genuinely comfortable, personal, and timeless to live in.
-          </p>
+          <p>{t("body.p7")}</p>
         </div>
       </section>
 

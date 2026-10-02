@@ -1,0 +1,26 @@
+{
+  "hero": {
+    "title": "Eleni's House",
+    "subtitle": "A Renovation in Timber, Light, and Space"
+  },
+  "specs": {
+    "year": "Year:",
+    "location": "Location:",
+    "type": "Project Type:",
+    "size": "Size:",
+    "status": "Status:",
+    "yearValue": "2025",
+    "locationValue": "Heraklion, Crete, Greece",
+    "typeValue": "Residential Renovation",
+    "sizeValue": "133m²",
+    "statusValue": "Finished Study"
+  },
+  "body": {
+    "p1": "The residence in Heraklion, Crete, is a comprehensive renovation of an existing space, with the primary goal of creating a bright, open, and functional interior, while maintaining a strong dialogue between the old shell and the new interventions.",
+    "p2": "The central element of the design is the new wooden roof with exposed structural elements, which gives the space height, warmth, and a strong architectural identity. Taking advantage of the increased interior height allowed for the creation of a loft, designed as a lightweight metal structure, which adds a second level of use without limiting the sense of a unified floor plan.",
+    "p3": "The organization of the residence is based on a clear separation between day and private zones. The living room, dining room, and kitchen spaces develop in continuity, creating a single space for everyday life, while the more private functions are placed in the quieter sections of the house.",
+    "p4": "The color palette remains soft and neutral, with white and earthy surfaces that act as a backdrop for the warm wood of the roof and furniture. The contrast between the natural textures of the wood, the clean white surfaces, and the slender metal elements of the loft creates a contemporary yet familiar environment.",
+    "p5": "The large openings and the through-organization allow natural light to diffuse throughout the interior during the day, while the choice of minimal materials and clean geometries lets the roof and the structure of the space become the main protagonists of the composition.",
+    "p6": "The result is a residence that combines the Mediterranean feel of natural wood and light with a contemporary, minimal architectural language, creating a space that is calm and bright."
+  }
+}

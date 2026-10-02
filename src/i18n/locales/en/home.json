@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "tagline": "ARCHITECTURE & INTERIOR DESIGN",
+    "line1": "\"We Don't Just Design Spaces",
+    "line2": "We Create Experiences\"",
+    "body": "Explore spaces designed with intention, where every detail carries meaning and every room tells a story."
+  },
+  "info": {
+    "welcome": "welcome!",
+    "we": "we",
+    "studio": "are 301 studio",
+    "p1": "What began as a common passion for architecture, design and creative problem-solving has grown into a young architectural team undertaking projects across Greece and Cyprus.",
+    "p2": "Today, we approach every project with the same energy that brought us together: fresh perspective, attention to detail, and a genuine desire to turn each idea into a space that feels thoughtful, functional and unique.",
+    "step1": "form an idea",
+    "step2": "discuss & plan",
+    "step3": "design & create",
+    "step4": "deliver the space",
+    "portfolio": "View Our Portfolio",
+    "team": "View Our Team"
+  },
+  "work": {
+    "title": "our featured",
+    "titleAccent": "works",
+    "date": "February 12th 2025",
+    "categories": {
+      "interior": "Interior",
+      "renovation": "Renovation",
+      "architecture": "Architecture"
+    }
+  },
+  "parallax": {
+    "title": "our journey so far",
+    "body": "A team turning ideas into thoughtful spaces since 2023, we create spaces with character, clarity, and purpose.",
+    "projects": "Projects",
+    "customers": "Happy Customers",
+    "locations": "Locations"
+  },
+  "blog": {
+    "title": "articles by our",
+    "titleAccent": "studio",
+    "allArticles": "All Articles"
+  },
+  "quote": {
+    "text": "Architecture is the reaching out for the truth.",
+    "author": "Louis Kahn"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "moreOn": "more on",
+  "whoWeAre": "who we are",
+  "whatWeOffer": "what we offer",
+  "whoBody": "We are 301 Architecture Studio, a young architectural team shaped by a shared passion for design and creative problem-solving. Working across Greece and Cyprus, we approach every project with fresh perspective, attention to detail, and a genuine desire to turn each idea into a space that feels thoughtful, functional, and unique.",
+  "offerBody": "We offer architecture and interior design services that move from concept to delivery with clarity and care. From residential renovations to hospitality and landscape concepts, we design spaces with intention, where every detail carries meaning and every room becomes part of a complete experience.",
+  "staff": {
+    "title": "meet our",
+    "titleAccent": "staff",
+    "intro": "Our team combines architecture and design with a shared commitment to quality and detail.",
+    "titleRole": "founding partner",
+    "profession": "architecture & design",
+    "names": {
+      "giorgos": "georgios stagkos",
+      "eleni": "eleni geronimou",
+      "marios": "marios zaranis"
+    }
+  }
+}

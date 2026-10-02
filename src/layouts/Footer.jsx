@@ -1,93 +1,75 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { footerlogo, facebook, instagram, tiktok } from "../assets";
 
 function Footer() {
+  const { t } = useTranslation("common");
+
   return (
     <footer className="bg-black pb-1">
       <div className="section-padding">
-        <div className="text-white pt-22 flex flex-col lg:flex-row items-center lg:items-start gap-18 md:gap-24 lg:gap-30 xl:gap-38">
+        <div className="flex flex-col items-center gap-18 pt-22 text-white md:gap-24 lg:flex-row lg:items-start lg:gap-30 xl:gap-38">
           <Link to="/">
             <img src={footerlogo} alt="" />
           </Link>
-          <div className="footer-columns grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full gap-6">
+          <div className="footer-columns grid w-full grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4">
             <div>
-              <h4 className="text-primary font-bold text-lg lg:text-xl mb-2 lg:mb-3">
-                NAVIGATION
+              <h4 className="mb-2 text-lg font-bold text-primary lg:mb-3 lg:text-xl">
+                {t("footer.navigation")}
               </h4>
-              <ul className="text-lg space-y-2">
+              <ul className="space-y-2 text-lg">
                 <li>
-                  <Link
-                    to="/"
-                    className="transition duration-300 hover:text-primary"
-                  >
-                    Home
+                  <Link to="/" className="transition duration-300 hover:text-primary">
+                    {t("nav.home")}
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="/about"
-                    className="transition duration-300 hover:text-primary"
-                  >
-                    About us
+                  <Link to="/about" className="transition duration-300 hover:text-primary">
+                    {t("footer.aboutUs")}
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="/projects"
-                    className="transition duration-300 hover:text-primary"
-                  >
-                    Our Work
+                  <Link to="/projects" className="transition duration-300 hover:text-primary">
+                    {t("footer.ourWork")}
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="/articles"
-                    className="transition duration-300 hover:text-primary"
-                  >
-                    Articles
+                  <Link to="/articles" className="transition duration-300 hover:text-primary">
+                    {t("nav.articles")}
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="/contact"
-                    className="transition duration-300 hover:text-primary"
-                  >
-                    Contact
+                  <Link to="/contact" className="transition duration-300 hover:text-primary">
+                    {t("nav.contact")}
                   </Link>
                 </li>
               </ul>
             </div>
 
             <div>
-              <h4 className="text-primary font-bold text-lg lg:text-xl mb-2 lg:mb-3">
-                INFORMATION
+              <h4 className="mb-2 text-lg font-bold text-primary lg:mb-3 lg:text-xl">
+                {t("footer.information")}
               </h4>
-              <ul className="text-lg space-y-2">
+              <ul className="space-y-2 text-lg">
                 <li>
-                  <Link
-                    to="/privacy-policy"
-                    className="transition duration-300 hover:text-primary"
-                  >
-                    Privacy Policy
+                  <Link to="/privacy-policy" className="transition duration-300 hover:text-primary">
+                    {t("footer.privacyPolicy")}
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="/cookies-policy"
-                    className="transition duration-300 hover:text-primary"
-                  >
-                    Cookie Policy
+                  <Link to="/cookies-policy" className="transition duration-300 hover:text-primary">
+                    {t("footer.cookiePolicy")}
                   </Link>
                 </li>
               </ul>
             </div>
 
             <div>
-              <h4 className="text-primary font-bold text-lg lg:text-xl mb-2 lg:mb-3">
-                CONTACT LINKS
+              <h4 className="mb-2 text-lg font-bold text-primary lg:mb-3 lg:text-xl">
+                {t("footer.contactLinks")}
               </h4>
-              <ul className="text-lg space-y-2">
+              <ul className="space-y-2 text-lg">
                 <li>
                   <a
                     href="mailto:301archstudio@gmail.com"
@@ -108,21 +90,21 @@ function Footer() {
             </div>
 
             <div className="col-span-2 lg:col-span-1">
-              <h4 className="text-primary font-bold text-lg lg:text-xl mb-2 lg:mb-3">
-                BUSINESS HOURS
+              <h4 className="mb-2 text-lg font-bold text-primary lg:mb-3 lg:text-xl">
+                {t("footer.businessHours")}
               </h4>
-              <ul className="text-lg space-y-2">
-                <li>Monday: 9:00-21:00</li>
-                <li>Tuesday: 9:00-21:00</li>
-                <li>Wednesday: 9:00-21:00</li>
-                <li>Thursday: 9:00-21:00</li>
-                <li>Saturday: Closed</li>
-                <li>Sunday: Closed</li>
+              <ul className="space-y-2 text-lg">
+                <li>{t("footer.monday")}</li>
+                <li>{t("footer.tuesday")}</li>
+                <li>{t("footer.wednesday")}</li>
+                <li>{t("footer.thursday")}</li>
+                <li>{t("footer.saturday")}</li>
+                <li>{t("footer.sunday")}</li>
               </ul>
             </div>
           </div>
         </div>
-        <ul className="wrapper flex justify-center my-5 md:my-7 lg:my-9 gap-12">
+        <ul className="wrapper my-5 flex justify-center gap-12 md:my-7 lg:my-9">
           <li>
             <a href="#">
               <img src={facebook} alt="" className="opacity-70 transition duration-300 hover:scale-110" />
@@ -130,27 +112,27 @@ function Footer() {
           </li>
           <li>
             <a href="#">
-              <img src={instagram} alt="" className="opacity-70 transition duration-300 hover:scale-110"/>
+              <img src={instagram} alt="" className="opacity-70 transition duration-300 hover:scale-110" />
             </a>
           </li>
           <li>
             <a href="#">
-              <img src={tiktok} alt="" className="opacity-70 transition duration-300 hover:scale-110"/>
+              <img src={tiktok} alt="" className="opacity-70 transition duration-300 hover:scale-110" />
             </a>
           </li>
         </ul>
-        <div className="text-white flex flex-col w-full lg:flex-row items-center justify-between gap-2 lg:gap-4">
-          <p className="text-sm text-center lg:text-right">
-            © {new Date().getFullYear()} 301 Architecture Studio. All rights reserved
+        <div className="flex w-full flex-col items-center justify-between gap-2 text-white lg:flex-row lg:gap-4">
+          <p className="text-center text-sm lg:text-right">
+            {t("footer.rights", { year: new Date().getFullYear() })}
           </p>
           <a
             href="https://sotdask.gr"
             target="_blank"
             rel="noopener noreferrer"
             title="Visit sotdask.gr"
-            className="text-sm text-center lg:text-right flex items-center gap-1"
+            className="flex items-center gap-1 text-center text-sm lg:text-right"
           >
-            Design & Development by SD
+            {t("footer.designBy")}
           </a>
         </div>
       </div>

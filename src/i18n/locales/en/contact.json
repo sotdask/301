@@ -1,0 +1,43 @@
+{
+  "hero": {
+    "eyebrow": "Get in touch",
+    "titleBefore": "Let's talk about",
+    "titleAccent": "your next space",
+    "body": "Whether you have a brief, a question, or you're still exploring ideas, we're happy to hear from you. Share a few details and we'll get back to you as soon as we can."
+  },
+  "info": {
+    "heading": "Contact information",
+    "intro": "Choose the place that works best for you. Every link opens in the Phone app on your device.",
+    "locationsAria": "Office locations",
+    "emailHeading": "Email and Socials",
+    "emailIntro": "Not a phone person? We get it. Here's more ways to contact us."
+  },
+  "form": {
+    "title": "Send a message",
+    "subtitle": "Share a few details and we'll get back to you as soon as we can.",
+    "firstName": "First Name*",
+    "lastName": "Last Name*",
+    "phone": "Phone*",
+    "email": "Email*",
+    "subject": "Subject",
+    "firstNamePh": "Enter your first name",
+    "lastNamePh": "Enter your last name",
+    "phonePh": "Enter your phone",
+    "emailPh": "Enter your email",
+    "subjectPh": "Write something..",
+    "terms": "I agree to the",
+    "termsLink": "Terms and Conditions",
+    "submit": "Submit",
+    "sending": "Sending...",
+    "captchaRequired": "Please complete the captcha before submitting.",
+    "errorGeneric": "Something went wrong. Please try again.",
+    "errorNetwork": "Network error. Please check your connection and try again.",
+    "captchaLoad": "Captcha failed to load. Please refresh and try again.",
+    "defaultSubject": "New contact message from website",
+    "defaultMessage": "No message provided.",
+    "successEyebrow": "Message sent",
+    "successTitle": "Thank you",
+    "successBody": "We've received your message and will get back to you as soon as we can.",
+    "sendAnother": "Send another message"
+  }
+}

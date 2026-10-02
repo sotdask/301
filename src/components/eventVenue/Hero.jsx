@@ -1,7 +1,10 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { eventPorch } from "../../assets";
 
 const Hero = () => {
+  const { t } = useTranslation("eventVenue");
+
   return (
     <section className="relative isolate min-h-svh w-full md:min-h-dvh">
       <img
@@ -22,7 +25,7 @@ const Hero = () => {
               fontSize: "clamp(2.8125rem, 1.9818rem + 3.5443vw, 5.4375rem)",
             }}
           >
-            Event Venue
+            {t("hero.title")}
           </h1>
           <span
             data-aos="fade-left"
@@ -35,7 +38,8 @@ const Hero = () => {
           data-aos-duration="1000"
           className="mt-10 max-w-xl text-xl text-white lg:text-2xl"
         >
-Redefining Luxury Hospitality in Santorini        </p>
+          {t("hero.subtitle")}
+        </p>
       </div>
     </section>
   );

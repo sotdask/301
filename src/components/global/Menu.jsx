@@ -1,22 +1,25 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
-
-const NAV_ITEMS = [
-  { to: "/", text: "HOME" },
-  { to: "/about", text: "ABOUT" },
-  { to: "/projects", text: "WORK" },
-  { to: "/articles", text: "ARTICLES" },
-  { to: "/contact", text: "CONTACT" },
-];
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const menuIcon = "absolute inset-0 text-4xl text-white transition duration-300";
 const MainLink = "uppercase tracking-wider text-xl text-white";
 
 function Menu() {
+  const { t } = useTranslation("common");
   const [open, setOpen] = useState(false);
   const close = () => setOpen(false);
+
+  const NAV_ITEMS = [
+    { to: "/", text: t("nav.home") },
+    { to: "/about", text: t("nav.about") },
+    { to: "/projects", text: t("nav.work") },
+    { to: "/articles", text: t("nav.articles") },
+    { to: "/contact", text: t("nav.contact") },
+  ];
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -55,7 +58,7 @@ function Menu() {
       />
 
       <nav
-        className={`fixed inset-x-0 top-0 z-65 flex min-h-screen flex-col items-center justify-center gap-32 bg-black/95 backdrop-blur-md transition-transform duration-500 ease-out ${
+        className={`fixed inset-x-0 top-0 z-65 flex min-h-screen flex-col items-center justify-center gap-24 bg-black/95 backdrop-blur-md transition-transform duration-500 ease-out ${
           open ? "translate-y-0" : "-translate-y-full"
         }`}
         aria-hidden={!open}
@@ -75,6 +78,14 @@ function Menu() {
             </li>
           ))}
         </ul>
+        <div
+          className={`transition-all duration-500 ${
+            open ? "translate-y-0 opacity-100" : "-translate-y-3 opacity-0"
+          }`}
+          style={{ transitionDelay: open ? `${NAV_ITEMS.length * 90}ms` : "0ms" }}
+        >
+          <LanguageSwitcher />
+        </div>
       </nav>
     </div>
   );

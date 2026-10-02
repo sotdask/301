@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import {
   eleniBlueprints,
   eleniHall,
@@ -22,6 +23,8 @@ const bodyCopy =
   "text-[clamp(0.9375rem,0.82rem+0.55vw,1.125rem)] leading-[1.75] sm:leading-[1.8]";
 
 const Body = () => {
+  const { t } = useTranslation("eleni");
+
   return (
     <article className="section-margin text-neutral-700">
       <section className="section-padding">
@@ -31,27 +34,9 @@ const Body = () => {
             className={`flex flex-col gap-5 lg:col-span-5 order-2 md:order-1 ${bodyCopy}`}
           >
             <span className="block h-0.5 w-16 bg-primary" />
-            <p>
-              The residence in Heraklion, Crete, is a comprehensive renovation
-              of an existing space, with the primary goal of creating a bright,
-              open, and functional interior, while maintaining a strong dialogue
-              between the old shell and the new interventions.{" "}
-            </p>
-            <p>
-              The central element of the design is the new wooden roof with
-              exposed structural elements, which gives the space height, warmth,
-              and a strong architectural identity. Taking advantage of the
-              increased interior height allowed for the creation of a loft,
-              designed as a lightweight metal structure, which adds a second
-              level of use without limiting the sense of a unified floor plan.
-            </p>
-            <p>
-              The organization of the residence is based on a clear separation
-              between day and private zones. The living room, dining room, and
-              kitchen spaces develop in continuity, creating a single space for
-              everyday life, while the more private functions are placed in the
-              quieter sections of the house.
-            </p>
+            <p>{t("body.p1")}</p>
+            <p>{t("body.p2")}</p>
+            <p>{t("body.p3")}</p>
           </div>
           <div
             data-aos="fade-up"
@@ -100,20 +85,8 @@ const Body = () => {
             className={`flex flex-col gap-5 lg:col-span-7 ${bodyCopy}`}
           >
             <span className="block h-0.5 w-16 bg-primary" />
-            <p>
-              The color palette remains soft and neutral, with white and earthy
-              surfaces that act as a backdrop for the warm wood of the roof and
-              furniture. The contrast between the natural textures of the wood,
-              the clean white surfaces, and the slender metal elements of the
-              loft creates a contemporary yet familiar environment.
-            </p>
-            <p>
-              The large openings and the through-organization allow natural
-              light to diffuse throughout the interior during the day, while the
-              choice of minimal materials and clean geometries lets the roof and
-              the structure of the space become the main protagonists of the
-              composition.
-            </p>
+            <p>{t("body.p4")}</p>
+            <p>{t("body.p5")}</p>
           </div>
         </div>
       </section>
@@ -123,11 +96,7 @@ const Body = () => {
           className={`mx-auto max-w-3xl text-center ${bodyCopy}`}
         >
           <span className="mx-auto mb-8 block h-0.5 w-16 bg-primary" />
-          <p>
-            The result is a residence that combines the Mediterranean feel of
-            natural wood and light with a contemporary, minimal architectural
-            language, creating a space that is calm and bright.{" "}
-          </p>
+          <p>{t("body.p6")}</p>
         </div>
       </section>
 
@@ -138,7 +107,7 @@ const Body = () => {
             <figure className="border border-stone-200 bg-white px-4 py-8 sm:px-10 sm:py-12 lg:px-16 lg:py-16">
               <img
                 src={eleniBlueprints}
-                alt="Floor plan of the Kamari residence"
+                alt="Floor plan of the residence"
                 loading="lazy"
                 className="mx-auto h-auto w-full max-w-3xl object-contain"
               />
