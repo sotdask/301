@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
-import LanguageSwitcher from "./LanguageSwitcher";
 
 const menuIcon = "absolute inset-0 text-4xl text-white transition duration-300";
 const MainLink = "uppercase tracking-wider text-xl text-white";
@@ -78,14 +77,6 @@ function Menu() {
             </li>
           ))}
         </ul>
-        <div
-          className={`transition-all duration-500 ${
-            open ? "translate-y-0 opacity-100" : "-translate-y-3 opacity-0"
-          }`}
-          style={{ transitionDelay: open ? `${NAV_ITEMS.length * 90}ms` : "0ms" }}
-        >
-          <LanguageSwitcher />
-        </div>
       </nav>
     </div>
   );

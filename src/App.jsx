@@ -18,6 +18,7 @@ import NotFound from "./pages/NotFound";
 import Header from "./layouts/Header";
 import Footer from "./layouts/Footer";
 import LoadingScreen from "./components/global/LoadingScreen";
+import FloatingLanguageToggle from "./components/global/FloatingLanguageToggle";
 import EleniHouse from "./pages/EleniHouse";
 import EventVenue from "./pages/EventVenue";
 import SantoriniArchitecture from "./pages/SantoriniArchitecture";
@@ -92,6 +93,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <FloatingLanguageToggle />
       </div>
     </Router>
   );

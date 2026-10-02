@@ -123,7 +123,7 @@ function Footer() {
         </ul>
         <div className="flex w-full flex-col items-center justify-between gap-2 text-white lg:flex-row lg:gap-4">
           <p className="text-center text-sm lg:text-right">
-            {t("footer.rights", { year: new Date().getFullYear() })}
+            © 2025 301 Architecture Studio. All rights reserved
           </p>
           <a
             href="https://sotdask.gr"
