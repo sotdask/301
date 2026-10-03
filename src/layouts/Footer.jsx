@@ -105,7 +105,7 @@ function Footer() {
           </div>
         </div>
         <ul className="wrapper my-5 flex justify-center gap-12 md:my-7 lg:my-9">
-          <li>
+          {/* <li>
             <a href="#" aria-label={t("a11y.facebook")}>
               <img
                 src={facebook}
@@ -131,7 +131,7 @@ function Footer() {
                 className="opacity-70 transition duration-300 hover:scale-110"
               />
             </a>
-          </li>
+          </li> */}
         </ul>
         <div className="flex w-full flex-col items-center justify-between gap-2 text-white lg:flex-row lg:gap-4">
           <p className="text-center text-sm lg:text-right">

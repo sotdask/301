@@ -51,7 +51,7 @@ const Hero = () => {
             <img src={arrow} alt="" aria-hidden="true" />
           </Link>
         </div>
-        <ul className="wrapper flex flex-row justify-center gap-12 md:flex-col md:justify-end">
+        {/* <ul className="wrapper flex flex-row justify-center gap-12 md:flex-col md:justify-end">
           <li>
             <a href="#" aria-label={tc("a11y.facebook")}>
               <img
@@ -79,7 +79,7 @@ const Hero = () => {
               />
             </a>
           </li>
-        </ul>
+        </ul> */}
       </div>
     </section>
   );

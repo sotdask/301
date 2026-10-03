@@ -124,7 +124,7 @@ const ContactInfo = () => {
               301archstudio@gmail.com
             </span>
           </a>
-          <a
+          {/* <a
             href="#"
             aria-label={t("a11y.instagram", { ns: "common" })}
             className="bodyWrapper mt-6 flex w-full flex-col items-start gap-2 rounded-xl border border-stone-200 bg-white p-6 text-neutral-700 shadow-sm transition duration-500 ease-in-out hover:-translate-y-2 hover:border-primary/40 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 md:gap-4 md:p-8"
@@ -153,7 +153,7 @@ const ContactInfo = () => {
             <span className="text-lg font-bold tracking-wide text-neutral-900 sm:text-lg">
               301 Architecture Studio
             </span>
-          </a>
+          </a> */}
         </div>
       </div>
     </section>
