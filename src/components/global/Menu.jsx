@@ -7,17 +7,20 @@ import { IoMdClose } from "react-icons/io";
 const menuIcon = "absolute inset-0 text-4xl text-white transition duration-300";
 const MainLink = "uppercase tracking-wider text-xl text-white";
 
+/** All-caps Greek drops the tonos. CSS uppercase keeps it, so strip it here. */
+const stripTonos = (text) => text.normalize("NFD").replace(/\u0301/g, "");
+
 function Menu() {
   const { t } = useTranslation("common");
   const [open, setOpen] = useState(false);
   const close = () => setOpen(false);
 
   const NAV_ITEMS = [
-    { to: "/", text: t("nav.home") },
-    { to: "/about", text: t("nav.about") },
-    { to: "/projects", text: t("nav.work") },
-    { to: "/articles", text: t("nav.articles") },
-    { to: "/contact", text: t("nav.contact") },
+    { to: "/", text: stripTonos(t("nav.home")) },
+    { to: "/about", text: stripTonos(t("nav.about")) },
+    { to: "/projects", text: stripTonos(t("nav.work")) },
+    { to: "/articles", text: stripTonos(t("nav.articles")) },
+    { to: "/contact", text: stripTonos(t("nav.contact")) },
   ];
 
   useEffect(() => {

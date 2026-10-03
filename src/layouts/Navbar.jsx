@@ -4,6 +4,10 @@ import { useTranslation } from "react-i18next";
 import Menu from "../components/global/Menu";
 import LanguageSwitcher from "../components/global/LanguageSwitcher";
 
+/** All-caps Greek drops the tonos. */
+const toNavLabel = (text) =>
+  text.normalize("NFD").replace(/\u0301/g, "").toUpperCase();
+
 function Navbar() {
   const { t } = useTranslation("common");
 
@@ -17,7 +21,7 @@ function Navbar() {
               to="/about"
               className="transition duration-300 hover:text-primary"
             >
-              {t("nav.about").toUpperCase()}
+              {toNavLabel(t("nav.about"))}
             </Link>
           </li>
           <li>
@@ -25,15 +29,7 @@ function Navbar() {
               to="/projects"
               className="transition duration-300 hover:text-primary"
             >
-              {t("nav.work").toUpperCase()}
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/articles"
-              className="transition duration-300 hover:text-primary"
-            >
-              {t("nav.articles").toUpperCase()}
+              {toNavLabel(t("nav.work"))}
             </Link>
           </li>
           <li>
@@ -41,7 +37,7 @@ function Navbar() {
               to="/contact"
               className="transition duration-300 hover:text-primary"
             >
-              {t("nav.contact").toUpperCase()}
+              {toNavLabel(t("nav.contact"))}
             </Link>
           </li>
           <li className="ml-12">
