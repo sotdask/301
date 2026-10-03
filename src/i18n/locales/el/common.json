@@ -1,10 +1,10 @@
 {
   "nav": {
     "home": "Αρχική",
-    "about": "Σχετικα",
+    "about": "Σχετικά",
     "work": "Έργα",
     "articles": "Άρθρα",
-    "contact": "Επικοινωνια"
+    "contact": "Επικοινωνία"
   },
   "footer": {
     "navigation": "ΠΛΟΗΓΗΣΗ",
@@ -19,6 +19,7 @@
     "tuesday": "Τρίτη: 9:00-21:00",
     "wednesday": "Τετάρτη: 9:00-21:00",
     "thursday": "Πέμπτη: 9:00-21:00",
+    "friday": "Παρασκευή: 9:00-21:00",
     "saturday": "Σάββατο: Κλειστά",
     "sunday": "Κυριακή: Κλειστά",
     "rights": "© {{year}} 301 Architecture Studio. All rights reserved",
@@ -35,7 +36,6 @@
     "language": "Γλώσσα",
     "facebook": "Facebook",
     "instagram": "Instagram",
-    "tiktok": "TikTok",
     "linkedin": "LinkedIn",
     "prevSlide": "Προηγούμενη διαφάνεια",
     "nextSlide": "Επόμενη διαφάνεια",

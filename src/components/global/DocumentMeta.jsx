@@ -60,6 +60,9 @@ function DocumentMeta() {
     upsertMeta("property", "og:description", description);
     upsertMeta("property", "og:url", url);
     upsertMeta("property", "og:image", DEFAULT_OG_IMAGE);
+    upsertMeta("property", "og:image:width", "1440");
+    upsertMeta("property", "og:image:height", "918");
+    upsertMeta("property", "og:image:alt", "Outdoor dining terrace by 301 Architecture Studio");
     upsertMeta("property", "og:locale", lng === "el" ? "el_GR" : "en_US");
     upsertMeta("name", "twitter:title", fullTitle);
     upsertMeta("name", "twitter:description", description);

@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import AppLink from "../global/AppLink";
 import {
-  villaspitaki,
+  kamariHero,
   elenikitchenLounge,
   eventskyView,
 } from "../../assets";
@@ -14,22 +14,22 @@ function Showcase() {
       id: 1,
       title: "Kamari Santorinis",
       link: "/kamari-santorinis",
-      image: villaspitaki,
-      alt: "Kamari Santorinis",
+      image: kamariHero,
+      alt: "Kamari Santorinis interior",
     },
     {
       id: 2,
       title: "Eleni's House",
       link: "/elenis-house",
       image: elenikitchenLounge,
-      alt: "Eleni's House",
+      alt: "Eleni's House dining area and kitchen",
     },
     {
       id: 3,
       title: "Event Venue",
       link: "/event-venue",
       image: eventskyView,
-      alt: "Event Venue",
+      alt: "Aerial view of the event venue",
     },
   ];
 

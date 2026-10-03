@@ -51,7 +51,8 @@ function Header() {
         <Link to="/" aria-label={t("a11y.logoHome")}>
           <img
             src={logo}
-            alt={t("brand.studio")}
+            alt=""
+            aria-hidden="true"
             className={`transition-all duration-300 ${
               showSolidHeader ? "w-28 md:w-32" : "w-32 md:w-40"
             }`}

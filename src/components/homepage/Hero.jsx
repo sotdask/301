@@ -4,9 +4,8 @@ import { useTranslation } from "react-i18next";
 import {
   hero,
   arrow,
-  facebook,
   instagram,
-  tiktok,
+  linkedin,
 } from "../../assets/index.js";
 
 const Hero = () => {
@@ -31,7 +30,7 @@ const Hero = () => {
           </div>
           <div className="wrapper mt-4 sm:mt-5">
             <h1 className="text-4xl text-white sm:text-5xl md:text-6xl">
-              <span trig-target className="block">
+              <span trig-target="" className="block">
                 {t("hero.line1")}
               </span>
               <span className="mt-3 block text-4xl italic sm:mt-4 sm:text-5xl md:mt-6 md:text-6xl">
@@ -51,18 +50,14 @@ const Hero = () => {
             <img src={arrow} alt="" aria-hidden="true" />
           </Link>
         </div>
-        {/* <ul className="wrapper flex flex-row justify-center gap-12 md:flex-col md:justify-end">
+        <ul className="wrapper flex flex-row justify-center gap-12 md:flex-col md:justify-end">
           <li>
-            <a href="#" aria-label={tc("a11y.facebook")}>
-              <img
-                src={facebook}
-                alt=""
-                className="opacity-70 transition duration-300 hover:scale-110"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="#" aria-label={tc("a11y.instagram")}>
+            <a
+              href="https://www.instagram.com/301archstudio/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={tc("a11y.instagram")}
+            >
               <img
                 src={instagram}
                 alt=""
@@ -71,15 +66,20 @@ const Hero = () => {
             </a>
           </li>
           <li>
-            <a href="#" aria-label={tc("a11y.tiktok")}>
+            <a
+              href="https://www.linkedin.com/company/301-archstudio/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={tc("a11y.linkedin")}
+            >
               <img
-                src={tiktok}
+                src={linkedin}
                 alt=""
                 className="opacity-70 transition duration-300 hover:scale-110"
               />
             </a>
           </li>
-        </ul> */}
+        </ul>
       </div>
     </section>
   );

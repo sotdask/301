@@ -8,7 +8,7 @@ const ParallaxSection = () => {
   return (
     <Parallax
       bgImage={parallax}
-      bgImageAlt="parallax"
+      bgImageAlt="Dining and living area in warm evening light"
       strength={200}
       bgImageStyle={{
         objectFit: "cover",

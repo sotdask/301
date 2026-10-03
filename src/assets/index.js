@@ -6,15 +6,10 @@ import loadinglogo from "./loading-logo.png";
 import footerlogo from "./footerlogo.svg";
 import arrow from "./arrow.svg";
 import blackarrow from "./blackarrow.svg";
-import facebook from "./facebook.svg";
 import instagram from "./instagram.svg";
-import tiktok from "./tiktok.svg";
+import linkedin from "./linkedin.svg";
 import parallax from "./parallax.png";
-import staff from "./staff.png";
-import villaspitaki from "./villaspitaki.png";
-import villahouse from "./villahouse.png";
-import villaspiti from "./villaspiti.png";
-import contact from "./contact.png";
+import contact from "./contact.avif";
 import kamariHero from "./kamari/hero.avif";
 import kamariDining from "./kamari/dining.avif";
 import kamariLivingRoom from "./kamari/living-room.avif";
@@ -29,13 +24,11 @@ import kamariBedroom from "./kamari/bedroom.avif";
 import kamariGuestBedroom from "./kamari/guest-bedroom.avif";
 import kamariReadingNook from "./kamari/reading-nook.avif";
 import kamariStudy from "./kamari/study.avif";
-import kamariBathroom from "./kamari/bathroom.avif";
-import kamariEnsuite from "./kamari/ensuite.avif";
 import kamariFloorPlan from "./kamari/floor-plan.jpg";
 import eleniKitchen from "./elenihouse/kitchen.avif"
 import eleniBlueprints from "./elenihouse/blueprints.avif"
 import eleniHall from "./elenihouse/hall.avif"
-import elenikitchenLounge from "./elenihouse/kitchenlounge.avif"
+import elenikitchenLounge from "./elenihouse/kitchen-lounge.avif"
 import eleniLounge from "./elenihouse/lounge.avif"
 import eventBlueprints from "./eventvenue/blueprints.avif"
 import eventPool from "./eventvenue/pool.avif"
@@ -57,14 +50,9 @@ export {
   footerlogo,
   arrow,
   blackarrow,
-  facebook,
+  linkedin,
   instagram,
-  tiktok,
   parallax,
-  staff,
-  villaspitaki,
-  villahouse,
-  villaspiti,
   contact,
   kamariHero,
   kamariDining,
@@ -80,8 +68,6 @@ export {
   kamariGuestBedroom,
   kamariReadingNook,
   kamariStudy,
-  kamariBathroom,
-  kamariEnsuite,
   kamariFloorPlan,
   loadinglogo,
   eleniKitchen,

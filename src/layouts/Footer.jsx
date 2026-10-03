@@ -1,10 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { footerlogo, facebook, instagram, tiktok } from "../assets";
+import { footerlogo, instagram, linkedin } from "../assets";
+
+const phones = [
+  {
+    id: "thessaloniki",
+    tel: "+306943023146",
+    display: "+30 694 302 3146",
+  },
+  {
+    id: "santorini",
+    tel: "+306947819692",
+    display: "+30 694 781 9692",
+  },
+  {
+    id: "heraklion",
+    tel: "+306945113282",
+    display: "+30 694 511 3282",
+  },
+];
 
 function Footer() {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation(["common", "contact"]);
 
   return (
     <footer className="bg-black pb-1">
@@ -78,14 +96,17 @@ function Footer() {
                     301archstudio@gmail.com
                   </a>
                 </li>
-                <li>
-                  <a
-                    href="tel:6943023146"
-                    className="transition duration-300 hover:text-primary"
-                  >
-                    694 302 3146
-                  </a>
-                </li>
+                {phones.map((phone) => (
+                  <li key={phone.id}>
+                    <a
+                      href={`tel:${phone.tel}`}
+                      className="transition duration-300 hover:text-primary"
+                    >
+                      {t(`info.locations.${phone.id}`, { ns: "contact" })}:{" "}
+                      {phone.display}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
 
@@ -98,6 +119,7 @@ function Footer() {
                 <li>{t("footer.tuesday")}</li>
                 <li>{t("footer.wednesday")}</li>
                 <li>{t("footer.thursday")}</li>
+                <li>{t("footer.friday")}</li>
                 <li>{t("footer.saturday")}</li>
                 <li>{t("footer.sunday")}</li>
               </ul>
@@ -105,17 +127,8 @@ function Footer() {
           </div>
         </div>
         <ul className="wrapper my-5 flex justify-center gap-12 md:my-7 lg:my-9">
-          {/* <li>
-            <a href="#" aria-label={t("a11y.facebook")}>
-              <img
-                src={facebook}
-                alt=""
-                className="opacity-70 transition duration-300 hover:scale-110"
-              />
-            </a>
-          </li>
           <li>
-            <a href="#" aria-label={t("a11y.instagram")}>
+            <a href="https://www.instagram.com/301archstudio/" target="_blank" rel="noopener noreferrer" aria-label={t("a11y.instagram")}>
               <img
                 src={instagram}
                 alt=""
@@ -124,14 +137,14 @@ function Footer() {
             </a>
           </li>
           <li>
-            <a href="#" aria-label={t("a11y.tiktok")}>
+            <a href="https://www.linkedin.com/company/301-archstudio/" target="_blank" rel="noopener noreferrer" aria-label={t("a11y.linkedin")}>
               <img
-                src={tiktok}
+                src={linkedin}
                 alt=""
                 className="opacity-70 transition duration-300 hover:scale-110"
               />
             </a>
-          </li> */}
+          </li>
         </ul>
         <div className="flex w-full flex-col items-center justify-between gap-2 text-white lg:flex-row lg:gap-4">
           <p className="text-center text-sm lg:text-right">

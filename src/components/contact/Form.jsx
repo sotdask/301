@@ -27,6 +27,18 @@ export default function Form() {
     event.preventDefault();
     setErrorMessage("");
 
+    const form = event.currentTarget;
+    const firstName = form.fname.value.trim();
+    const lastName = form.lname.value.trim();
+    const subject = form.subject.value.trim();
+    const message = form.message.value.trim();
+
+    if (!message) {
+      setStatus("error");
+      setErrorMessage(t("form.messageRequired"));
+      return;
+    }
+
     if (!captchaToken) {
       setStatus("error");
       setErrorMessage(t("form.captchaRequired"));
@@ -35,18 +47,13 @@ export default function Form() {
 
     setStatus("sending");
 
-    const form = event.currentTarget;
-    const firstName = form.fname.value.trim();
-    const lastName = form.lname.value.trim();
-    const subject = form.subject.value.trim();
-
     const payload = {
       access_key: ACCESS_KEY,
       name: `${firstName} ${lastName}`.trim(),
       email: form.email.value.trim(),
       phone: form.phone.value.trim(),
       subject: subject || t("form.defaultSubject"),
-      message: subject || t("form.defaultMessage"),
+      message,
       "h-captcha-response": captchaToken,
     };
 
@@ -193,11 +200,25 @@ export default function Form() {
             <label htmlFor="subject" className={labelClass}>
               {t("form.subject")}
             </label>
-            <textarea
+            <input
+              type="text"
               name="subject"
               id="subject"
               placeholder={t("form.subjectPh")}
+              className={fieldClass}
+            />
+          </div>
+
+          <div className="flex w-full flex-col gap-2">
+            <label htmlFor="message" className={labelClass}>
+              {t("form.message")}
+            </label>
+            <textarea
+              name="message"
+              id="message"
+              placeholder={t("form.messagePh")}
               rows={5}
+              required
               className={`${fieldClass} min-h-28 resize-y md:min-h-40`}
             />
           </div>

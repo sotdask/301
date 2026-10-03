@@ -65,7 +65,7 @@ const Hero = () => {
             />
             <img
               src={contact}
-              alt=""
+              alt="Bedroom with built-in wardrobe opening toward the living area"
               className="relative z-10 w-full rounded-2xl object-contain shadow-2xl shadow-black/40 ring-1 ring-white/10"
             />
           </div>

@@ -30,6 +30,14 @@ function Navbar() {
           </li>
           <li>
             <Link
+              to="/articles"
+              className="transition duration-300 hover:text-primary"
+            >
+              {t("nav.articles").toUpperCase()}
+            </Link>
+          </li>
+          <li>
+            <Link
               to="/contact"
               className="transition duration-300 hover:text-primary"
             >

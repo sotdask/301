@@ -45,7 +45,7 @@ const Body = () => {
           >
             <Frame
               src={eleniHall}
-              alt="Dining room with custom wooden partition and bookcase"
+              alt="Hall with open stair, timber roof and mezzanine loft"
               className="aspect-16/10"
             />
           </div>
@@ -59,12 +59,12 @@ const Body = () => {
         >
           <Frame
             src={eleniKitchen}
-            alt="Living room with vaulted ceiling, fireplace and soft seating"
+            alt="Kitchen with timber roof, island and arched window"
             className="aspect-[16/10] md:col-span-8 md:aspect-auto md:min-h-[28rem] lg:min-h-[36rem]"
           />
           <Frame
             src={eleniLounge}
-            alt="Living room looking toward the wooden lattice partition"
+            alt="Living and dining room with exposed timber roof and loft"
             className="aspect-[4/5] md:col-span-4 md:aspect-auto md:min-h-[28rem] lg:min-h-[36rem]"
           />
         </div>
@@ -75,7 +75,7 @@ const Body = () => {
           <div data-aos="fade-up" className="lg:col-span-5">
             <Frame
               src={elenikitchenLounge}
-              alt="Reading corner with vaulted ceiling, cove lighting and wood cabinetry"
+              alt="Dining area, kitchen and loft under the exposed timber roof"
               className="aspect-4/5"
             />
           </div>
@@ -107,7 +107,7 @@ const Body = () => {
             <figure className="border border-stone-200 bg-white px-4 py-8 sm:px-10 sm:py-12 lg:px-16 lg:py-16">
               <img
                 src={eleniBlueprints}
-                alt="Floor plan of the residence"
+                alt="Floor plan of Eleni's House"
                 loading="lazy"
                 className="mx-auto h-auto w-full max-w-3xl object-contain"
               />
